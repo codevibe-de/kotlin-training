@@ -6,8 +6,8 @@ fun main() {
     val c: Int
     c = -1
 
-    var changeme: Int = 123
-    changeme = 2 * 3
+    var changeMe: Int = 123
+    changeMe = 2 * 3
 }
 
 val toplevel = "this works"
