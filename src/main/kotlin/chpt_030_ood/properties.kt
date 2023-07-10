@@ -1,35 +1,18 @@
 package chpt_030_ood
 
-import java.util.*
+import java.util.UUID
 
-class ClassWithCustomGetter(
-    private val internalName: String
+class Product(
+    val id: String = generateId(),
+    var name: String,
 ) {
-    val name: String
-        get() = "//" + internalName.uppercase() + """\\"""
-
-    private var _pwd: String = ""
-    val pwd: String
-        get() {
-            if (_pwd == "") {
-                _pwd = UUID.randomUUID().toString() // on-demand initialization
-            }
-            return _pwd
-        }
-}
-
-class MultiConstr(
-    val id: String,
-    val name: String,
-) {
-    constructor(id: String) : this(id, "unnamed")
+    companion object {
+        fun generateId() = UUID.randomUUID().toString()
+    }
 }
 
 fun main() {
-    val sc = ClassWithCustomGetter("tom")
-    println(sc.name)
-    println(sc.pwd)
-    println(sc.pwd)
-    MultiConstr("123").id
-    MultiConstr("123", "tom").apply { this.id }
+    val prd = Product(name = "Pizza Salamy")
+    prd.name = "Pizza Salami" // fix typo
+    println("${prd.id} ${prd.name}")
 }
