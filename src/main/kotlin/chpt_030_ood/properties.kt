@@ -3,11 +3,12 @@ package chpt_030_ood
 import java.util.UUID
 
 class Product(
-    val id: String = generateId(),
     var name: String,
 ) {
+    val id: String = generateInternalId()
+
     companion object {
-        fun generateId() = UUID.randomUUID().toString()
+        fun generateInternalId() = UUID.randomUUID().toString()
     }
 }
 
