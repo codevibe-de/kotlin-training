@@ -6,28 +6,31 @@ interface HQ<T> {
 
 class CommandCenter : HQ<InfantryType> {
     override fun buildBarracks(): Building<InfantryType, Infantry> {
-        return Barracks()
+        return object : Building<InfantryType, Infantry> {
+            override fun build(type: InfantryType): Infantry {
+                return when (type) {
+                    InfantryType.MARINE -> Marine()
+                    InfantryType.FIREBAT -> Firebat()
+                }
+            }
+        }
     }
 }
 
 class Hive : HQ<ZergInfantryType> {
     override fun buildBarracks(): Building<ZergInfantryType, Infantry> {
-        return SpawningPool()
+        return object : Building<ZergInfantryType, Infantry> {
+            override fun build(type: ZergInfantryType): Infantry {
+                return when (type) {
+                    ZergInfantryType.ZERGLING -> Zergling()
+                }
+            }
+        }
     }
-
 }
 
 enum class ZergInfantryType {
     ZERGLING
-}
-
-class SpawningPool : Building<ZergInfantryType, Infantry> {
-    override fun build(type: ZergInfantryType): Infantry {
-        return when(type) {
-            ZergInfantryType.ZERGLING -> Zergling()
-        }
-    }
-
 }
 
 class Zergling : Infantry
