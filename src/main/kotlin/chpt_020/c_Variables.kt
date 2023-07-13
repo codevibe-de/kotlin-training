@@ -1,4 +1,4 @@
-package de.codevibe.chpt010
+package chpt_020
 
 fun main() {
     val a: Int = 42

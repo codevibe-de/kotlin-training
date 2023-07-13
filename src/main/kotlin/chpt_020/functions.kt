@@ -1,4 +1,4 @@
-package de.codevibe
+package chpt_020
 
 fun sum(a: Int, b: Int): Int {
     return a + b
@@ -34,7 +34,7 @@ fun complexStuff(
     // do complex stuff
 }
 
-fun main2() {
+fun main22() {
     complexStuff(
         "Hey, I am a String",
         suffix = "!!!",

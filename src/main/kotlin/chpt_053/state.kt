@@ -6,7 +6,7 @@ sealed class State {
     override fun toString(): String {
         return javaClass.simpleName
     }
-    fun wait() {}
+    fun waitSomeTime() {}
 }
 
 // this is "the context"
@@ -16,7 +16,7 @@ data class Computer(private var state: State = Off) {
     }
 
     fun waitAWhile() {
-        state.wait()
+        state.waitSomeTime()
         state = state.next()
     }
 }

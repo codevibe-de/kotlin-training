@@ -1,4 +1,4 @@
-package de.codevibe
+package chpt_020
 
 fun main() {
     val a = 3

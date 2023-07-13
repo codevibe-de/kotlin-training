@@ -1,4 +1,4 @@
-package de.codevibe
+package chpt_020
 
 val n = 42
 val answer = "The answer is $n"
