@@ -64,7 +64,7 @@ Schreiben Sie eine Funktion, welche aus einer römischen Zahl eine dezimale Zahl
 
 Es gilt also die Subtraktionsregel: https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift#Subtraktionsregel
 
-Weitere Überprüfungen auf die Reihenfolge der Zeichen braucht nicht zu erfolgen...
+Weitere Überprüfungen auf die Reihenfolge der Zeichen brauchen nicht zu erfolgen...
 
 Hilfreich für die Lösung ist das `CharArray`, welches aus einem String erzeugt werden kann.
 
@@ -88,9 +88,13 @@ Diese finden Sie im Projekt unter dem Namen `books.csv`. Jede Zeile hat folgende
 ````
 
 Lesen Sie die Datei Zeile für Zeile ein (z.B. mit `File.readLines()`) und extrahieren Sie die
-notwendigen Informationen, um das Buch der Bücherei hinzuzufügen. 
+notwendigen Informationen, um das Buch der Bücherei hinzuzufügen.
 
-## 
+## Binnenmajuskel
 
-Erstellen Sie eine eigene `BooksMap` Klasse, welche von einer `Map` erbt und nur Bücher verwalten kann.
+Erstellen Sie eine Extension Function für den Typ `String`, der die Zeichenkette in Camelcase formatiert zurückgibt.
+
+Also aus "Wir lernen Kotlin" wird "WirLernenKotlin".
+
+PS https://de.wikipedia.org/wiki/Binnenmajuskel :D
 
