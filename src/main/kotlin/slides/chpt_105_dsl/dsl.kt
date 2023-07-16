@@ -1,4 +1,4 @@
-package chpt_105_dsl
+package slides.chpt_105_dsl
 
 class Items {
     private val _products = mutableListOf<Product>()
