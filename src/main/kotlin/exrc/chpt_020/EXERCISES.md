@@ -84,7 +84,7 @@ Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Art
 * ein 1:1 Mapping von ISBN auf Buchtitel
 * ein 1:n Mapping von einem Autor auf seine Bücher (Titel)
 
-Schreiben Sie die zwei Funktionen, welche für jedes Mapping eine `Map` erstellen. 
+Schreiben Sie die zwei Funktionen, welche für jeden Anwendungsfall eine `Map` erstellt. 
 
 Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet.
 
