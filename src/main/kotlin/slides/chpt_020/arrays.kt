@@ -1,19 +1,20 @@
 package chpt_020
 
-
 fun main() {
-    val fibonacciSeed = Array(2) { _ -> 1}
-    println(fibonacciSeed.contentToString())
-
-    val moreFibs = arrayOf(2, 3, 5, 8, 13, 21, 34)
-    val allFibs = fibonacciSeed.plus(moreFibs)
-    println(allFibs.joinToString(" -> "))
-
-    allFibs.indexOf(8)
-    allFibs.copyOfRange(0, 5)
-    allFibs.fill(0, 0, allFibs.size)
-
-    allFibs[0]
-    allFibs.get(0)
-    for (n in allFibs.iterator()) print(n)
+    val fibonacci: Array<Int> = arrayOf(2, 3, 5, 8, 13, 21, 34)
+    println(fibonacci)
+//    for (f in fibonacci) println(f)
+//
+    println(fibonacci.contentToString())
+//
+//    val firstFib = fibonacci[0]
+//
+//    fibonacci.plus(arrayOf(55, 89))
+//    println(fibonacci.joinToString(" -> "))
+//
+//    fibonacci.indexOf(8)
+//
+//    val firstFiveFibs: Array<Int> = fibonacci.copyOfRange(0, 5)
+//
+//    fibonacci.fill(0)
 }
