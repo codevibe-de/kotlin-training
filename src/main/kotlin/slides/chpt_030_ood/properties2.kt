@@ -1,4 +1,4 @@
-package chpt_030_ood
+package slides.chpt_030_ood
 
 import java.util.*
 import kotlin.random.Random

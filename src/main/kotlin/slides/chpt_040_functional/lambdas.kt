@@ -1,4 +1,4 @@
-package chpt_040_functional
+package slides.chpt_040_functional
 
 fun main() {
     val sc = SuperConsumer { n, s -> println("$n-$s") }

@@ -1,6 +1,11 @@
-package chpt_040_functional
+package slides.chpt_040_functional
 
-val sumLambda = { a: Int, b: Int -> a + b }
+val sumLambda: (Int, Int) -> Int = { a: Int, b: Int -> a + b }
+
+fun main() {
+    println(sumLambda(1, 2))
+//    println(complexLambda("C:\\DOS\\DATA.TXT"))
+}
 
 val complexLambda = { s: String ->
     if (s.endsWith("txt", true)) {
@@ -8,9 +13,4 @@ val complexLambda = { s: String ->
     } else {
         "Something else"
     }
-}
-
-fun main() {
-    println(sumLambda(1, 2))
-    println(complexLambda("C:\\DOS\\DATA.TXT"))
 }

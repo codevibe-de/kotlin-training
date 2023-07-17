@@ -1,4 +1,4 @@
-package chpt_020
+package slides.chpt_020
 
 fun main() {
     val fibonacci: Array<Int> = arrayOf(2, 3, 5, 8, 13, 21, 34)

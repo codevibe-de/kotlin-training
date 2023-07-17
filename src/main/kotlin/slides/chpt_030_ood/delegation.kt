@@ -1,4 +1,4 @@
-package chpt_030_ood
+package slides.chpt_030_ood
 
 class AuditingList<E>(private val delegate:MutableList<E>) : MutableList<E> by delegate {
     override fun add(element: E): Boolean {

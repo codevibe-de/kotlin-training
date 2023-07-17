@@ -1,4 +1,4 @@
-package chpt_051
+package slides.chpt_051
 
 object Highlander {
     val name: String = "Connor MacLeod"

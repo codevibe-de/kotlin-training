@@ -1,4 +1,4 @@
-package chpt_020
+package slides.chpt_020
 
 fun sum(a: Int, b: Int): Int {
     return a + b

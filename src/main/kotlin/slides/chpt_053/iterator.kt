@@ -1,11 +1,11 @@
-package chpt_053
+package slides.chpt_053
 
-import chpt_052.File
-import chpt_052.FilesystemItem
+import slides.chpt_052.File
+import slides.chpt_052.FilesystemItem
 
 fun main() {
     val folder = createRootFolder()
-    for (item:FilesystemItem in folder) {
+    for (item: FilesystemItem in folder) {
         // ...
     }
 }

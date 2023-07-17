@@ -1,4 +1,4 @@
-package chpt_020
+package slides.chpt_020
 
 val n = 42
 val answer = "The answer is $n"
