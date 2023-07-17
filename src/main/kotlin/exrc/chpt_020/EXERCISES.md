@@ -1,6 +1,6 @@
 # Übungen zum Kapitel "Syntax"
 
-## Memo
+## a) Memo
 
 Lassen Sie einen Multi-Line String ausgeben (für Ihr persönliches Memorandum), in dem Sie folgende Inhalte per Template
 Expressions einfügen:
@@ -9,7 +9,7 @@ Expressions einfügen:
 * Variablen
 * Rückgabe von Funktionsaufrufen
 
-## Argumente parsen
+## b) Argumente parsen
 
 Schreiben Sie ein Programm, welchem Kommandozeilenargumente in der Form `<value>:<type>` übergeben werden können, wie
 z.B. "123:Int" und "true:Boolean".
@@ -17,18 +17,26 @@ z.B. "123:Int" und "true:Boolean".
 Ihr Programm soll diese Paare aufsplitten und dann je nach Typangabe in die entsprechende native Form umwandeln und
 diesen dann als Erfolgsmeldung ausgeben.
 
-Dabei auftretende Fehler lassen wir unbehandelt auftreten.
+Aufsplitten geht z.B. mittels folgender Anweisung. Dieses nutzt "Destructuring", was wir später noch 
+ausführlich kennenlernen:
 
-## Bücherei
+````kotlin
+val parts = arg.split(":")
+val (value, type) = parts
+````
+
+Beim Parsen auftretende Fehler lassen wir unbehandelt auftreten.
+
+## c) Bücherei
 
 Sie beginnen die Geschäftslogik für eine Bücherei zu entwickeln.
 
 Dabei ist der zentrale Bestandteil die Funktion `addBook`, die folgende Parameter verarbeiten kann:
 
 * `title: String`, erforderlich
-* `isbn: String`, optional, Default-Wert ""
-* `price: Float`, optional, Default-Wert 0.0
-* `author: String`, optional, Default-Wert ""
+* `isbn: String`, optional, Default-Wert "?"
+* `price: Float`, erforderlich
+* `author: String`, optional, Default-Wert "??"
 
 Der Methodenkörper macht vorerst nur ein einfaches `println` mit den Parametern.
 
@@ -37,14 +45,14 @@ Rufen Sie die Methode mit folgenden Argument-Kombinationen auf:
 * für alle Parameter
 * title, isbn, price
 * title, price
-* title, isbn, author
+* title, price, author (und dabei alle Argumente benennen)
 
-## Fehlerbehandlung beim Argumente parsen
+## d) Fehlerbehandlung beim Argumente parsen
 
 Ergänzen Sie nun den Argumente-Parser von vorhin um eine Fehlerbehandlung, sodass fehlerhafte Werte übersprungen und die
 danach folgenden doch noch geparst werden.
 
-## Statistik
+## e) Statistik
 
 Schreiben Sie eine Methode, die
 
