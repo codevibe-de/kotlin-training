@@ -17,7 +17,7 @@ z.B. "123:Int" und "true:Boolean".
 Ihr Programm soll diese Paare aufsplitten und dann je nach Typangabe in die entsprechende native Form umwandeln und
 diesen dann als Erfolgsmeldung ausgeben.
 
-Aufsplitten geht z.B. mittels folgender Anweisung. Dieses nutzt "Destructuring", was wir später noch 
+Aufsplitten geht z.B. mittels folgender Anweisung. Dieses nutzt "Destructuring", was wir später noch
 ausführlich kennenlernen:
 
 ````kotlin
@@ -106,6 +106,12 @@ notwendigen Informationen, um das Buch der Bücherei hinzuzufügen.
 Erstellen Sie eine Extension Function für den Typ `String`, der die Zeichenkette in Camelcase formatiert zurückgibt.
 
 Also aus "Wir lernen Kotlin" wird "WirLernenKotlin".
+
+Hinweise:
+
+* einen `String` splitten: `String.split()`
+* auf einen `Char` eines Strings zugreifen: `str[0]`
+* sowohl `String` als auch `Char` bieten Funktionen zur Umwandlung der Groß-/Kleinschreibung
 
 PS https://de.wikipedia.org/wiki/Binnenmajuskel :D
 
