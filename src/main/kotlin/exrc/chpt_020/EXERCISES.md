@@ -81,10 +81,12 @@ Hilfreich für die Lösung ist das `CharArray`, welches aus einem String erzeugt
 
 Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Arten verwalten:
 
-* ein 1:1 Mapping von ISBN auf ein Buch
-* ein 1:n Mapping von einem Autor auf seine Bücher
+* ein 1:1 Mapping von ISBN auf Buchtitel
+* ein 1:n Mapping von einem Autor auf seine Bücher (Titel)
 
-Schreiben Sie die zwei Funktionen, welche für jedes Mapping eine `Map` erstellen.
+Schreiben Sie die zwei Funktionen, welche für jedes Mapping eine `Map` erstellen. 
+
+Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet.
 
 ## i) Bücherei Import
 
