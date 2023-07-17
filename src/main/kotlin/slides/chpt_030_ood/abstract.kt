@@ -1,14 +1,21 @@
 package slides.chpt_030_ood
 
-import java.util.UUID
+import java.util.*
 
-abstract class IdGenerator {
+abstract class IdGenerator(protected val length: Int) {
     abstract val name: String
-    abstract fun generateId(maxLength:Int): String
+    abstract fun generateId(): String
 }
 
-class UUidGenerator(override val name: String) : IdGenerator() {
-    override fun generateId(maxLength:Int): String {
-        return UUID.randomUUID().toString().substring(0, maxLength)
+
+class UUidGenerator(
+    override val name: String,
+    length: Int
+) : IdGenerator(length) {
+
+    override fun generateId(): String {
+        return UUID.randomUUID()
+            .toString()
+            .substring(0, length)
     }
 }
