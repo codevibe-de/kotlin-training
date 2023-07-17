@@ -18,26 +18,16 @@ fun main() {
 
 fun read(
     b: ByteArray,
-    off: Int = 0,
-    len: Int = b.size,
+    offset: Int = 0,
+    length: Int = b.size,
 ) {
     // do some reading
 }
 
 
-fun complexStuff(
-    str: String,
-    prefix: String = "",
-    suffix: String = "",
-    maxLength: Int
-) {
-    // do complex stuff
-}
-
 fun main22() {
-    complexStuff(
-        "Hey, I am a String",
-        suffix = "!!!",
-        maxLength = 2
-    )
+    val byteArr = byteArrayOf(32, 46, 75, 33)
+    read(byteArr)
+    read(byteArr, length = 2)
+    read(length = 2, offset = 1, b = byteArr)
 }
