@@ -1,8 +1,9 @@
 # Übungen zum Kapitel "Syntax"
 
-## Ein Brief
+## Memo
 
-Lassen Sie einen Multi-Line String ausgeben, in dem Sie folgende Inhalte per Template Expressions einfügen:
+Lassen Sie einen Multi-Line String ausgeben (für Ihr persönliches Memorandum), in dem Sie folgende Inhalte per Template
+Expressions einfügen:
 
 * Konstanten
 * Variablen
