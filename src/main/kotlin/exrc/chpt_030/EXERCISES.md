@@ -75,12 +75,11 @@ Erstellen Sie eine Klasse `Vector`, welche eine X/Y Koordinate beschreibt.
 
 Instanzen (unten als "V" dargestellt) sollen mittels folgender Operatoren verarbeitet werden können:
 
-* plus (V+V)
-* minus (V-V)
-* faktor (V*f)
-* negation (-V)
-* destructuring
-* Zugriff auf x/y V["x"] ????
+* Plus (V+V)
+* Minus (V-V)
+* Negation (-V)
+* Destructuring
+* Zugriff auf x/y mittels V['x'] bzw. V['y']
 
 ## Lazy Id
 
