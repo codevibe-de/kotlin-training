@@ -3,15 +3,14 @@ package chpt_020
 fun main() {
     val a = 3
     val b = 1
-    var max: Int
-
-    // with else
-    if (a > b) {
-        max = a
-    } else {
-        max = b
-    }
 
     // as expression
-    max = if (a > b) a else b
+    val max = if (a > b) {
+        a
+    } else {
+        b
+    }
+
+    // short version as ternary expression
+    val max2 = if (a > b) a else b
 }
