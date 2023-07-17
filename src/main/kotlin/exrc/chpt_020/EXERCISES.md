@@ -45,7 +45,7 @@ Rufen Sie die Methode mit folgenden Argument-Kombinationen auf:
 * für alle Parameter
 * title, isbn, price
 * title, price
-* title, price, author (und dabei alle Argumente benennen)
+* title, price, author (dabei jedes der drei Argumente benennen)
 
 ## d) Fehlerbehandlung beim Argumente parsen
 
@@ -61,7 +61,7 @@ Schreiben Sie eine Methode, die
 
 annimmt. Je nach Berechnungsart sollen die Zahlen entsprechend berechnet und als `Int` zurückgegeben werden.
 
-## Römische Zahlen
+## f) Römische Zahlen
 
 Schreiben Sie eine Funktion, welche aus einer römischen Zahl eine dezimale Zahl berechnet:
 
@@ -77,7 +77,7 @@ Weitere Überprüfungen auf die Reihenfolge der Zeichen brauchen nicht zu erfolg
 
 Hilfreich für die Lösung ist das `CharArray`, welches aus einem String erzeugt werden kann.
 
-## Gemappte Bücherei
+## g) Gemappte Bücherei
 
 Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Arten verwalten:
 
@@ -86,7 +86,7 @@ Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Art
 
 Schreiben Sie die zwei Funktionen, welche für jedes Mapping eine `Map` erstellen.
 
-## Bücherei Import
+## i) Bücherei Import
 
 Wir lesen eine Liste an Büchern von einer suboptimal konzipierten CSV Datei ein.
 
@@ -99,7 +99,7 @@ Diese finden Sie im Projekt unter dem Namen `books.csv`. Jede Zeile hat folgende
 Lesen Sie die Datei Zeile für Zeile ein (z.B. mit `File.readLines()`) und extrahieren Sie die
 notwendigen Informationen, um das Buch der Bücherei hinzuzufügen.
 
-## Binnenmajuskel
+## j) Binnenmajuskel
 
 Erstellen Sie eine Extension Function für den Typ `String`, der die Zeichenkette in Camelcase formatiert zurückgibt.
 
