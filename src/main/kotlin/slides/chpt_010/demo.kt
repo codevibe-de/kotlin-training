@@ -1,3 +1,5 @@
+package slides.chpt_010
+
 fun main(args: Array<String>) {
     greet {
         To.place
