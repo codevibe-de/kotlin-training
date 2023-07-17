@@ -21,26 +21,30 @@ Dann: Menü > Tools > Kotlin > Decompile to Java
 
 ## Kotlin Compiler (optional)
 
-Installieren Sie den Kotlin Compiler. Kompilieren Sie Ihr Programm von der Kommandozeile:
+Installieren Sie den Kotlin Compiler.
+
+Wechseln Sie auf der Kommandozeile in das Root-Verzeichnis des Projekts.
+
+Kompilieren Sie Ihr Programm von der Kommandozeile, also z.B.:
 
 ```` shell
-kotlinc-jvm <source-file> -d <out-dir>
+kotlinc-jvm src/main/kotlin/exrc/chpt_010/hello.kt -d bin
 ````
 
 und führen es dann aus:
 
 ```` shell
-kotlin -cp <out-dir> <package>.<class>
+kotlin -cp bin exrc.chpt_010.HelloKt
 ````
 
 Oder kompilieren Sie das Programm, sodass Kotlin ein self-contained JAR inkl. Runtime erstellt:
 
 ```` shell
-kotlinc-jvm hello.kt -include-runtime -d hello.jar 
+kotlinc-jvm src/main/kotlin/exrc/chpt_010/hello.kt -include-runtime -d bin/hello.jar 
 ````
 
 Dieses können Sie dann wie ein gewöhnliches Java JAR starten:
 
 ```` shell
-java -jar hello.jar
+java -jar bin/hello.jar
 ````
