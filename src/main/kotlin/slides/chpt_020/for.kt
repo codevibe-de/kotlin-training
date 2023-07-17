@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
     for (i in args.indices) {
         println("#$i: ${args[i]}")
     }
+
     for ((i,v) in args.withIndex()) {
         println("#$i: $v")
     }
@@ -29,13 +30,13 @@ fun main2() {
     }
 
     for (n in (1..3).reversed()) {
-        println("$n...")
+        println("$n")
     }
     println("Lift off!")
 }
-// 3...
-// 2...
-// 1...
+// 3
+// 2
+// 1
 // Lift off!
 
 class Lyrics {
