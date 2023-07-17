@@ -1,4 +1,4 @@
-package chpt_080
+package slides.chpt_080
 
 import io.mockk.every
 import io.mockk.impl.annotations.MockK

@@ -1,4 +1,4 @@
-package chpt_020
+package slides.chpt_020
 
 var b: Boolean = true
 val c: Char = 'a' // '\u0040'

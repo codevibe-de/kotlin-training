@@ -1,4 +1,4 @@
-package chpt_053
+package slides.chpt_053
 
 sealed class State {
     abstract fun powerButtonPressed(): State

@@ -1,4 +1,4 @@
-package chpt_052
+package slides.chpt_052
 
 data class User(val username: String)
 

@@ -1,4 +1,4 @@
-package chpt_045
+package slides.chpt_045
 
 fun main() {
     setOps()

@@ -1,4 +1,4 @@
-package chpt_025
+package slides.chpt_060
 
 fun main() {
     println(toBoolean("yes"))

@@ -1,4 +1,4 @@
-package chpt_040_functional
+package slides.chpt_040_functional
 
 fun main() {
     listOf("Hey", "Joe", "!")

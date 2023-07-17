@@ -1,4 +1,4 @@
-package chpt_030_ood
+package slides.chpt_030_ood
 
 //class Animal
 //

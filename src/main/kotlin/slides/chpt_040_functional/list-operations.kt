@@ -1,4 +1,4 @@
-package chpt_040_functional
+package slides.chpt_040_functional
 
 import java.util.function.Consumer
 

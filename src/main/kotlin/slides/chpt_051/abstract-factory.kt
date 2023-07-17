@@ -1,4 +1,4 @@
-package chpt_051
+package slides.chpt_051
 
 interface HQ<T> {
     fun buildBarracks(): Building<T, Infantry>

@@ -1,4 +1,4 @@
-package chpt_040_functional
+package slides.chpt_040_functional
 
 val sumLambda = { a: Int, b: Int -> a + b }
 
