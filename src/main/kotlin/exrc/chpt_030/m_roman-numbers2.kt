@@ -12,7 +12,8 @@ private fun romanToInt(roman: String): Int {
     var result = 0
     var prevValue: Int = -1
     for (c in roman.toCharArray()) {
-        val value = valueOf(c)
+        val romanNumber = RomanNumber.valueOf(c.toString())
+        val value = romanNumber.value
         result += value
 
         // subtraction rule -- if we were preceded by a smaller value then it should have been subtracted
@@ -25,14 +26,11 @@ private fun romanToInt(roman: String): Int {
     return result
 }
 
-fun valueOf(c: Char): Int {
-    return when (c) {
-        'M' -> 1000
-        'C' -> 100
-        'L' -> 50
-        'X' -> 10
-        'V' -> 5
-        'I' -> 1
-        else -> throw IllegalArgumentException(c.toString())
-    }
+enum class RomanNumber(val value: Int) {
+    M(1000),
+    C(100),
+    L(50),
+    X(10),
+    V(5),
+    I(1)
 }
