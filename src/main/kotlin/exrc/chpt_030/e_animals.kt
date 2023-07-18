@@ -2,21 +2,23 @@ package exrc.chpt_030
 
 import org.assertj.core.api.Assertions.assertThat
 
-class Carp
+open class Animal
 
-class Fish
+class Carp : Fish()
 
-class Mammal
+open class Fish : Animal()
 
-class Shark
+open class Mammal : Animal()
 
-class Tiger
+class Shark : Fish()
 
-class Whale
+class Tiger : Mammal()
+
+class Whale : Mammal()
 
 fun main() {
-//    val willy = Whale()
-//    assertThat(willy).isInstanceOf(Animal::class.java)
-//    assertThat(willy).isInstanceOf(Mammal::class.java)
-//    assertThat(willy).isInstanceOf(Whale::class.java)
+    val willy = Whale()
+    assertThat(willy).isInstanceOf(Animal::class.java)
+    assertThat(willy).isInstanceOf(Mammal::class.java)
+    assertThat(willy).isInstanceOf(Whale::class.java)
 }
