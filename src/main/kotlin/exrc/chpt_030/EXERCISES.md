@@ -25,7 +25,7 @@ Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden ka
 
 ## e) Zoologie
 
-Grundlage: `src/main/kotlin/exrc/chpt_030/animals.kt`
+Grundlage: `src/main/kotlin/exrc/chpt_030/e_animals.kt`
 
 Bringen Sie die angegebenen Klassen in eine sinnvolle Vererbungshierarchie.
 
