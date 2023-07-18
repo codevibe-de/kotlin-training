@@ -56,6 +56,8 @@ Dann bitte die Tiere entsprechend die Interfaces implementieren lassen und notwe
 
 ## k) Extended Library
 
+Grundlage: `src/main/kotlin/exrc/chpt_030/k_extended-library.kt`
+
 Schauen Sie sich die bestehende `Library` Klasse an.
 
 Diese benötigt eine `Book` Klasse, um arbeiten zu können. Erstellen Sie bitte diese.
