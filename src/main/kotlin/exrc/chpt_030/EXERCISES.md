@@ -54,6 +54,11 @@ Die Interfaces sollen umprogrammiert werden, dass:
 
 Dann bitte die Tiere entsprechend die Interfaces implementieren lassen und notwendige Änderungen durchführen.
 
+PS:
+
+1. nicht alle Säugetiere haben Zähne, z.B. haben manche Wale keine Zähne (z.B. Blauwal)
+2. auch nicht alle Fische haben Zähne, z.B. haben Karpfen keine (zumindest nicht im Kiefer, was hier gemeint ist)
+
 ## k) Extended Library
 
 Grundlage: `src/main/kotlin/exrc/chpt_030/k_extended-library.kt`
