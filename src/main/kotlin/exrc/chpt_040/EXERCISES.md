@@ -23,11 +23,23 @@ Ziel soll sein, dass die Verarbeitungspipeline
 
 Grundlage: `src/main/kotlin/exrc/chpt_040/c_collection-operations.kt`
 
-Implementieren Sie in der oben genannten Datei eine Verarbeitungs-Pipeline auf Basis einer 
+Implementieren Sie in der oben genannten Datei eine Verarbeitungs-Pipeline auf Basis einer
 Liste oder Sequenz, welche den gleichen Output generiert wie oben in b).
 
-Nehmen Sie dafür die vorhandenen Collection-Operations wie 
+Nehmen Sie dafür die vorhandenen Collection-Operations wie
 
 * `filter()`
 * `map()`
 * `foreach()`
+
+## e) Reduzierung
+
+Sie sind nun mit komplexeren Daten konfrontiert. Als Input bekommen Sie eine Liste von Bestellungen, jede hat
+eine Menge an bestellten Produkt-Ids.
+
+Ihre Aufgabe ist es, diese in eine gesamthafte Menge an Ids zu bringen:
+
+`List<Order(productIds:Set<String>)> => Set<String>`
+
+Zusatzaufgabe: Konvertieren Sie den Input in eine `Map<String, Int>`, sodass für jede Id die Anzahl Bestellungen
+definiert ist.
