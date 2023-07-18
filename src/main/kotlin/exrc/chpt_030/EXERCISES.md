@@ -42,9 +42,7 @@ Stellen Sie sicher, dass Instanzen immer einen Prioritätswert haben und dass di
 
 ## i) Abstrakte Zoologie mit Schnittstellen
 
-Datei: `src/main/kotlin/exrc/chpt_030/i_animal-interfaces.kt`
-
-Ergänzen Sie die bestehenden Tierklassen um abstrakte Klassen und Interfaces.
+Datei: `src/main/kotlin/exrc/chpt_030/animal-interfaces.kt`
 
 Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten. Ggf. finden Sie noch andere
 Klassen, die ebenfalls abstrakt sein können.
@@ -56,14 +54,16 @@ Die Interfaces sollen umprogrammiert werden, dass:
 
 Dann bitte die Tiere entsprechend die Interfaces implementieren lassen und notwendige Änderungen durchführen.
 
-## k) Eine eigene BookMap
+## k) Extended Library
 
-Erstellen Sie eine Klasse `BookMap`, die von `Map` ableitet.
+Schauen Sie sich die bestehende `Library` Klasse an.
 
-Nutzen Sie diese, in der Übung wo wir Bücher gemappt haben.
+Diese benötigt eine `Book` Klasse, um arbeiten zu können. Erstellen Sie bitte diese.
 
-Schreiben Sie für die `BookMap` eine Extension-Function, die für eine beliebige Anzahl an Autoren-Namen all deren
-Bücher alphabetisch nach Titel sortiert zurückgibt (eine Liste für alle Autoren).
+Schreiben Sie dann für die `Library`  
+eine Extension-Function (z.B. weil wir diese Klasse nicht verändern können/wollen), die für alle Bücher eine Map
+berechnet, welche je Autor eine alphabetisch
+sortierte Liste seiner/ihrer Buch-Titel aggregiert.
 
 ## m) Römische Zahlen II
 
