@@ -11,10 +11,10 @@ fun main() {
     MultiConstr("123").happyDays()
     MultiConstr("123", "tom").apply { this.id }
 
-    println(SimpleSetter().name)
+    println(ClassWithGetterSetter().name)
 }
 
-class SimpleSetter {
+class ClassWithGetterSetter {
     var name: String = ""
         // these are the default get/set accessors
         get() {
@@ -25,15 +25,14 @@ class SimpleSetter {
         }
 }
 
-class SimpleSetter2 {
-    var name: String = ""   // default required
+class ClassWithSetter {
+    var name: String = validateName("") // default value
         set(value) {
-            field = if (value.isBlank()) "no-name" else name
+            field = validateName(value)
         }
 
-    init {
-        name = ""   // trigger logic in set()
-    }
+    private fun validateName(n: String) =
+        if (n.isBlank()) "no-name" else n
 }
 
 class NoBacking {

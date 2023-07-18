@@ -21,7 +21,7 @@ Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden ka
 
 * mit Angabe des darzustellenden Strings
 * aus Angabe eines `Char` und der Anzahl Wiederholungen, woraus der String gebildet wird
-* einem `Int` für den darzustellenden Unicode Charakter 
+* einem `Int` für den darzustellenden Unicode Charakter
 
 ## e) Zoologie
 
@@ -44,24 +44,28 @@ Stellen Sie sicher, dass Instanzen immer einen Prioritätswert haben und dass di
 
 Datei: `src/main/kotlin/exrc/chpt_030/animal-interfaces.kt`
 
-Ergänzen Sie die bestehenden Tierklassen um Interfaces. Die Interfaces erweitern Sie aber vorher noch, sodass:
+Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten. Ggf. finden Sie noch andere
+Klassen, die ebenfalls abstrakt sein können.
 
-* jedes Tier einen Namen haben kann (Property `name: String`)
+Die Interfaces sollen umprogrammiert werden, dass:
+
 * ein Tier mit Flossen weiß, wie viele dies sind (Property `finCount: Int`)
-* ein Tier mit Zähnen ein anderes beißen kann (Function `bite(animal:Animal)`)
+* ein Tier mit Zähnen ein anderes beißen kann (Function `bite(animal: Animal)`)
 
-Dies hat natürlich auch Auswirkungen auf die Klassen.
+Dann bitte die Tiere entsprechend die Interfaces implementieren lassen und notwendige Änderungen durchführen.
 
-Vielleicht finden Sie auch Verwendung für eine *abstrakte* Klasse.
+## k) Extended Library
 
-## k) Eine eigene BookMap
+Grundlage: `src/main/kotlin/exrc/chpt_030/k_extended-library.kt`
 
-Erstellen Sie eine Klasse `BookMap`, die von `Map` ableitet.
+Schauen Sie sich die bestehende `Library` Klasse an.
 
-Nutzen Sie diese, in der Übung wo wir Bücher gemappt haben.
+Diese benötigt eine `Book` Klasse, um arbeiten zu können. Erstellen Sie bitte diese.
 
-Schreiben Sie für die `BookMap` eine Extension-Function, die für eine beliebige Anzahl an Autoren-Namen all deren 
-Bücher alphabetisch nach Titel sortiert zurückgibt (eine Liste für alle Autoren).
+Schreiben Sie dann für die `Library`  
+eine Extension-Function (z.B. weil wir diese Klasse nicht verändern können/wollen), die für alle Bücher eine Map
+berechnet, welche je Autor eine alphabetisch
+sortierte Liste seiner/ihrer Buch-Titel aggregiert.
 
 ## m) Römische Zahlen II
 
