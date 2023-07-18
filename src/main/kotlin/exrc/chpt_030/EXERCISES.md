@@ -2,8 +2,10 @@
 
 ## a) Stack
 
+Grundlage: `src/main/kotlin/exrc/chpt_030/a_stack.kt`
+
 Schreiben Sie eine Klasse `Stack`, also eine Datenklasse, welche einen Stapel von
-Werten verwaltet. Dieser bietet folgende Methoden:
+`String` Werten verwaltet. Dieser bietet folgende Methoden:
 
 * `peek(): String` -- liefert den obersten Wert auf dem Stack
 * `push(v: String): Unit` -- legt einen Wert auf dem Stack ab
@@ -13,6 +15,8 @@ Gerne können Sie statt `String` auch einen generischen Typen `<T>` nehmen.
 
 ## c) Konstruktor
 
+Grundlage: `src/main/kotlin/exrc/chpt_030/c_constructor.kt`
+
 Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden kann:
 
 * mit Angabe des darzustellenden Strings
@@ -21,7 +25,7 @@ Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden ka
 
 ## e) Zoologie
 
-Datei: `src/main/kotlin/exrc/chpt_030/animals.kt`
+Grundlage: `src/main/kotlin/exrc/chpt_030/animals.kt`
 
 Bringen Sie die angegebenen Klassen in eine sinnvolle Vererbungshierarchie.
 
