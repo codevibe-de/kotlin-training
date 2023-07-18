@@ -32,6 +32,5 @@ enum class OperatorType : BinaryOperator<Int> {
 }
 
 fun main() {
-    val f: BiFunction<Int, Int, Int> = OperatorType.SUM
-    f.apply(3,5)
+    OperatorType.SUM.apply(3, 5)
 }
