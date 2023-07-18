@@ -31,6 +31,8 @@ Bringen Sie die angegebenen Klassen in eine sinnvolle Vererbungshierarchie.
 
 ## g) Task
 
+Grundlage: `src/main/kotlin/exrc/chpt_030/g_task.kt`
+
 Schreiben Sie eine Klasse `Task`, welche einen Namen und eine optionale Priorität als `Byte` hat. Diese
 kann im Bereich 1-5 liegen. Standard ist 3.
 
