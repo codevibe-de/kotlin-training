@@ -21,7 +21,7 @@ Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden ka
 
 * mit Angabe des darzustellenden Strings
 * aus Angabe eines `Char` und der Anzahl Wiederholungen, woraus der String gebildet wird
-* einem `Int` für den darzustellenden Unicode Charakter 
+* einem `Int` für den darzustellenden Unicode Charakter
 
 ## e) Zoologie
 
@@ -42,17 +42,19 @@ Stellen Sie sicher, dass Instanzen immer einen Prioritätswert haben und dass di
 
 ## i) Abstrakte Zoologie mit Schnittstellen
 
-Datei: `src/main/kotlin/exrc/chpt_030/animal-interfaces.kt`
+Datei: `src/main/kotlin/exrc/chpt_030/i_animal-interfaces.kt`
 
-Ergänzen Sie die bestehenden Tierklassen um Interfaces. Die Interfaces erweitern Sie aber vorher noch, sodass:
+Ergänzen Sie die bestehenden Tierklassen um abstrakte Klassen und Interfaces.
 
-* jedes Tier einen Namen haben kann (Property `name: String`)
+Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten. Ggf. finden Sie noch andere
+Klassen, die ebenfalls abstrakt sein können.
+
+Die Interfaces sollen umprogrammiert werden, dass:
+
 * ein Tier mit Flossen weiß, wie viele dies sind (Property `finCount: Int`)
-* ein Tier mit Zähnen ein anderes beißen kann (Function `bite(animal:Animal)`)
+* ein Tier mit Zähnen ein anderes beißen kann (Function `bite(animal: Animal)`)
 
-Dies hat natürlich auch Auswirkungen auf die Klassen.
-
-Vielleicht finden Sie auch Verwendung für eine *abstrakte* Klasse.
+Dann bitte die Tiere entsprechend die Interfaces implementieren lassen und notwendige Änderungen durchführen.
 
 ## k) Eine eigene BookMap
 
@@ -60,7 +62,7 @@ Erstellen Sie eine Klasse `BookMap`, die von `Map` ableitet.
 
 Nutzen Sie diese, in der Übung wo wir Bücher gemappt haben.
 
-Schreiben Sie für die `BookMap` eine Extension-Function, die für eine beliebige Anzahl an Autoren-Namen all deren 
+Schreiben Sie für die `BookMap` eine Extension-Function, die für eine beliebige Anzahl an Autoren-Namen all deren
 Bücher alphabetisch nach Titel sortiert zurückgibt (eine Liste für alle Autoren).
 
 ## m) Römische Zahlen II
