@@ -104,3 +104,6 @@ Erweitern Sie die `Task` Klasse um ein `id` Property, welches mittels Delegation
 
 Bei der ersten Abfrage des Properties soll dieses einmalig als UUID berechnet werden.
 
+Gerne können Sie in einem `init{}` Block eine Ausgabe erzeugen, dass eine Instanz fertig ist und außerdem
+bei der Berechnung der id eine Ausgabe machen. So kann man sehen, was in welcher Reihenfolge passiert...
+

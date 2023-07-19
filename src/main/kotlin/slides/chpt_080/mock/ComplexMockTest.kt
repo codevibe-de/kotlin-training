@@ -15,19 +15,32 @@ class ComplexMockTest {
 
     @BeforeEach
     fun setup() {
-        repoMock = mockk<ProductRepository>()
+        repoMock = mockk<ProductRepository>(relaxed = true)
+        // relaxed mock doesn't require us to stub out save()
+
         val idSlot = slot<Int>()
-        every { repoMock.findById(less(1000, true)) } returns null
-        every { repoMock.findById(capture(idSlot)) } answers { Product(idSlot.captured, "Sample Product", 1.99) }
+        every { repoMock.findById(capture(idSlot)) } answers {
+            if (idSlot.captured >= 100) {
+                null
+            } else {
+                Product(idSlot.captured, "Sample Product", 1.99)
+            }
+        }
+
+//        val prdSlot = slot<Product>()
+//        every { repoMock.save(capture(prdSlot))} answers { prdSlot.captured }
+
         service = ServiceUnderTest(repoMock)
     }
 
     @Test
     fun `tests that product is saved`() {
         // when
-        service.createNew(Product(1, "New Product", 0.01))
+        service.createNew(Product(1234, "New Product", 0.01))
 
         // then
+        verify(exactly = 1) { repoMock.findById(1234) }
+        verify(exactly = 0) { repoMock.findById(neq(1234)) }
         verify { repoMock.save(any()) }
     }
 
@@ -46,7 +59,8 @@ interface ProductRepository {
 
 class ServiceUnderTest(private val productRepository: ProductRepository) {
     fun createNew(prd: Product) {
-        if (productRepository.findById(prd.id) == null) {
+        val existingPrd = productRepository.findById(prd.id)
+        if (existingPrd == null) {
             productRepository.save(prd)
         } else {
             throw IllegalStateException("Product with id ${prd.id} already exists")
@@ -59,3 +73,4 @@ data class Product(
     val title: String,
     val price: Double
 )
+
