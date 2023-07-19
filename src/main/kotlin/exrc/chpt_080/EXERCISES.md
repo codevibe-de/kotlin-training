@@ -16,7 +16,7 @@ Es gibt einen OrderService, der über einen `ProductApiClient` einen Drittservic
 
 Den API-Client wollen wir mocken, um die Geschäftslogik des Service zu testen:
 
-* bei der ersten Anfrage nach `isAvailable()` liefert der Client ein `false`, danach ein `true`
+* bei der ersten Anfrage nach `isAvailable()` liefert der Client ein `false`, danach ein `true` (Hint: `returnsMany()`)
 * die beiden vorhandenen Produkte sollen je Anfrage zurückgegeben werden
 
 Folgende Dinge sind zu tun:
