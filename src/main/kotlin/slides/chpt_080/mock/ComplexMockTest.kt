@@ -39,6 +39,8 @@ class ComplexMockTest {
         service.createNew(Product(1234, "New Product", 0.01))
 
         // then
+        verify(exactly = 1) { repoMock.findById(1234) }
+        verify(exactly = 0) { repoMock.findById(neq(1234)) }
         verify { repoMock.save(any()) }
     }
 
