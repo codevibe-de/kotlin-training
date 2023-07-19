@@ -3,8 +3,8 @@ package exrc.chpt_080
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
-import org.assertj.core.api.Assertions
 import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Assertions.catchException
 import org.assertj.core.data.Offset.offset
 import org.junit.jupiter.api.Test
 
@@ -23,7 +23,7 @@ class OrderServiceTest {
         val orderService = OrderService(productApiClient)
 
         // when
-        Assertions.catchException { orderService.calculateOrderTotal(listOf("P1", "P2")) }    // expect exception
+        catchException { orderService.calculateOrderTotal(listOf("P1", "P2")) }    // expect exception
         val total = orderService.calculateOrderTotal(listOf("P1", "P2")) // expect correct total
 
         // then
