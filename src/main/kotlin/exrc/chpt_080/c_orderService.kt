@@ -16,7 +16,8 @@ class OrderService(private val productApiClient: ProductApiClient) {
         if (!productApiClient.isAvailable()) {
             throw IllegalStateException("API-Client not available")
         }
-        // TODO calculate total by adding each product's price
-        return 0.0
+        return productIds
+            .map { productApiClient.getProduct(it).price }
+            .sum()
     }
 }
