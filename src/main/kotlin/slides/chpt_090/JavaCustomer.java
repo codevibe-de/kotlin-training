@@ -14,6 +14,8 @@ public class JavaCustomer {
     public Address getAddress() {
         return null;
     }
+
+    public void format(@NotNull String s) {}
 }
 
 class Address {
