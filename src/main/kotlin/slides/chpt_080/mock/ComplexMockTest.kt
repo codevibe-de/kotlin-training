@@ -19,13 +19,8 @@ class ComplexMockTest {
         // relaxed mock doesn't require us to stub out save()
 
         val idSlot = slot<Int>()
-        every { repoMock.findById(capture(idSlot)) } answers {
-            if (idSlot.captured >= 100) {
-                null
-            } else {
-                Product(idSlot.captured, "Sample Product", 1.99)
-            }
-        }
+        every { repoMock.findById(capture(idSlot)) } answers { Product(idSlot.captured, "Sample Product", 1.99) }
+        every { repoMock.findById(more(100, true)) } returns null
 
 //        val prdSlot = slot<Product>()
 //        every { repoMock.save(capture(prdSlot))} answers { prdSlot.captured }

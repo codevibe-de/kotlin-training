@@ -17,6 +17,6 @@ fun safeCast(obj: Any) {
 }
 
 fun safeCastToNull(obj: Any?) {
-    val s: String? = obj as? String?
+    val s: String? = obj as String?
     println(s)
 }
