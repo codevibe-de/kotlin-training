@@ -4,7 +4,9 @@ val n = 42
 val answer = "The answer is $n"
 
 val s = "abc"
-val analysis = "The string `%s` has length ${s.length}."
+val analysis = "The string '$s' has length ${s.length}."
+
+val someExpr = "\$name" // $name
 
 
 val longAnswer = """
@@ -21,5 +23,7 @@ fun getAnswer(): Int {
 
 fun main() {
     println(longAnswer)
+    println(analysis)
+    println(someExpr)
 }
 

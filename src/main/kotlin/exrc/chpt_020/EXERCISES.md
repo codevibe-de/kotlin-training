@@ -1,35 +1,8 @@
 # Übungen zum Kapitel "Syntax"
 
-## a) Memo
-
-Lassen Sie einen Multi-Line String ausgeben (für Ihr persönliches Memorandum), in dem Sie folgende Inhalte per Template
-Expressions einfügen:
-
-* Konstanten
-* Variablen
-* Rückgabe von Funktionsaufrufen
-
-## b) Argumente parsen
-
-Schreiben Sie ein Programm, welchem Kommandozeilenargumente in der Form `<value>:<type>` übergeben werden können, wie
-z.B. "123:Int" und "true:Boolean".
-
-Ihr Programm soll diese Paare aufsplitten und dann je nach Typangabe in die entsprechende native Form umwandeln und
-diesen dann als Erfolgsmeldung ausgeben.
-
-Aufsplitten geht z.B. mittels folgender Anweisung. Dieses nutzt "Destructuring", was wir später noch
-ausführlich kennenlernen:
-
-````kotlin
-val parts = arg.split(":")
-val (value, type) = parts
-````
-
-Beim Parsen auftretende Fehler lassen wir unbehandelt auftreten.
-
 ## c) Bücherei
 
-Sie beginnen die Geschäftslogik für eine Bücherei zu entwickeln.
+Sie beginnen die Geschäftslogik für eine Bücherei (Klasse `Library`) zu entwickeln.
 
 Dabei ist der zentrale Bestandteil die Funktion `addBook`, die folgende Parameter verarbeiten kann:
 
@@ -38,14 +11,32 @@ Dabei ist der zentrale Bestandteil die Funktion `addBook`, die folgende Paramete
 * `price: Float`, erforderlich
 * `author: String`, optional, Default-Wert "??"
 
-Der Methodenkörper macht vorerst nur ein einfaches `println` mit den Parametern.
+Der Methodenkörper macht vorerst nur ein einfaches `println` mit den Parametern. Hier können Sie einen
+einzeiligen oder auch mehrzeiligen String zusammenbasteln :)
 
-Rufen Sie die Methode mit folgenden Argument-Kombinationen auf:
+Nun rufen Sie die Methode mit folgenden Argument-Kombinationen auf:
 
-* für alle Parameter
-* title, isbn, price
-* title, price
-* title, price, author (dabei jedes der drei Argumente benennen)
+* alle Parameter 
+* nur title, isbn, price
+* nur title, price
+* nur title, price, author (dabei jedes der drei Argumente benennen)
+
+### Bonus:
+
+Erlauben Sie, dass ein oder mehrere Bücher per Kommandozeilenparameter definiert werden können. Dies
+kann im Format `<title>:<price>` erfolgen.
+
+Ihr Programm soll diese Paare aufsplitten und daraus Funktionsaufrufe generieren.
+
+Aufsplitten geht z.B. mittels folgender Anweisung. Dieses nutzt "Destructuring", was wir später noch
+ausführlich kennenlernen:
+
+````kotlin
+val parts = arg.split(":")
+val (titleString, priceString) = parts
+````
+
+Beim Parsen auftretende Fehler lassen wir noch unbehandelt auftreten.
 
 ## d) Fehlerbehandlung beim Argumente parsen
 
