@@ -1,5 +1,14 @@
 # Übungen zum Kapitel "Syntax"
 
+## a) Vielfache von 3 und 5
+
+Schreiben Sie ein Programm, welches für alle Zahlen unterhalb einer gegebenen Obergrenze die Zahlen addiert, die
+entweder durch 3 oder 5 teilbar sind. Ist eine Zahl durch beides teilbar, so wird diese nur einmal gezählt.
+
+````text
+addUp(10) = 23    // da 3 + 5 + 6 + 9
+````
+
 ## c) Bücherei
 
 Sie beginnen die Geschäftslogik für eine Bücherei (Klasse `Library`) zu entwickeln.
@@ -36,12 +45,7 @@ val parts = arg.split(":")
 val (titleString, priceString) = parts
 ````
 
-Beim Parsen auftretende Fehler lassen wir noch unbehandelt auftreten.
-
-## d) Fehlerbehandlung beim Argumente parsen
-
-Ergänzen Sie nun den Argumente-Parser von vorhin um eine Fehlerbehandlung, sodass fehlerhafte Werte übersprungen und die
-danach folgenden doch noch geparst werden.
+Beim Parsen auftretende Fehler können Sie gerne behandeln.
 
 ## e) Statistik
 
@@ -79,7 +83,7 @@ Schreiben Sie die zwei Funktionen, welche für jeden Anwendungsfall eine `Map` e
 
 Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet.
 
-## i) Bücherei Import
+### Bonus:
 
 Wir lesen eine Liste an Büchern von einer suboptimal konzipierten CSV Datei ein.
 

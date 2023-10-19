@@ -19,6 +19,12 @@ Schauen Sie in dem Order `out/production/kotlin-training/exrc/chpt_010` nach der
 
 Dann: Menü > Tools > Kotlin > Decompile to Java
 
+## Änderung der Kotlin Version
+
+Ändern Sie die Kotlin Compiler Version über die globalen Settings.
+
+Ändern Sie die Version der Kotlin Runtime Library über die Modul-Settings.
+
 ## Kotlin Compiler (optional)
 
 Installieren Sie den Kotlin Compiler.
