@@ -1,35 +1,17 @@
 # Übungen zum Kapitel "Syntax"
 
-## a) Memo
+## a) Vielfache von 3 und 5
 
-Lassen Sie einen Multi-Line String ausgeben (für Ihr persönliches Memorandum), in dem Sie folgende Inhalte per Template
-Expressions einfügen:
+Schreiben Sie ein Programm, welches für alle Zahlen unterhalb einer gegebenen Obergrenze die Zahlen addiert, die
+entweder durch 3 oder 5 teilbar sind. Ist eine Zahl durch beides teilbar, so wird diese nur einmal gezählt.
 
-* Konstanten
-* Variablen
-* Rückgabe von Funktionsaufrufen
-
-## b) Argumente parsen
-
-Schreiben Sie ein Programm, welchem Kommandozeilenargumente in der Form `<value>:<type>` übergeben werden können, wie
-z.B. "123:Int" und "true:Boolean".
-
-Ihr Programm soll diese Paare aufsplitten und dann je nach Typangabe in die entsprechende native Form umwandeln und
-diesen dann als Erfolgsmeldung ausgeben.
-
-Aufsplitten geht z.B. mittels folgender Anweisung. Dieses nutzt "Destructuring", was wir später noch
-ausführlich kennenlernen:
-
-````kotlin
-val parts = arg.split(":")
-val (value, type) = parts
+````text
+addUp(10) = 23    // da 3 + 5 + 6 + 9
 ````
-
-Beim Parsen auftretende Fehler lassen wir unbehandelt auftreten.
 
 ## c) Bücherei
 
-Sie beginnen die Geschäftslogik für eine Bücherei zu entwickeln.
+Sie beginnen die Geschäftslogik für eine Bücherei (Klasse `Library`) zu entwickeln.
 
 Dabei ist der zentrale Bestandteil die Funktion `addBook`, die folgende Parameter verarbeiten kann:
 
@@ -38,19 +20,32 @@ Dabei ist der zentrale Bestandteil die Funktion `addBook`, die folgende Paramete
 * `price: Float`, erforderlich
 * `author: String`, optional, Default-Wert "??"
 
-Der Methodenkörper macht vorerst nur ein einfaches `println` mit den Parametern.
+Der Methodenkörper macht vorerst nur ein einfaches `println` mit den Parametern. Hier können Sie einen
+einzeiligen oder auch mehrzeiligen String zusammenbasteln :)
 
-Rufen Sie die Methode mit folgenden Argument-Kombinationen auf:
+Nun rufen Sie die Methode mit folgenden Argument-Kombinationen auf:
 
-* für alle Parameter
-* title, isbn, price
-* title, price
-* title, price, author (dabei jedes der drei Argumente benennen)
+* alle Parameter 
+* nur title, isbn, price
+* nur title, price
+* nur title, price, author (dabei jedes der drei Argumente benennen)
 
-## d) Fehlerbehandlung beim Argumente parsen
+### Bonus:
 
-Ergänzen Sie nun den Argumente-Parser von vorhin um eine Fehlerbehandlung, sodass fehlerhafte Werte übersprungen und die
-danach folgenden doch noch geparst werden.
+Erlauben Sie, dass ein oder mehrere Bücher per Kommandozeilenparameter definiert werden können. Dies
+kann im Format `<title>:<price>` erfolgen.
+
+Ihr Programm soll diese Paare aufsplitten und daraus Funktionsaufrufe generieren.
+
+Aufsplitten geht z.B. mittels folgender Anweisung. Dieses nutzt "Destructuring", was wir später noch
+ausführlich kennenlernen:
+
+````kotlin
+val parts = arg.split(":")
+val (titleString, priceString) = parts
+````
+
+Beim Parsen auftretende Fehler können Sie gerne behandeln.
 
 ## e) Statistik
 
@@ -88,7 +83,7 @@ Schreiben Sie die zwei Funktionen, welche für jeden Anwendungsfall eine `Map` e
 
 Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet.
 
-## i) Bücherei Import
+### Bonus:
 
 Wir lesen eine Liste an Büchern von einer suboptimal konzipierten CSV Datei ein.
 
