@@ -6,12 +6,13 @@ Schreiben Sie ein Programm, welches für alle Zahlen unterhalb einer gegebenen O
 entweder durch 3 oder 5 teilbar sind. Ist eine Zahl durch beides teilbar, so wird diese nur einmal gezählt.
 
 ````text
+addUp(3) = 0
 addUp(10) = 23    // da 3 + 5 + 6 + 9
 ````
 
 ## c) Bücherei
 
-Sie beginnen die Geschäftslogik für eine Bücherei (Klasse `Library`) zu entwickeln.
+Sie beginnen die Geschäftslogik für eine Bücherei zu entwickeln.
 
 Dabei ist der zentrale Bestandteil die Funktion `addBook`, die folgende Parameter verarbeiten kann:
 
@@ -25,7 +26,7 @@ einzeiligen oder auch mehrzeiligen String zusammenbasteln :)
 
 Nun rufen Sie die Methode mit folgenden Argument-Kombinationen auf:
 
-* alle Parameter 
+* alle Parameter
 * nur title, isbn, price
 * nur title, price
 * nur title, price, author (dabei jedes der drei Argumente benennen)
@@ -79,7 +80,7 @@ Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Art
 * ein 1:1 Mapping von ISBN auf Buchtitel
 * ein 1:n Mapping von einem Autor auf seine Bücher (Titel)
 
-Schreiben Sie die zwei Funktionen, welche für jeden Anwendungsfall eine `Map` erstellt. 
+Schreiben Sie die zwei Funktionen, welche für jeden Anwendungsfall eine `Map` erstellt.
 
 Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet.
 
@@ -87,26 +88,30 @@ Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collection
 
 Wir lesen eine Liste an Büchern von einer suboptimal konzipierten CSV Datei ein.
 
-Diese finden Sie im Projekt unter dem Namen `books.csv`. Jede Zeile hat folgendes Format:
+Diese finden Sie im Projekt unter dem Namen `books.csv`. Jede Zeile hat folgendes Format (die
+Zeichen "<" und ">" sind kein Literal und gehören zum Platzhalter):
 
 ````text
 <isbn>,<title> (<author>),"<price>","<description>"
 ````
 
 Lesen Sie die Datei Zeile für Zeile ein (z.B. mit `File.readLines()`) und extrahieren Sie die
-notwendigen Informationen, um das Buch der Bücherei hinzuzufügen.
+notwendigen Informationen, um das Buch der Bücherei hinzuzufügen. Dies kann geschickt mit einer `Regex`
+erfolgen, die Sie z.B. mit https://regex101.com/ entwickeln können.
 
-## j) Binnenmajuskel
+## j) Extension Functions
 
-Erstellen Sie eine Extension Function für den Typ `String`, der die Zeichenkette in Camelcase formatiert zurückgibt.
+Sie können sich an drei möglichen Extension Functions für den Typ `String` austoben:
 
-Also aus "Wir lernen Kotlin" wird "WirLernenKotlin".
+1. Zählen der Anzahl Vokale (inklusive Umlaute) 
+2. Umwandlung in Camelcase ("Wir lernen Kotlin" wird zu "WirLernenKotlin")
+3. Einfügen eines Leerzeichens zwischen jedem Buchstaben ("Hallo" wird zu "H a l l o")
 
 Hinweise:
 
 * einen `String` splitten: `String.split()`
-* auf einen `Char` eines Strings zugreifen: `str[0]`
-* sowohl `String` als auch `Char` bieten Funktionen zur Umwandlung der Groß-/Kleinschreibung
-
-PS https://de.wikipedia.org/wiki/Binnenmajuskel :D
+* auf einen `Char` eines Strings zugreifen mit `str[0]` oder mittels `for(c in string)` auf dem String
+  (denn ein String ist mittels Index-Operator iterierbar)
+* sowohl `String` als auch `Char` bieten Funktionen zur Umwandlung der Groß-/Kleinschreibung, aber bei
+einem `Char` ist der Rückgabewert dann ein `String`!
 
