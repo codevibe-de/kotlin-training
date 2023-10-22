@@ -6,7 +6,7 @@ fun addBook(
     price: Float,
     author: String = "??"
 ) {
-    var output = """
+    val output = """
             ADDING BOOK '$title'
             - written by $author
             - ISBN $isbn
