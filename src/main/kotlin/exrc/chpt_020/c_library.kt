@@ -1,21 +1,5 @@
 package exrc.chpt_020
 
-fun addBook(
-    title: String,
-    isbn: String = "?",
-    price: Float,
-    author: String = "??"
-) {
-    val output = """
-            ADDING BOOK '$title'
-            - written by $author
-            - ISBN $isbn
-            - price $price
-          """.trimIndent()
-    println()
-    println(output)
-}
-
 fun main(args: Array<String>) {
     addBook("Stark", "123-123", 7.99f, "Ben Elton")
     addBook("Stark", "123-123", 7.99f)
@@ -33,3 +17,21 @@ fun main(args: Array<String>) {
         }
     }
 }
+
+
+fun addBook(
+    title: String,
+    isbn: String = "?",
+    price: Float,
+    author: String = "??"
+) {
+    val output = """
+            ADDING BOOK '$title'
+            - written by $author
+            - ISBN $isbn
+            - price $price
+          """.trimIndent()
+    println()
+    println(output)
+}
+
