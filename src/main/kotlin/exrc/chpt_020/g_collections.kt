@@ -1,7 +1,10 @@
 package exrc.chpt_020
 
-val booksByIsbn = mutableMapOf<String,String>()
-val booksByAuthor = mutableMapOf<String,MutableList<String>>()
+import java.io.File
+
+val bookTitlesByIsbn = mutableMapOf<String,String>()
+val bookTitlesByAuthor = mutableMapOf<String,MutableList<String>>()
+
 
 fun main() {
     addBook2("Stark", "123-123", 7.99f, "Ben Elton")
@@ -9,9 +12,12 @@ fun main() {
     addBook2("My Life", "555-144", 0.99f, "Kate Perry")
     addBook2("Kotlin Design Patterns", "978-1801815727", 30.99f, "Alexey Soshin")
 
-    println(booksByIsbn)
-    println(booksByAuthor)
+    readBooksCsv("./src/main/kotlin/exrc/chpt_020/books.csv")
+
+    println(bookTitlesByIsbn)
+    println(bookTitlesByAuthor)
 }
+
 
 fun addBook2(
     title: String,
@@ -19,11 +25,29 @@ fun addBook2(
     price: Float,
     author: String = "??"
 ) {
-    println("Adding book '$title' (written by $author), having ISBN $isbn and price $price")
-    booksByIsbn[isbn] = title
-    if (!booksByAuthor.containsKey(author)) {
-        booksByAuthor[author] = mutableListOf()
+    println("Adding book '$title' written by $author")
+    // title mapping is 1:1
+    bookTitlesByIsbn[isbn] = title
+    // author mapping is 1:n -- the if-statement below can be simplified with lambdas later...
+    if (!bookTitlesByAuthor.containsKey(author)) {
+        bookTitlesByAuthor[author] = mutableListOf()
     }
-    booksByAuthor[author]!!.add(title)
+    bookTitlesByAuthor[author]!!.add(title)
 }
 
+
+fun readBooksCsv(filename:String) {
+    var csvFile = File(filename)
+    var regex = Regex(pattern = """([\d-]+),([\w\s]+) \(([\w\s]*)\),"([\d.]*)","([^"]*)"""")
+    for (line in csvFile.readLines()) {
+        val result = regex.find(line)
+        if (result != null) {
+            addBook2(
+                title = result.groupValues[2],
+                isbn = result.groupValues[1],
+                price = result.groupValues[4].toFloat(),
+                author = result.groupValues[3]
+            )
+        }
+    }
+}
