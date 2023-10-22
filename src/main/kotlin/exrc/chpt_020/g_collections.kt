@@ -37,8 +37,8 @@ fun addBook2(
 
 
 fun readBooksCsv(filename:String) {
-    var csvFile = File(filename)
-    var regex = Regex(pattern = """([\d-]+),([\w\s]+) \(([\w\s]*)\),"([\d.]*)","([^"]*)"""")
+    val csvFile = File(filename)
+    val regex = Regex(pattern = """([\d-]+),([\w\s]+) \(([\w\s]*)\),"([\d.]*)","([^"]*)"""")
     for (line in csvFile.readLines()) {
         val result = regex.find(line)
         if (result != null) {
