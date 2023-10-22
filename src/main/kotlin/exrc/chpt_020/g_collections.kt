@@ -6,9 +6,10 @@ fun main() {
     addBook2("My Life", "555-144", 0.99f, "Kate Perry")
     addBook2("Kotlin Design Patterns", "978-1801815727", 30.99f, "Alexey Soshin")
 
-//    println(booksByIsbn)
-//    println(booksByAuthor)
+//    println(bookTitlesByIsbn)
+//    println(bookTitlesByAuthor)
 }
+
 
 fun addBook2(
     title: String,
@@ -16,7 +17,7 @@ fun addBook2(
     price: Float,
     author: String = "??"
 ) {
-    println("Adding book '$title' (written by $author), having ISBN $isbn and price $price")
+    println("Adding book '$title' written by $author")
     // TODO
 }
 
