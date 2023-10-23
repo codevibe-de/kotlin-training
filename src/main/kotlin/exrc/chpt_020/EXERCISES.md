@@ -10,6 +10,9 @@ addUp(3) = 0
 addUp(10) = 23    // da 3 + 5 + 6 + 9
 ````
 
+Lambdas kommen erst später, Sie können diese Übung gerne noch ohne Lambdas entwickeln. Auch hierfür gibt es
+spannende Möglichkeiten :)
+
 ## c) Bücherei
 
 Sie beginnen die Geschäftslogik für eine Bücherei zu entwickeln.
@@ -95,7 +98,7 @@ Zeichen "<" und ">" sind kein Literal und gehören zum Platzhalter):
 <isbn>,<title> (<author>),"<price>","<description>"
 ````
 
-Lesen Sie die Datei Zeile für Zeile ein (z.B. mit `File.readLines()`) und extrahieren Sie die
+Lesen Sie die Datei Zeile für Zeile ein (siehe vordefinierte Funktion `readLinesFromFile()`) und extrahieren Sie die
 notwendigen Informationen, um das Buch der Bücherei hinzuzufügen. Dies kann geschickt mit einer `Regex`
 erfolgen, die Sie z.B. mit https://regex101.com/ entwickeln können.
 
@@ -103,7 +106,7 @@ erfolgen, die Sie z.B. mit https://regex101.com/ entwickeln können.
 
 Sie können sich an drei möglichen Extension Functions für den Typ `String` austoben:
 
-1. Zählen der Anzahl Vokale (inklusive Umlaute) 
+1. Zählen der Anzahl Vokale (inklusive Umlaute)
 2. Umwandlung in Camelcase ("Wir lernen Kotlin" wird zu "WirLernenKotlin")
 3. Einfügen eines Leerzeichens zwischen jedem Buchstaben ("Hallo" wird zu "H a l l o")
 
@@ -113,5 +116,5 @@ Hinweise:
 * auf einen `Char` eines Strings zugreifen mit `str[0]` oder mittels `for(c in string)` auf dem String
   (denn ein String ist mittels Index-Operator iterierbar)
 * sowohl `String` als auch `Char` bieten Funktionen zur Umwandlung der Groß-/Kleinschreibung, aber bei
-einem `Char` ist der Rückgabewert dann ein `String`!
+  einem `Char` ist der Rückgabewert dann ein `String`!
 

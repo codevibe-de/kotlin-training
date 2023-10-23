@@ -36,10 +36,13 @@ fun addBook2(
 }
 
 
+// filename must be relative to project root
+fun readLinesFromFile(filename:String): List<String> =
+    File(filename).readLines()
+
 fun readBooksCsv(filename:String) {
-    val csvFile = File(filename)
     val regex = Regex(pattern = """([\d-]+),([\w\s]+) \(([\w\s]*)\),"([\d.]*)","([^"]*)"""")
-    for (line in csvFile.readLines()) {
+    for (line in readLinesFromFile(filename)) {
         val result = regex.find(line)
         if (result != null) {
             addBook2(
