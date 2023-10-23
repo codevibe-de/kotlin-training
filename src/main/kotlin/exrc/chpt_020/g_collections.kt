@@ -1,5 +1,7 @@
 package exrc.chpt_020
 
+import java.io.File
+
 fun main() {
     addBook2("Stark", "123-123", 7.99f, "Ben Elton")
     addBook2("Time and Time Again", "978-0552779999", 11.30f, "Ben Elton")
@@ -21,3 +23,7 @@ fun addBook2(
     // TODO
 }
 
+
+// filename must be relative to project root
+fun readLinesFromFile(filename:String): List<String> =
+    File(filename).readLines()
