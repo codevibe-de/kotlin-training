@@ -1,10 +1,21 @@
 package slides.chpt_030_ood
 
-fun main() {
-    val (r, m) = ResultAndHint(123, "12 warnings, 2 errors")
-}
 
 data class ResultAndHint(val res: Int, val msg: String)
+
+
+fun main() {
+    val resultAndHint = ResultAndHint(12, "12 warnings")
+    val (r, m) = resultAndHint
+
+    // same as:
+    val r2 = resultAndHint.component1()
+    val m2 = resultAndHint.component2()
+
+    //
+    val (_, justTheHint) = resultAndHint
+}
+
 
 
 fun more() {

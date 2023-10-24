@@ -21,10 +21,10 @@ Ziel soll sein, dass die Verarbeitungspipeline
 
 ## d) Collection Pipeline
 
-Grundlage: `src/main/kotlin/exrc/chpt_040/c_collection-operations.kt`
+Grundlage: `src/main/kotlin/exrc/chpt_040/d_collection-operations.kt`
 
-Implementieren Sie in der oben genannten Datei eine Verarbeitungs-Pipeline auf Basis einer
-Liste oder Sequenz, welche den gleichen Output generiert wie oben in b).
+Implementieren Sie in der oben genannten Datei eine Verarbeitung-Pipeline auf Basis einer
+Liste oder Range, welche den gleichen Output generiert wie oben in b).
 
 Nehmen Sie dafür die vorhandenen Collection-Operations wie
 
@@ -41,5 +41,7 @@ Ihre Aufgabe ist es, diese in eine gesamthafte Menge an Ids zu bringen:
 
 `List<Order(productIds:Set<String>)> => Set<String>`
 
-Zusatzaufgabe: Konvertieren Sie den Input in eine `Map<String, Int>`, sodass für jede Id die Anzahl Bestellungen
+### Bonus
+
+Konvertieren Sie den Input in eine `Map<String, Int>`, sodass für jede Id die Anzahl Bestellungen
 definiert ist.
