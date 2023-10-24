@@ -53,15 +53,17 @@ einfach der `run()` Aufruf delegiert (denn: "don't work late, delegate!" :))
 
 Datei: `src/main/kotlin/exrc/chpt_030/animal-interfaces.kt`
 
-Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten. Ggf. finden Sie noch andere
-Klassen, die ebenfalls abstrakt sein können.
+Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten. 
 
-Die Interfaces sollen umprogrammiert werden, dass:
+Schreiben Sie Subklassen für Tiergattungen oder konkrete Tiere, die davon ableiten. Nutzen Sie
+die vorhandenen Interfaces, wenn dies für Ihre Gattung oder Tier relevant ist.
+
+Ideen: `Mammal`, `Fish`, `Shark`, `BlueWhale`, `Orca`, `Lion` 
+
+Die Interfaces sollen erweitert werden, sodass:
 
 * ein Tier mit Flossen weiß, wie viele dies sind (Property `finCount: Int`)
 * ein Tier mit Zähnen ein anderes beißen kann (Function `bite(animal: Animal)`)
-
-Dann bitte die Tiere entsprechend die Interfaces implementieren lassen und notwendige Änderungen durchführen.
 
 PS:
 
@@ -110,6 +112,8 @@ Instanzen (unten als "V" dargestellt) sollen mittels folgender Operatoren verarb
 ## r) Lazy Id
 
 Erweitern Sie die `Task` Klasse um ein `id` Property, welches mittels Delegation "lazy" erzeugt wird.
+
+https://www.baeldung.com/kotlin/late-vs-lazy-init#lazy-initialization
 
 Bei der ersten Abfrage des Properties soll dieses einmalig als UUID berechnet werden.
 
