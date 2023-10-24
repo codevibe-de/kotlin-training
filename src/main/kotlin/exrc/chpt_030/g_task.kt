@@ -19,7 +19,7 @@ class Task(
             field = validPriority(value)
         }
 
-    private fun validPriority(p: Byte) = p.coerceIn(MIN_PRIO..MAX_PRIO)
+    private fun validPriority(p: Byte) = p.coerceIn(MIN_PRIO, MAX_PRIO)
 
     companion object {
         const val MIN_PRIO: Byte = 1
