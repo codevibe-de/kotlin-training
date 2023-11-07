@@ -43,7 +43,8 @@ Stellen Sie sicher, dass Instanzen immer einen Prioritätswert haben und dass di
 ### Bonus:
 
 Lassen Sie den Task das Interface `Runnable` implementieren -- nun muss der Task an sich aber auch abstrakt
-werden.
+werden. Das Thema hatten wir noch nicht, ist aber nicht schwer: Einfach wie in Java `abstract` vor den Klassennamen
+schreiben.
 
 Schreiben Sie dann eine Klasse `DelegatingTask` welche als zusätzlichen Konstruktor-Parameter eine andere
 `Runnable` Instanz erhalten kann. In der `run()` Funktion vom `DelegatingTask` wird dann an dieses andere `Runnable`
