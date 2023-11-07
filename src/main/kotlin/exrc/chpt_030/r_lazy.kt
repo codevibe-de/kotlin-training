@@ -2,32 +2,35 @@ package exrc.chpt_030
 
 import java.util.UUID
 
+
 fun main() {
-    val task = IdentifiableTask("test")
-    println(task)
-    println(task.id)
+    val task = IdentifiableTask("clean desk", IdentifiableTask.MIN_PRIO)
+    println(task.name + "\t" + task.id)
 }
 
-
 class IdentifiableTask(
-    val name: String,
-    initialPriority: Byte = DEFAULT_PRIO
+    val name:String,
+    initialPriority: Int = DEFAULT_PRIO
 ) {
-    var priority: Byte = validPriority(initialPriority)
+    var priority: Int = validPriority(initialPriority)
         set(value) {
             field = validPriority(value)
         }
 
-    val id by lazy {
-        println("Generating id...")
+    val id: String by lazy {
+        println("generating id...")
         UUID.randomUUID().toString()
     }
 
-    private fun validPriority(p: Byte) = p.coerceIn(MIN_PRIO, MAX_PRIO)
+    init {
+        println("task initialized")
+    }
+
+    private fun validPriority(p: Int) = p.coerceIn(MIN_PRIO..MAX_PRIO)
 
     companion object {
-        const val MIN_PRIO: Byte = 1
-        const val MAX_PRIO: Byte = 5
-        const val DEFAULT_PRIO: Byte = 3
+        const val MIN_PRIO = 1
+        const val MAX_PRIO = 5
+        const val DEFAULT_PRIO = 3
     }
 }
