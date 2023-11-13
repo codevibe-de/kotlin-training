@@ -1,5 +1,17 @@
 package slides.chpt_030_ood
 
+class Fish constructor(
+    name: String,
+    age: Int
+)
+
+class Fish2(
+    val name: String
+) {
+    var age: Int = 0
+}
+
+
 class Animal(
     val name: String,
     val length: Int   // cm
