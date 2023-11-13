@@ -13,5 +13,5 @@ class SuperString(val value: String) {
 fun main() {
     println(SuperString("hallo"))
     println(SuperString('-', 30))
-    println(SuperString(3000))
+    println(SuperString(408)) // LATIN CAPITAL LETTER K WITH HOOK
 }
