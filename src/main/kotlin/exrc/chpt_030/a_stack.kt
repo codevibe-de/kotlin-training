@@ -3,16 +3,12 @@ package exrc.chpt_030
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.assertThatExceptionOfType
 
-class Stack<T> {
-
-    private val _items = mutableListOf<T>()
-
-    fun push(item: T) = _items.add(item)
-
-    fun peek() = _items.last()
-
-    fun pop() = _items.removeLast()
-
+class Stack<T>(
+    private val items: MutableList<T> = mutableListOf()
+) {
+    fun push(item: T) = items.add(item)
+    fun peek() = items.last()
+    fun pop() = items.removeLast()
 }
 
 fun main() {
