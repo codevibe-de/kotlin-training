@@ -24,6 +24,9 @@ fun main2() {
     for (i in 1..3) {
         println(i)
     }
+    for (i in 1 until 4) {
+        println(i)
+    }
 
     for (i in 6 downTo 0 step 2) {
         println(i)
