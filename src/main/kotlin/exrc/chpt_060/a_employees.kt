@@ -37,16 +37,16 @@ fun main() {
     val fred = FreelanceEmployee(freelanceId = "X233", hoursPerMonth = 120, hourlyRate = 80, supervisor = kate)
     val bruce = HiredEmployee("Lee", salary = 65_000, fred)
     val angie = FreelanceEmployee(freelanceId = "A002", hoursPerMonth = 50, hourlyRate = 80, supervisor = fred)
-    
+
     val employees = listOf(kate, fred, bruce, angie)
-    
+
     showMonthlyPayouts(employees)
     employees.forEach(::printOverallSupervisor)
 }
 
 
 val identifierProducer: (Employee) -> String = {
-    when(it) {
+    when (it) {
         is FreelanceEmployee -> it.freelanceId
         is HiredEmployee -> it.lastName
     }
@@ -58,10 +58,11 @@ val identifierProducer: (Employee) -> String = {
  */
 fun showMonthlyPayouts(employees: List<Employee>) {
     val map: Map<String, List<Employee>> = employees.groupBy {
-        when(it) {
+        when (it) {
             is FreelanceEmployee -> it.freelanceId
             is HiredEmployee -> it.lastName
-        } }
+        }
+    }
 }
 
 

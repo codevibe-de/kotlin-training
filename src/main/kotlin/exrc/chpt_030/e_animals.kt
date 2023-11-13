@@ -1,7 +1,5 @@
 package exrc.chpt_030
 
-import org.assertj.core.api.Assertions.assertThat
-
 class Carp
 
 class Fish

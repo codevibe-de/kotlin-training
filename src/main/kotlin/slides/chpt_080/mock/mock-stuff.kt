@@ -10,7 +10,7 @@ fun main() {
 
     // same effect ("do nothing"):
     every { service.printNames(any()) } returns Unit
-    every { service.printNames(any()) } answers { Unit }
+    every { service.printNames(any()) } answers { }
     every { service.printNames(any()) } just runs
 
     // calls actual implementation:

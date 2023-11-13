@@ -1,12 +1,8 @@
 package exrc.chpt_080
 
 import io.mockk.mockk
-import io.mockk.verify
-import org.assertj.core.api.Assertions
 import org.assertj.core.api.Assertions.assertThat
-import org.assertj.core.data.Offset
 import org.assertj.core.data.Offset.offset
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class OrderServiceTest {

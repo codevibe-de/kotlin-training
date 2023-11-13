@@ -7,11 +7,7 @@ interface UserRepository {
     fun findByUsername(id: String)
 }
 
-class JpaUserRepository(
-    // entityManager
-    // schema files
-    // caches
-) : UserRepository {
+class JpaUserRepository : UserRepository {
 
     override fun save(u: User) {
         // complex implementation

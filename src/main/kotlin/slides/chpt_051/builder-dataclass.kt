@@ -5,8 +5,7 @@ data class Person2(
     val lastName: String,
     val age: Int = 0,
     val middleName: String = "",
-) {
-}
+)
 
 fun main() {
     val p = Person2(

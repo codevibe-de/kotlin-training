@@ -13,7 +13,7 @@ object NameRegistry {
         return names[inst] ?: "unnamed"
     }
 
-    fun registerName(inst: Any, name:String) {
+    fun registerName(inst: Any, name: String) {
         names[inst] = name
     }
 }

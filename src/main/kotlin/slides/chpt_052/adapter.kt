@@ -13,5 +13,4 @@ fun main() {
 }
 
 // adapts from USB-A to USB-C
-class Adapter(private val usbA: UsbA) : UsbC {
-}
+class Adapter(private val usbA: UsbA) : UsbC

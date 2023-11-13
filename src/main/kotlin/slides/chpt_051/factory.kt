@@ -32,8 +32,6 @@ fun main() {
 }
 
 
-class Marine : Infantry {
-}
+class Marine : Infantry
 
-class Firebat : Infantry {
-}
+class Firebat : Infantry

@@ -1,6 +1,6 @@
 package slides.chpt_030_ood
 
-class Foo() {
+class Foo {
     val settings = object : SettingsProvider {
         override val flagThis = true
         override val flagThat = false

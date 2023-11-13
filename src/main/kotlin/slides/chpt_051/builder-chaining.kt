@@ -1,7 +1,7 @@
 package slides.chpt_051
 
 
-class Person() {
+class Person {
     var name = ""
     var age = 0
 

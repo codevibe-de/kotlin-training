@@ -9,8 +9,7 @@ fun main() {
         bad()
     } catch (e: CalculationException) {
         println("giving up")
-    }
-    finally {
+    } finally {
         // do something clever
     }
 }

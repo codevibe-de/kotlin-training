@@ -1,9 +1,9 @@
 package slides.chpt_030_ood
 
-infix fun Boolean.entwederOder(that:Boolean) = this.xor(that)
+infix fun Boolean.entwederOder(that: Boolean) = this.xor(that)
 
-class Student(name:String) {
-    infix fun isEnrolledIn(courseId:String) = false
+class Student(name: String) {
+    infix fun isEnrolledIn(courseId: String) = false
 }
 
 fun main() {

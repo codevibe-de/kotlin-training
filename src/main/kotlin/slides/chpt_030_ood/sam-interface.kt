@@ -11,5 +11,5 @@ fun main() {
         }
     }
 
-    val p2 = IntPredicate{ n -> n % 2 == 0}
+    val p2 = IntPredicate { n -> n % 2 == 0 }
 }

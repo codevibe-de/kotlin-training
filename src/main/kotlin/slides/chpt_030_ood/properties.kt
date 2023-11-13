@@ -1,6 +1,6 @@
 package slides.chpt_030_ood
 
-import java.util.UUID
+import java.util.*
 
 class Product(
     var name: String,

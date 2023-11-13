@@ -8,6 +8,6 @@ fun main() {
     k.forEach(consumer::apply) // instance function
 }
 
-class Consumer() {
-    fun apply(d:Double) = println(d)
+class Consumer {
+    fun apply(d: Double) = println(d)
 }

@@ -1,6 +1,5 @@
 package slides.chpt_030_ood
 
-import java.util.function.BiFunction
 import java.util.function.BinaryOperator
 
 enum class Priority {

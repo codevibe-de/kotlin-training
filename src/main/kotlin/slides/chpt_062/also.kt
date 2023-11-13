@@ -7,7 +7,7 @@ import slides.chpt_020.toBinary
 class ResultsList {
     val results = mutableListOf<String>()
 
-    fun addItem(n:Int) =
+    fun addItem(n: Int) =
         // we have both this and it
         n.toBinary().also { this.results.add(it) }
 }

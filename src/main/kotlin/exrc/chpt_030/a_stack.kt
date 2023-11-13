@@ -1,8 +1,5 @@
 package exrc.chpt_030
 
-import org.assertj.core.api.Assertions.assertThat
-import org.assertj.core.api.Assertions.assertThatExceptionOfType
-
 fun main() {
 //    val stack = Stack() // oder Stack<String>()
 //    stack.push("a")

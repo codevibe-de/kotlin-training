@@ -1,6 +1,6 @@
 package exrc.chpt_080
 
-class FactorialCalculator() {
+class FactorialCalculator {
 
     fun factorial(n: Int): Int {
         return when {

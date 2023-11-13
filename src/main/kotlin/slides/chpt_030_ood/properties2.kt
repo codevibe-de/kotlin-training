@@ -10,13 +10,6 @@ fun main() {
 
 class ClassWithGetterSetter {
     var name: String = ""
-        // these are the default get/set accessors
-        get() {
-            return field
-        }
-        set(value) {
-            field = value
-        }
 }
 
 
@@ -39,7 +32,7 @@ class ClassWithSetter {
 
 open class BaseClass {
     open var property: String = "default"
-        set(v:String) {
+        set(v: String) {
             field = if (v.isBlank()) "default" else v
         }
 }
@@ -47,5 +40,7 @@ open class BaseClass {
 class SubClass : BaseClass() {
     override var property: String
         get() = super.property + "X"
-        set(value) { super.property = value.uppercase() }
+        set(value) {
+            super.property = value.uppercase()
+        }
 }

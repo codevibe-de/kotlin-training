@@ -10,7 +10,7 @@ class Turtle {
 }
 
 fun main() {
-    Turtle().run() { //draw a 100 pix square
+    Turtle().run { //draw a 100 pix square
         penDown()
         for (i in 1..4) {
             forward(100.0)
