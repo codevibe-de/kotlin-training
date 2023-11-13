@@ -20,7 +20,7 @@ fun Library.titlesByAuthor(): Map<String, List<String>> {
         }
         result[b.author]!!.add(b.title)
     }
-    for ((_,v) in result) {
+    for ((_, v) in result) {
         v.sort()
     }
     return result

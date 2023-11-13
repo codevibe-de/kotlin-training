@@ -1,10 +1,10 @@
 package exrc.chpt_030
 
-class SuperString(val value:String) {
+class SuperString(val value: String) {
 
-    constructor(ch:Char, count:Int) : this(ch.toString().repeat(count))
+    constructor(ch: Char, count: Int) : this(ch.toString().repeat(count))
 
-    constructor(unicode:Int) : this(unicode.toChar().toString())
+    constructor(unicode: Int) : this(unicode.toChar().toString())
 
     override fun toString() = value
 

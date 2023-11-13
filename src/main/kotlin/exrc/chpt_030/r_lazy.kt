@@ -1,6 +1,6 @@
 package exrc.chpt_030
 
-import java.util.UUID
+import java.util.*
 
 
 fun main() {
@@ -9,7 +9,7 @@ fun main() {
 }
 
 class IdentifiableTask(
-    val name:String,
+    val name: String,
     initialPriority: Int = DEFAULT_PRIO
 ) {
     var priority: Int = validPriority(initialPriority)

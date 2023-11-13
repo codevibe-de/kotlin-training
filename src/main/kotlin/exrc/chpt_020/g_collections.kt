@@ -2,8 +2,8 @@ package exrc.chpt_020
 
 import java.io.File
 
-val bookTitlesByIsbn = mutableMapOf<String,String>()
-val bookTitlesByAuthor = mutableMapOf<String,MutableList<String>>()
+val bookTitlesByIsbn = mutableMapOf<String, String>()
+val bookTitlesByAuthor = mutableMapOf<String, MutableList<String>>()
 
 
 fun main() {
@@ -40,7 +40,7 @@ fun addBook2(
 fun readLinesFromFile(filename: String): List<String> =
     File(filename).readLines()
 
-fun readBooksCsv(filename:String) {
+fun readBooksCsv(filename: String) {
     val regex = Regex(pattern = """([\d-]+),([\w\s]+) \(([\w\s]*)\),"([\d.]*)","([^"]*)"""")
     for (line in readLinesFromFile(filename)) {
         val result = regex.find(line)

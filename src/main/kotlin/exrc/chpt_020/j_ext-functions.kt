@@ -17,7 +17,7 @@ fun String.vowelCount(): Int {
 
 fun String.camelcase(): String {
     val words = this.split(' ').toMutableList()
-    for ((i,w) in words.withIndex()) {
+    for ((i, w) in words.withIndex()) {
         words[i] = w[0].uppercase() + w.substring(1).lowercase()
     }
     return words.joinToString("")
