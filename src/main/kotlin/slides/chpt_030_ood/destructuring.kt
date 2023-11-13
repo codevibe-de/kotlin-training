@@ -17,7 +17,6 @@ fun main() {
 }
 
 
-
 fun more() {
     val map = mapOf("1" to 1)
     for ((k, v) in map) {

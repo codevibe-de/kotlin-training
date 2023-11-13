@@ -7,7 +7,7 @@ import kotlin.reflect.full.memberProperties
 class X
 
 fun main() {
-    val clazz:Class<X> = X::class.java
+    val clazz: Class<X> = X::class.java
     clazz.constructors
     clazz.methods
     clazz.fields

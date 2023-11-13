@@ -5,7 +5,7 @@ import java.util.function.Supplier
 class Person {
 
     private val id = "123"
-    private val address = Person.Address("97080", "Würzburg")
+    private val address = Address("97080", "Würzburg")
 
     // inner
     inner class XmlFormatter : Supplier<String> {

@@ -41,7 +41,7 @@ fun setOps() {
     set.addAll((100..111).toSet())
 
     set.contains(111) // true
-    for (n:Int in set) {
+    for (n: Int in set) {
         print("$n, ")
     }
 }

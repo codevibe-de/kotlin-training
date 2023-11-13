@@ -17,4 +17,7 @@ fun main() {
 //    val firstFiveFibs: Array<Int> = fibonacci.copyOfRange(0, 5)
 //
 //    fibonacci.fill(0)
+
+    val intArray = IntArray(2) // populated with zeros
+    println(intArray[0])
 }

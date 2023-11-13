@@ -1,29 +1,23 @@
 package slides.chpt_030_ood
 
-import java.util.*
 import kotlin.random.Random
 
 fun main() {
-    val sc = ClassWithCustomGetter("tom")
-    println(sc.name)
-    println(sc.pwd)
-    println(sc.pwd)
-    MultiConstr("123").happyDays()
-    MultiConstr("123", "tom").apply { this.id }
-
-    println(ClassWithGetterSetter().name)
+    val sc = SubClass()
+    sc.property = "abc"
+    println(sc.property)    // ABCX
 }
 
 class ClassWithGetterSetter {
     var name: String = ""
-        // these are the default get/set accessors
-        get() {
-            return field
-        }
-        set(value) {
-            field = value
-        }
 }
+
+
+class NoBacking {
+    val dynamicProp: Int
+        get() = Random.nextInt()
+}
+
 
 class ClassWithSetter {
     var name: String = validateName("") // default value
@@ -35,35 +29,18 @@ class ClassWithSetter {
         if (n.isBlank()) "no-name" else n
 }
 
-class NoBacking {
-    val dynamicProp: Int
-        get() = Random.nextInt()
-}
 
-class ClassWithCustomGetter(
-    private val internalName: String
-) {
-    val name: String
-        get() = "//" + internalName.uppercase() + """\\"""
-
-    private var _pwd: String = ""
-    val pwd: String
-        get() {
-            if (_pwd == "") {
-                _pwd = UUID.randomUUID().toString() // on-demand initialization
-            }
-            return _pwd
+open class BaseClass {
+    open var property: String = "default"
+        set(v: String) {
+            field = if (v.isBlank()) "default" else v
         }
 }
 
-class MultiConstr(
-    val id: String,
-    val name: String,
-) {
-    constructor(id: String) : this(id, "unnamed")
+class SubClass : BaseClass() {
+    override var property: String
+        get() = super.property + "X"
+        set(value) {
+            super.property = value.uppercase()
+        }
 }
-
-fun MultiConstr.happyDays() {
-    println("Your name is ${this.name}")
-}
-

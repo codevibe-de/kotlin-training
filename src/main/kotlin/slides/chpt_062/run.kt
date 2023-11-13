@@ -1,16 +1,25 @@
 package slides.chpt_062
 
+import java.awt.Image
+import java.awt.image.BufferedImage
+
 // public inline fun <T, R> T.run(block: T.() -> R): R
 
-fun main() {
-    Computer().run {
-        installOs()
-    }.run {
-        // context is now "Unit", not "Computer" anymore
+class Turtle {
+    fun turn(degrees: Double) {}
+    fun forward(pixels: Double) {}
+    fun export(): Image {
+        return BufferedImage(100, 100, BufferedImage.TYPE_INT_RGB)
     }
 }
 
-class Computer {
-    fun installOs() {}
-    fun installKotlinSdk() {}
+fun main() {
+    val image =
+        Turtle().run { //draw a 100 pix square
+            for (i in 1..4) {
+                forward(100.0)
+                turn(90.0)
+            }
+            export() // return value
+        }
 }

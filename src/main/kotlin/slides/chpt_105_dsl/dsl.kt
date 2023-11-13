@@ -13,9 +13,11 @@ class Product {
     private var _name: String = ""
     val name: String
         get() = _name
+
     fun name(n: String) {
         _name = n
     }
+
     fun id(id: String) {
     }
 }

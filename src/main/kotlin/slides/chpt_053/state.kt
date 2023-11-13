@@ -6,6 +6,7 @@ sealed class State {
     override fun toString(): String {
         return javaClass.simpleName
     }
+
     fun waitSomeTime() {}
 }
 

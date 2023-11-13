@@ -10,7 +10,12 @@ class Y : BaseError(), MyType
 fun main() {
     val obj: MyType = X()
     when (obj) {
-        is X -> { println("X") }
-        is Y -> { println("Y") }
+        is X -> {
+            println("X")
+        }
+
+        is Y -> {
+            println("Y")
+        }
     }
 }

@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
         println("#$i: ${args[i]}")
     }
 
-    for ((i,v) in args.withIndex()) {
+    for ((i, v) in args.withIndex()) {
         println("#$i: $v")
     }
 }
@@ -22,6 +22,9 @@ fun main(args: Array<String>) {
 
 fun main2() {
     for (i in 1..3) {
+        println(i)
+    }
+    for (i in 1 until 4) {
         println(i)
     }
 
@@ -43,7 +46,7 @@ class Lyrics {
     operator fun iterator(): Iterator<String> {
         return listOf("Hey now", "you're an All Star", "get your game on", "go play!")
             .listIterator()
-        }
+    }
 }
 
 fun main3() {

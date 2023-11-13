@@ -10,5 +10,5 @@ fun main() {
 data class Counter(val count: Int) {
     operator fun inc(): Counter = Counter(count + 1)
     operator fun unaryMinus(): Counter = Counter(-count)
-    operator fun get(s:String): Int = count
+    operator fun get(s: String): Int = count
 }

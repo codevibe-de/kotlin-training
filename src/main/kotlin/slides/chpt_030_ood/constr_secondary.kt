@@ -1,6 +1,6 @@
 package slides.chpt_030_ood
 
-class Animal3 (
+class Animal3(
     val name: String
 ) {
     constructor(order: String, family: String)

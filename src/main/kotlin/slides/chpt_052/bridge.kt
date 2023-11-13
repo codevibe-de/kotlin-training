@@ -4,11 +4,11 @@ class AuditingStack<T>(
     private val auditConsumer: (String) -> Unit,
     private val auditFormatter: (T) -> String,
 ) {
-  fun push(t:T) {
-      val msg = auditFormatter(t)
-      auditConsumer(msg)
-      // push to stack
-  }
+    fun push(t: T) {
+        val msg = auditFormatter(t)
+        auditConsumer(msg)
+        // push to stack
+    }
 }
 
 fun main() {

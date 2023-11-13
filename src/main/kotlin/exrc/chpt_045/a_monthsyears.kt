@@ -24,5 +24,5 @@ fun main() {
 
 }
 
-fun nameOfMonth(month:Int) =
+fun nameOfMonth(month: Int) =
     Month.of(month).getDisplayName(TextStyle.FULL, Locale.getDefault())
