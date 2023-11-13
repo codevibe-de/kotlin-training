@@ -1,10 +1,15 @@
 package exrc.chpt_020
 
+fun Char.isVowel(): Boolean =
+    when (this) {
+        'a', 'ä', 'A', 'Ä', 'e', 'E', 'i', 'I', 'o', 'O', 'ö', 'Ö', 'u', 'U', 'ü', 'Ü' -> true
+        else -> false
+    }
+
 fun String.vowelCount(): Int {
-    val vowels = setOf('a','ä','A','Ä','e','E','i','I','o','O','ö','Ö','u','U','ü','Ü')
     var result = 0
     for (c in this) {
-        result += if (c in vowels) 1 else 0
+        result += if (c.isVowel()) 1 else 0
     }
     return result
 }
