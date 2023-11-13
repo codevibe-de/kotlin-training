@@ -4,7 +4,6 @@ val List<Any>.lastIndex: Int
     get() = size - 1
 
 fun main() {
-    listOf(1, 2, 3)
-        .lastIndex
-        .also { println(it) }
+    val n = listOf(1, 2, 3).lastIndex
+    println(n)  // 2
 }
