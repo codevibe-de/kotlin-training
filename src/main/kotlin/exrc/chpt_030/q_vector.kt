@@ -1,5 +1,7 @@
 package exrc.chpt_030
 
+//import org.assertj.core.api.Assertions.assertThat
+
 fun main() {
 //    var v = Vector(0,0)
 //    v += Vector(10, 5)
