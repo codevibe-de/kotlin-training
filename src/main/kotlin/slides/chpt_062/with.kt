@@ -11,7 +11,7 @@ fun main() {
 }
 
 
-class Computer() {
+class Computer {
     fun installOs() {
     }
 

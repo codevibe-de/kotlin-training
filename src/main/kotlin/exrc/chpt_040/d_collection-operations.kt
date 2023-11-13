@@ -7,7 +7,7 @@ fun main() {
     val outputFile = File("output.txt")
 
     (1..10)
-        .filter { it % div == 0}
+        .filter { it % div == 0 }
         .map { it.toString(2) }
         .forEach { outputFile.appendText(it + "\n") }
 }
