@@ -47,17 +47,21 @@ object Booting : State() {
     }
 
     override fun next(): State {
-        return Running
+        return Running()
     }
 }
 
-object Running : State() {
+// this state is stateful, hence it is a class, not an object
+class Running : State() {
+
+    private val memory: String = "0x000"
+
     override fun powerButtonPressed(): State {
         return Shutdown
     }
 
     override fun next(): State {
-        return Running
+        return this
     }
 }
 

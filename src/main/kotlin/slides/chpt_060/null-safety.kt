@@ -6,11 +6,13 @@ fun main() {
 
     println(str ?: "default")
 
-    val cntr = Container(child = null)
-    println(cntr.child?.index ?: "nothing here")
+    val cntr = createContainer()
+    println(cntr?.child?.index ?: "nothing here")
 
-    cntr.child!!.index // java.lang.NullPointerException
+    cntr!!.child!!.index // java.lang.NullPointerException
 }
+
+fun createContainer(): Container? = null
 
 data class Container(val child: Child?)
 data class Child(val index: Int?)

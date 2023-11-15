@@ -23,12 +23,6 @@ Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden ka
 * aus Angabe eines `Char` und der Anzahl Wiederholungen, woraus der String gebildet wird
 * einem `Int` für den darzustellenden Unicode Charakter
 
-## e) Zoologie
-
-Grundlage: `src/main/kotlin/exrc/chpt_030/e_animals.kt`
-
-Bringen Sie die angegebenen Klassen in eine sinnvolle Vererbungshierarchie.
-
 ## g) Task
 
 Grundlage: `src/main/kotlin/exrc/chpt_030/g_task.kt`

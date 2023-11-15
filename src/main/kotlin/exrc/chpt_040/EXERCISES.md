@@ -13,24 +13,31 @@ Grundlage: `src/main/kotlin/exrc/chpt_040/b_firstclass.kt`
 
 Entkommentieren Sie alle kommentierten Zeilen in der oben genannten Datei.
 
-Ziel soll sein, dass die Verarbeitungspipeline
+Ziel soll sein, dass die Verarbeitungs-Pipeline
 
-* nur Zahlen beachtet, die durch eine gewisse, konfigurierbare Zahl teilbar sind
+* mittels einer Generator-Funktion die Zahlen 1 bis 10 verarbeitet (daher wird dieses Lambda innerhalb der Schleife
+  erzeugt)
+* nur Zahlen beachtet, die durch eine gewisse, konfigurierbare Zahl teilbar sind (das Lambda soll mittels
+  einer Funktion erzeugt werden)
 * wie in a) aus den Zahlen einen binären String erstellt
-* die binären Strings als Zeilen einer Datei hinzufügt
+* die binären Strings als Zeilen einer Datei hinzufügt (oder einfach nur per `println` ausgibt)
 
 ## d) Collection Pipeline
 
 Grundlage: `src/main/kotlin/exrc/chpt_040/d_collection-operations.kt`
 
 Implementieren Sie in der oben genannten Datei eine Verarbeitung-Pipeline auf Basis einer
-Liste oder Range, welche den gleichen Output generiert wie oben in b).
+Liste oder Range, welche den gleichen Output generiert wie oben in b). Die Variable `div` definiert die Zahl,
+mittels der die "Ist-Teilbar-Durch" Prüfung stattfinden soll.
+
+Sie brauchen also als Ausgangspunkt eine `List` oder z.B. auch eine `Range` Instanz, auf der dann die
+Verarbeitungs-Pipeline definiert wird.
 
 Nehmen Sie dafür die vorhandenen Collection-Operations wie
 
 * `filter()`
 * `map()`
-* `foreach()`
+* `forEach()`
 
 ## e) Reduzierung
 
