@@ -46,7 +46,7 @@ fun main() {
 
 
 /**
- * Shows the montly payout for each employee together with their identification (name or freelance-id)
+ * Shows the monthly payout for each employee together with their identification (name or freelance-id)
  */
 fun showMonthlyPayouts(employees: List<Employee>) {
     TODO("Not yet implemented")
