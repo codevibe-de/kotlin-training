@@ -1,5 +1,6 @@
 package slides.chpt_030_ood
 
+@Suppress("RedundantConstructorKeyword")
 class Fish constructor(
     name: String,
     age: Int
