@@ -24,11 +24,11 @@ fun main() {
 
     val sequence = sequenceOf(true, "asdads", 42)
 
-    sequence
+    val first = sequence
         .onEach { println("processing $it") }
         .map(Any::toString)
         .first { it.startsWith("a") }
-        .apply { println(this) }
+    println(first)
 
     sequence
         .onEach { println("processing $it") }
