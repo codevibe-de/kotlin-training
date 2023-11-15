@@ -1,6 +1,6 @@
 package exrc.chpt_060
 
-sealed interface Employee {
+interface Employee {
     val monthlyPayOut: Int
     val supervisor: Employee?
 }
@@ -45,24 +45,11 @@ fun main() {
 }
 
 
-val identifierProducer: (Employee) -> String = {
-    when (it) {
-        is FreelanceEmployee -> it.freelanceId
-        is HiredEmployee -> it.lastName
-    }
-}
-
-
 /**
  * Shows the montly payout for each employee together with their identification (name or freelance-id)
  */
 fun showMonthlyPayouts(employees: List<Employee>) {
-    val map: Map<String, List<Employee>> = employees.groupBy {
-        when (it) {
-            is FreelanceEmployee -> it.freelanceId
-            is HiredEmployee -> it.lastName
-        }
-    }
+    TODO("Not yet implemented")
 }
 
 
@@ -70,7 +57,6 @@ fun showMonthlyPayouts(employees: List<Employee>) {
  * Prints the top-most supervisor of this employee - or "none", if there is none.
  */
 fun printOverallSupervisor(employee: Employee) {
-    val seq = generateSequence(employee.supervisor) { it.supervisor }
-    println(seq.lastOrNull() ?: "none")
+    TODO("Not yet implemented")
 }
 
