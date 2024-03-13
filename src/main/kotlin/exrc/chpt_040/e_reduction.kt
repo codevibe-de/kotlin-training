@@ -9,26 +9,33 @@ fun main() {
         Order(setOf("p3", "p4", "p5")),
     )
 
-//    val result = reduce(orders)
-//    assertThat(result).hasSize(5);
-//    assertThat(result).containsOnly("p1", "p2", "p3", "p4", "p5");
-//
-//    val orderCount = countOrders(orders)
-//    assertThat(orderCount).hasSize(5)
-//    assertThat(orderCount).containsOnly(
-//        ("p1" to 2).toEntry(),
-//        ("p2" to 1).toEntry(),
-//        ("p3" to 2).toEntry(),
-//        ("p4" to 1).toEntry(),
-//        ("p5" to 3).toEntry(),
-//    );
+    val result = reduce(orders)
+    assertThat(result).hasSize(5);
+    assertThat(result).containsOnly("p1", "p2", "p3", "p4", "p5");
+
+    val orderCount = countOrders(orders)
+    assertThat(orderCount).hasSize(5)
+    assertThat(orderCount).containsOnly(
+        ("p1" to 2).toEntry(),
+        ("p2" to 1).toEntry(),
+        ("p3" to 2).toEntry(),
+        ("p4" to 1).toEntry(),
+        ("p5" to 3).toEntry(),
+    );
 }
 
-//fun reduce(orders: List<Order>): Set<String> {
-//}
-//
-//fun countOrders(orders: List<Order>): Map<String, Int> {
-//}
+fun reduce(orders: List<Order>): Set<String> {
+    return orders
+        .flatMap { it.productIds }
+        .toSet();
+}
+
+fun countOrders(orders: List<Order>): Map<String, Int> {
+    return orders
+        .flatMap { it.productIds }
+        .groupingBy { it }
+        .eachCount()
+}
 
 class Order(val productIds: Set<String>)
 
