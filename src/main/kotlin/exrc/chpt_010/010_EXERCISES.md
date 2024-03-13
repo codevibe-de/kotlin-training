@@ -10,11 +10,11 @@ Starten Sie dann Ihr Programm in der IDE.
 
 ## Decompile to Java
 
-Sie können mit Intellij eine aus Kotlin generierte `.class` Datei in Java decompilen.
+Sie können mit Intellij eine aus Kotlin generierte `.class` Datei in Java dekompilieren.
 
 Daran kann man schön erkennen, wie Kotlin intern eigentlich arbeitet.
 
-Schauen Sie in dem Order `out/production/kotlin-training/exrc/chpt_010` nach der
+Schauen Sie in dem Ordner `out/production/kotlin-training/exrc/chpt_010` nach der
 `.class` Datei, die durch diese Übung entstanden ist.
 
 Dann: Menü > Tools > Kotlin > Decompile to Java
@@ -27,7 +27,7 @@ Dann: Menü > Tools > Kotlin > Decompile to Java
 
 ## Kotlin Compiler (optional)
 
-Installieren Sie den Kotlin Compiler.
+Installieren Sie den Kotlin Compiler von https://github.com/JetBrains/kotlin/releases
 
 Wechseln Sie auf der Kommandozeile in das Root-Verzeichnis des Projekts.
 
@@ -43,7 +43,7 @@ und führen es dann aus:
 kotlin -cp bin exrc.chpt_010.HelloKt
 ````
 
-Oder kompilieren Sie das Programm, sodass Kotlin ein self-contained JAR inkl. Runtime erstellt:
+Oder kompilieren Sie das Programm, sodass Kotlin ein self-contained JAR inklusive Runtime erstellt:
 
 ```` shell
 kotlinc-jvm src/main/kotlin/exrc/chpt_010/hello.kt -include-runtime -d bin/hello.jar 
