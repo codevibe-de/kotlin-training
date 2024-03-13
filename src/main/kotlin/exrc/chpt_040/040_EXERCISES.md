@@ -41,14 +41,16 @@ Nehmen Sie dafür die vorhandenen Collection-Operations wie
 
 ## e) Reduzierung
 
+Grundlage: `src/main/kotlin/exrc/chpt_040/e_reduction.kt` (Kommentare entfernen)
+
 Sie sind nun mit komplexeren Daten konfrontiert. Als Input bekommen Sie eine Liste von Bestellungen, jede hat
 eine Menge an bestellten Produkt-Ids.
 
-Ihre Aufgabe ist es, diese in eine gesamthafte Menge an Ids zu bringen:
+Ihre Aufgabe ist es, diese in eine gesamthafte Menge (`Set`) an bestellen Produkt-Ids zu bringen:
 
-`List<Order(productIds:Set<String>)> => Set<String>`
+`List<Order> => Set<String>`
 
 ### Bonus
 
-Konvertieren Sie den Input in eine `Map<String, Int>`, sodass für jede Id die Anzahl Bestellungen
-definiert ist.
+Konvertieren Sie den Input in eine `Map<String, Int>`, sodass für jede Produkt-Id die Anzahl Bestellungen
+berechnet wird (Tipp: `groupingBy`)
