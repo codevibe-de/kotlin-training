@@ -1,4 +1,4 @@
-package slides.chpt_090;
+package chpt_090;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

@@ -1,4 +1,4 @@
-package slides.chpt_060
+package chpt_060
 
 fun main() {
     unsafeCast(1) // java.lang.ClassCastException

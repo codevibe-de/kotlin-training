@@ -1,4 +1,4 @@
-package slides.chpt_030_ood
+package chpt_030_ood
 
 infix fun Boolean.entwederOder(that: Boolean) = this.xor(that)
 

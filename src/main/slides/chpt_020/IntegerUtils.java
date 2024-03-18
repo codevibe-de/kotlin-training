@@ -1,4 +1,4 @@
-package slides.chpt_020;
+package chpt_020;
 
 // this is Java code :)
 public final class IntegerUtils {

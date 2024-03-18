@@ -1,4 +1,4 @@
-package slides.chpt_090
+package chpt_090
 
 import com.fasterxml.jackson.annotation.JsonAlias
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper

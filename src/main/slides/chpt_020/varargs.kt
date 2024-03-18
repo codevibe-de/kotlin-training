@@ -1,4 +1,4 @@
-package slides.chpt_020
+package chpt_020
 
 fun factorSum(vararg nums: Int, factor: Float = 1.0f): Float {
     var result = 0

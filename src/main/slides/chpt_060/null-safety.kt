@@ -1,4 +1,4 @@
-package slides.chpt_060
+package chpt_060
 
 fun main() {
     var str: String? = "abc"

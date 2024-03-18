@@ -1,4 +1,4 @@
-package slides.chpt_040_functional
+package chpt_040_functional
 
 fun main() {
     var k = listOf(1.2, 77.8, 6.3, 988.88, 0.1)

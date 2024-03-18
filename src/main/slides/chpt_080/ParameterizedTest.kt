@@ -1,4 +1,4 @@
-package slides.chpt_080
+package chpt_080
 
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest

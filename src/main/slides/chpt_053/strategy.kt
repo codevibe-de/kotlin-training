@@ -1,4 +1,4 @@
-package slides.chpt_053
+package chpt_053
 
 object CaseTypes {
     val uppercase = fun(s: String): String {

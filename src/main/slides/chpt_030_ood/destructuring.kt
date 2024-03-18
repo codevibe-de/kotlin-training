@@ -1,4 +1,4 @@
-package slides.chpt_030_ood
+package chpt_030_ood
 
 
 data class ResultAndHint(val res: Int, val msg: String)

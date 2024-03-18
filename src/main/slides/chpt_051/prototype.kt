@@ -1,4 +1,4 @@
-package slides.chpt_051
+package chpt_051
 
 import java.io.File
 

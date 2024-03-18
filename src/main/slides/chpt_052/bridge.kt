@@ -1,4 +1,4 @@
-package slides.chpt_052
+package chpt_052
 
 class AuditingStack<T>(
     private val auditConsumer: (String) -> Unit,

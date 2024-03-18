@@ -1,7 +1,7 @@
-package slides.chpt_053
+package chpt_053
 
-import slides.chpt_052.File
-import slides.chpt_052.FilesystemItem
+import chpt_052.File
+import chpt_052.FilesystemItem
 
 fun main() {
     val folder: IterableFolder = createRootFolder()

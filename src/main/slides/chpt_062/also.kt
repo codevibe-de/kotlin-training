@@ -1,6 +1,6 @@
-package slides.chpt_062
+package chpt_062
 
-import slides.chpt_020.toBinary
+import chpt_020.toBinary
 
 // public inline fun <T> T.also(block: (T) -> Unit): T
 

@@ -1,4 +1,4 @@
-package slides.chpt_090
+package chpt_090
 
 import org.apache.commons.collections4.Transformer
 import org.apache.commons.collections4.list.TransformedList

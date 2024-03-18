@@ -1,4 +1,4 @@
-package slides.chpt_040_functional
+package chpt_040_functional
 
 fun main() {
     val p = createPredicate(4)

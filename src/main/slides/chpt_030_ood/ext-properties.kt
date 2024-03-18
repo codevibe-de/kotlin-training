@@ -1,4 +1,4 @@
-package slides.chpt_030_ood
+package chpt_030_ood
 
 val List<Any>.lastIndex: Int
     get() = size - 1

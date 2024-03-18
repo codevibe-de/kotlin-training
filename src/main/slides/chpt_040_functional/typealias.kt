@@ -1,4 +1,4 @@
-package slides.chpt_040_functional
+package chpt_040_functional
 
 typealias StringPredicate = (String) -> Boolean
 

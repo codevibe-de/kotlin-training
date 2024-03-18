@@ -1,4 +1,4 @@
-package slides.chpt_080
+package chpt_080
 
 import org.junit.Test
 import org.junit.jupiter.api.Tag

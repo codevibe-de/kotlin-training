@@ -1,2 +1,2 @@
-package slides.chpt_052
+package chpt_052
 

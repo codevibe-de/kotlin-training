@@ -1,4 +1,4 @@
-package slides.chpt_090
+package chpt_090
 
 import kotlin.reflect.KClass
 import kotlin.reflect.full.functions

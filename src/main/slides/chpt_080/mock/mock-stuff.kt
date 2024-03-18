@@ -1,4 +1,4 @@
-package slides.chpt_080.mock
+package chpt_080.mock
 
 import io.mockk.every
 import io.mockk.just

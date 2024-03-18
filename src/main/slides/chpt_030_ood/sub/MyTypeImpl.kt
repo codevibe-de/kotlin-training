@@ -1,4 +1,4 @@
-package slides.chpt_030_ood.sub
+package chpt_030_ood.sub
 
 //class MyTypeImpl : MyType {
 //}

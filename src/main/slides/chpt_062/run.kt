@@ -1,4 +1,4 @@
-package slides.chpt_062
+package chpt_062
 
 import java.awt.Image
 import java.awt.image.BufferedImage

@@ -1,4 +1,4 @@
-package slides.chpt_030_ood
+package chpt_030_ood
 
 import java.io.BufferedOutputStream
 import java.io.File

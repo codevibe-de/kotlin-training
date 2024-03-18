@@ -1,4 +1,4 @@
-package slides.chpt_020
+package chpt_020
 
 fun Int.toBinary(): String {
     return this.toString(2)

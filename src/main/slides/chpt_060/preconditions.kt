@@ -1,4 +1,4 @@
-package slides.chpt_060
+package chpt_060
 
 const val acceptingInput = false
 

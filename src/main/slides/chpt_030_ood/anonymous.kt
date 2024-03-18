@@ -1,4 +1,4 @@
-package slides.chpt_030_ood
+package chpt_030_ood
 
 fun main() {
     createPrintlnRunnable("Hola!").run()
