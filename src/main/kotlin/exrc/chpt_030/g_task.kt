@@ -8,5 +8,8 @@ fun main() {
 //
 //    val task2 = Task("Clean room", -99)
 //    assertThat(task2.priority).isEqualTo(1)
+//
+//    task2.priority = 100 // yeah, let's clean up!
+//    Assertions.assertThat(task2.priority).isEqualTo(5)
 }
 
