@@ -1,21 +1,19 @@
 package chpt_030_ood
 
-sealed interface MyType
-
 sealed class BaseError
 
-class X : BaseError(), MyType
-class Y : BaseError(), MyType
+class ServerError : BaseError()
+class ClientError : BaseError()
 
 fun main() {
-    val obj: MyType = X()
-    when (obj) {
-        is X -> {
-            println("X")
+    val err: BaseError = ServerError()
+    when (err) {
+        is ServerError -> {
+            // alert dev-ops team!
         }
 
-        is Y -> {
-            println("Y")
+        is ClientError -> {
+            // return error code
         }
     }
 }
