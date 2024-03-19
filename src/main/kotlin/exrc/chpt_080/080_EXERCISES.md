@@ -2,6 +2,8 @@
 
 ## a) FactorialCalculator
 
+File: `src/main/kotlin/exrc/chpt_080/a_assertions.kt`
+
 Schreiben Sie zwei Testfälle für die vorhandene Klasse `FactorialCalculator`.
 
 * wird eine Exception mit richtiger Message für falschen Input erzeugt?
@@ -12,7 +14,9 @@ der Testfall Sourcecode in das gleiche Verzeichnis (ausnahmsweise..)
 
 ## c) OrderService
 
-Es gibt einen OrderService, der über einen `ProductApiClient` einen Drittservice nach Produktdetails anfragt.
+File: `src/main/kotlin/exrc/chpt_080/c_orderService.kt`
+
+Es gibt einen `OrderService`, der über einen `ProductApiClient` einen Drittservice nach Produktdetails anfragt.
 
 Den API-Client wollen wir mocken, um die Geschäftslogik des Service zu testen:
 
