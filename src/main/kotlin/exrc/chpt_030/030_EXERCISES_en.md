@@ -42,7 +42,7 @@ Make sure that instances always have a priority value and that this is within th
 
 ### Bonus:
 
-Let the task implement the `Runnable` interface -- but now the task itself must be abstract.
+Let the `Task` class implement the `Runnable` interface -- but now `Task` itself must be abstract.
 
 Then write a class `DelegatingTask`, which receives another `Runnable` instance as an additional constructor parameter.
 
