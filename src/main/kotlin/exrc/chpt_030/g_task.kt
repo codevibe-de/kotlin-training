@@ -6,8 +6,11 @@ fun main() {
     val task1 = Task("Do something")
     assertThat(task1.priority).isEqualTo(Task.DEFAULT_PRIO)
 
-    val task2 = Task("Clean room", -99)
+    val task2 = Task("Clean room", -9)
     assertThat(task2.priority).isEqualTo(1)
+
+    task2.priority = 100 // yeah, let's clean up!
+    assertThat(task2.priority).isEqualTo(5)
 }
 
 class Task(
