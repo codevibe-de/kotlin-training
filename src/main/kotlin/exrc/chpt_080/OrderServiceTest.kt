@@ -17,7 +17,7 @@ class OrderServiceTest {
         val orderService = OrderService(productApiClient)
 
         // when
-        orderService.calculateOrderTotal(listOf("P1", "P2"))    // expect exception
+        orderService.calculateOrderTotal(listOf("P1", "P2"))    // TODO expect exception
         val total = orderService.calculateOrderTotal(listOf("P1", "P2")) // expect correct total
 
         // then
