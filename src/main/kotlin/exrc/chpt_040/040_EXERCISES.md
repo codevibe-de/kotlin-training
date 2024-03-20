@@ -15,8 +15,7 @@ Entkommentieren Sie alle kommentierten Zeilen in der oben genannten Datei.
 
 Ziel soll sein, dass die Verarbeitungs-Pipeline
 
-* mittels einer Generator-Funktion die Zahlen 1 bis 10 verarbeitet (daher wird dieses Lambda innerhalb der Schleife
-  erzeugt)
+* die Zahlen 1 bis 10 verarbeitet (Supplier)
 * nur Zahlen beachtet, die durch eine gewisse, konfigurierbare Zahl teilbar sind (das Lambda soll mittels
   einer Funktion erzeugt werden)
 * wie in a) aus den Zahlen einen binären String erstellt
