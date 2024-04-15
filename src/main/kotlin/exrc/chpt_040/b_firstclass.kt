@@ -2,7 +2,7 @@ package exrc.chpt_040
 
 import java.io.File
 
-typealias GeneratorFunc = () -> Int
+typealias SupplierFunc = () -> Int
 typealias FilterFunc = (Int) -> Boolean
 typealias MapperFunc = (Int) -> String
 typealias TerminalFunc = (String) -> Unit
@@ -12,12 +12,12 @@ fun main() {
     val mapperFunc = { n: Int -> n.toString(2) }
     val filterFunc = createFilterDroppingNumbersDividableBy(3)
     for (n in 1..10) {
-        val generatorFunc: GeneratorFunc = createGenerator(n)
-        process2(generatorFunc, filterFunc, mapperFunc, terminalFunc)
+        val supplierFunc: SupplierFunc = createGenerator(n)
+        process2(supplierFunc, filterFunc, mapperFunc, terminalFunc)
     }
 }
 
-fun process2(generatorFunc: GeneratorFunc, filterFunc: FilterFunc, mapperFunc: MapperFunc, terminalFunc: TerminalFunc) {
+fun process2(generatorFunc: SupplierFunc, filterFunc: FilterFunc, mapperFunc: MapperFunc, terminalFunc: TerminalFunc) {
     val x = generatorFunc()
     if (filterFunc(x)) {
         val y = mapperFunc(x)
@@ -25,7 +25,7 @@ fun process2(generatorFunc: GeneratorFunc, filterFunc: FilterFunc, mapperFunc: M
     }
 }
 
-fun createGenerator(item: Int): GeneratorFunc {
+fun createGenerator(item: Int): SupplierFunc {
     return { -> item }
 }
 

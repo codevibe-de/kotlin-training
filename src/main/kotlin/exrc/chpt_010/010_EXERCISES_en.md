@@ -14,16 +14,16 @@ You can use Intellij to decompile a Kotlin generated `.class` file to Java.
 
 This is a good way to see how Kotlin actually works internally.
 
-Look in the folder `out/production/kotlin-training/exrc/chpt_010` for the
+Look in folder `out/production/kotlin-training/exrc/chpt_010` for the
 `.class` file created by this exercise.
 
 Then: Menu > Tools > Kotlin > Decompile to Java
 
 ## Change the Kotlin version
 
-Change the Kotlin compiler version via the IDE global settings.
+Change the Kotlin **compiler** version via the *IDE global* settings.
 
-Change the version of the Kotlin Runtime Library via the IDE module settings.
+Change the version of the **Kotlin Runtime Library** via the *IDE module* settings.
 
 ## Kotlin Compiler (optional)
 
