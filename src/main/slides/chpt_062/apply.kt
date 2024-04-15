@@ -5,6 +5,23 @@ package chpt_062
 data class Product(val name: String, val price: Double)
 
 
+class ProductBuilderBasic {
+    private var name: String = "unnamed"
+    private var price: Double = 0.0
+
+    fun name(s: String): ProductBuilderBasic {
+        name = s
+        return this
+    }
+
+    fun priceInCent(n: Int): ProductBuilderBasic {
+        price = n / 100.0
+        return this
+    }
+
+    fun build() = Product(name, price)
+}
+
 class ProductBuilder {
     private var name: String = "unnamed"
     private var price: Double = 0.0

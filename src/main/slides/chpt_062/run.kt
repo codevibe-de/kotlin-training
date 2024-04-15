@@ -13,13 +13,21 @@ class Turtle {
     }
 }
 
-fun main() {
-    val image =
-        Turtle().run { //draw a 100 pix square
-            for (i in 1..4) {
-                forward(100.0)
-                turn(90.0)
-            }
-            export() // return value
-        }
+fun renderTurtleImageBasic(): Image {
+    val turtle = Turtle()
+    for (i in 1..4) {
+        turtle.forward(100.0)
+        turtle.turn(90.0)
+    }
+    return turtle.export()
 }
+
+
+fun renderTurtleImage(): Image =
+    Turtle().run { //draw a 100 pix square
+        for (i in 1..4) {
+            forward(100.0)
+            turn(90.0)
+        }
+        export() // return value
+    }
