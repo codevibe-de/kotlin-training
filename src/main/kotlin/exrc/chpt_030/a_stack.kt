@@ -12,7 +12,7 @@ class Stack<T>(
 }
 
 fun main() {
-    val stack = Stack() // oder Stack<String>()
+    val stack = Stack<String>()
     stack.push("a")
     stack.push("b")
     stack.push("c")

@@ -10,7 +10,7 @@ fun main() {
     assertThat(task2.priority).isEqualTo(1)
 
     task2.priority = 100 // yeah, let's clean up!
-    Assertions.assertThat(task2.priority).isEqualTo(5)
+    assertThat(task2.priority).isEqualTo(5)
 }
 
 class Task(
