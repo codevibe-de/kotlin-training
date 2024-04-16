@@ -9,8 +9,8 @@ fun main() {
 
     // 2nd slide
     var counter = Counter(0)
-    println(counter++) // count=0
-    println(-counter) // count=-1
+    println(counter++) // Counter(count=0)
+    println(-counter) // Counter(count=-1)
     println(counter["whatever"]) // 1, nicht -1 !!!
 }
 

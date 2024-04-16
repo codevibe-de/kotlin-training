@@ -11,14 +11,18 @@ data class Book(
 fun main() {
     val book1 = Book("12-435", "The Misty Mountains", 1299)
     println(book1)
+    // Book(isbn=12-435, name=The Misty Mountains, priceInCent=1299)
+
+    val book1b = Book("12-435", "The Misty Mountains", 1299)
+    println(book1 == book1b) // true
 
     val book2 = book1.copy()
     println(book1 == book2) // true
     println(book1 === book2) // false
 
     val book3 = book1.copy(priceInCent = 299)
-    println(book1 == book3) // false
+    println(book3)
+    // Book(isbn=12-435, name=The Misty Mountains, priceInCent=299)
 
-    book3.priceInCent = book1.priceInCent
-    println(book1 == book3) // true
+    println(book1 == book3) // false
 }
