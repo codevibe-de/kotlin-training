@@ -5,7 +5,10 @@
 Grundlage: `src/main/kotlin/exrc/chpt_040/a_lambda.kt`
 
 Definieren Sie die zwei fehlenden Lambdas als Variablen mit Namen `mapper` und `consumer`, sodass die Ausgabe von
-"101010" auf der Konsole bei Programmstart erfolgt.
+"101010" auf der Konsole bei Programmstart erfolgt:
+
+- der `mapper` konvertiert die Zahl in deren binäre Repräsentation
+- der `consumer` verarbeitet seinen Input durch Ausgabe des übergebenen Wertes (`println()`)
 
 ## b) Erweiterte Pipeline
 
