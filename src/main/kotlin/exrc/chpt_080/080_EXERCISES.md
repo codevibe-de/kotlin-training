@@ -9,8 +9,8 @@ Schreiben Sie zwei Testfälle für die vorhandene Klasse `FactorialCalculator`.
 * wird eine Exception mit richtiger Message für falschen Input erzeugt?
 * stimmt das Ergebnis für eine Reihe an vorgegebenen Inputs und erwarteten Outputs?
 
-Diese können Sie per Intellij generieren lassen (Code > Generate). Da wir keinen separaten Test-Source Ordner haben kann
-der Testfall Sourcecode in das gleiche Verzeichnis (ausnahmsweise..)
+Die Testfälle können Sie per Intellij generieren lassen (Code > Generate). Da wir keinen separaten Test-Source Ordner
+haben darf der Testfall Sourcecode in das gleiche Verzeichnis (ausnahmsweise ...)
 
 ## c) OrderService
 
