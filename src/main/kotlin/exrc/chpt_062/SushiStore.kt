@@ -5,7 +5,7 @@ fun main() {
     val peter = Customer("Peter Fox")
     peter.addPhoneNumber("+49 178 444 3333")
     peter.addPhoneNumber("+49 89 200 100 100")
-    // todo add another customer named "john"
+    // todo add another customer variable "john" (who has the same landline number as peter)
 
     // prepare store
     val store = SushiStore()
@@ -31,7 +31,7 @@ fun main() {
 data class Customer(
     val name: String,
 ) {
-    val phoneNumbers: MutableList<String> = mutableListOf()
+    private val phoneNumbers: MutableList<String> = mutableListOf()
     fun addPhoneNumber(ph: String?) {
         if (ph != null) {
             this.phoneNumbers.add(ph)
@@ -54,6 +54,9 @@ class SushiStore {
     }
 
     fun fulfillOrder(customer: Customer, meal: String): Order {
+        if (meal.isBlank()) {
+            throw IllegalArgumentException("Argument 'meal' must not be blank")
+        }
         if (!preparedMeals.contains(meal)) {
             throw IllegalStateException("Sorry - we are out of $meal!!!")
         }
