@@ -1,21 +1,20 @@
 package exrc.chpt_030
 
-//import org.assertj.core.api.Assertions.assertThat
-//import org.assertj.core.api.Assertions.assertThatExceptionOfType
+import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 
 fun main() {
 //    val stack = Stack() // oder Stack<String>()
 //    stack.push("a")
 //    stack.push("b")
 //    stack.push("c")
-//    assertThat(stack.peek()).isEqualTo("c")
+//    assertEquals("c", stack.peek())
 //    stack.pop()
-//    assertThat(stack.peek()).isEqualTo("b")
+//    assertEquals("b", stack.peek())
 //    stack.push("d")
-//    assertThat(stack.peek()).isEqualTo("d")
+//    assertEquals("d", stack.peek())
 //    stack.pop()
 //    stack.pop()
 //    stack.pop()
-//    assertThatExceptionOfType(NoSuchElementException::class.java)
-//        .isThrownBy { stack.pop() }
+//    assertFailsWith<NoSuchElementException> { stack.pop() }
 }
