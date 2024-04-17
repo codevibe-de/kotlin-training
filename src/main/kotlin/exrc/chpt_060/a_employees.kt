@@ -45,7 +45,7 @@ fun main() {
 }
 
 
-val identifierProducer: (Employee) -> String = {
+val identifierKeyExtractor: (Employee) -> String = {
     when (it) {
         is FreelanceEmployee -> it.freelanceId
         is HiredEmployee -> it.lastName
@@ -59,10 +59,9 @@ val identifierProducer: (Employee) -> String = {
 fun showMonthlyPayouts(employees: List<Employee>) {
     println(
         employees
-            .associateBy(identifierProducer)
-            .mapValues { entry -> entry.value.monthlyPayOut }
+            .associateBy(identifierKeyExtractor)    // Map<String, Employee)
+            .mapValues { entry -> entry.value.monthlyPayOut }   // Map<String, Int>
     )
-
 }
 
 
