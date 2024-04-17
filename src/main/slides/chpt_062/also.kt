@@ -7,7 +7,16 @@ import chpt_020.toBinary
 class ResultsList {
     val results = mutableListOf<String>()
 
-    fun addItem(n: Int) =
-        // we have both this and it
-        n.toBinary().also { this.results.add(it) }
+    fun convertAndStore(n: Int) = n.toBinary().also { this.results.add(it) }
+}
+
+
+class ResultsListBasic {
+    val results = mutableListOf<String>()
+
+    fun convertAndStore(n: Int) : String {
+        val binaryStr = n.toBinary()
+        results.add(binaryStr)
+        return binaryStr
+    }
 }

@@ -81,11 +81,17 @@ Hilfreich für die Lösung ist das `CharArray`, welches aus einem String erzeugt
 Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Arten verwalten:
 
 * ein 1:1 Mapping von ISBN auf Buchtitel
-* ein 1:n Mapping von einem Autor auf seine Bücher (Titel)
+* ein 1:n Mapping von einem Autor auf seine Buchtitel
 
 Schreiben Sie die zwei Funktionen, welche für jeden Anwendungsfall eine `Map` erstellt.
 
-Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet.
+Beginnen Sie damit, die zwei Variablen für diese Maps anzulegen. Welche generischen Typen müssen die Maps
+jeweils haben?
+
+In der `addBook2()` Funktion sollen dann beide Maps mit den übergebenen Argumenten erweitert werden.
+
+Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet - in dieser
+Datei können Sie also weiterprogrammieren.
 
 ### Bonus:
 

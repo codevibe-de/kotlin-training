@@ -15,9 +15,11 @@ Uncomment all commented lines in the above file.
 
 Then write code so that the given processing pipeline:
 
-* only considers numbers that are divisible by a certain, configurable number
-* creates a binary string from the numbers as in task "a"
-* appends the binary strings as lines to a file
+* processes the numbers from 1 to 10 (supplier)
+* only considers numbers that are divisible by a certain, configurable number -- make sure to create a
+  parameterized factory method to obtain a lambda instance (filter)
+* creates a binary string from the numbers as in task "a" (mapper)
+* appends the binary strings as lines to a file (or simply prints as lines to the terminal)
 
 ## d) Collection Pipeline
 
