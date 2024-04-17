@@ -1,4 +1,4 @@
-# Übungen zum Kapitel "Objektoriente Programmierung"
+# Übungen zum Kapitel "Objektorientierte Programmierung"
 
 ## a) Stack
 
@@ -32,7 +32,7 @@ kann im Bereich 1-5 liegen. Standard ist 3.
 
 Der Name ist final, die Priorität kann jederzeit geändert und abgefragt werden.
 
-Stellen Sie sicher, dass Instanzen immer einen Prioritätswert haben und dass dieser im gültigen Bereich liegt.
+Stellen Sie sicher, dass Instanzen immer einen Wert für die Priorität haben und dass dieser im gültigen Bereich liegt.
 
 ### Bonus:
 
@@ -51,7 +51,7 @@ Datei: `src/main/kotlin/exrc/chpt_030/animal-interfaces.kt`
 Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten.
 
 Schreiben Sie Subklassen für Tiergattungen oder konkrete Tiere, die davon ableiten. Nutzen Sie
-die vorhandenen Interfaces, wenn dies für Ihre Gattung oder Tier relevant ist.
+die vorhandenen Interfaces, **wenn dies für die jeweilige Gattung oder das Tier relevant ist**.
 
 Ideen: `Mammal`, `Fish`, `Shark`, `BlueWhale`, `Orca`, `Lion`
 
@@ -113,5 +113,5 @@ https://www.baeldung.com/kotlin/late-vs-lazy-init#lazy-initialization
 Bei der ersten Abfrage des Properties soll dieses einmalig als UUID berechnet werden.
 
 Gerne können Sie in einem `init{}` Block eine Ausgabe erzeugen, dass eine Instanz fertig ist und außerdem
-bei der Berechnung der id eine Ausgabe machen. So kann man sehen, was in welcher Reihenfolge passiert...
+bei der Berechnung der id eine Ausgabe machen. So kann man sehen, was in welcher Reihenfolge passiert ...
 

@@ -18,3 +18,9 @@ class Person {
         val city: String,
     )
 }
+
+
+fun main() {
+    val formatter = Person().XmlFormatter()
+    val address = Person.Address("12345", "Gotham City")
+}

@@ -5,7 +5,10 @@
 Grundlage: `src/main/kotlin/exrc/chpt_040/a_lambda.kt`
 
 Definieren Sie die zwei fehlenden Lambdas als Variablen mit Namen `mapper` und `consumer`, sodass die Ausgabe von
-"101010" auf der Konsole bei Programmstart erfolgt.
+"101010" auf der Konsole bei Programmstart erfolgt:
+
+- der `mapper` konvertiert die Zahl in deren binäre Repräsentation
+- der `consumer` verarbeitet seinen Input durch Ausgabe des übergebenen Wertes (`println()`)
 
 ## b) Erweiterte Pipeline
 
@@ -15,7 +18,7 @@ Entkommentieren Sie alle kommentierten Zeilen in der oben genannten Datei.
 
 Ziel soll sein, dass die Verarbeitungs-Pipeline
 
-* die Zahlen 1 bis 10 verarbeitet (Supplier)
+* die Zahlen 1 bis 10 generiert / bereitstellt (Supplier)
 * nur Zahlen beachtet, die durch eine gewisse, konfigurierbare Zahl teilbar sind (das Lambda soll mittels
   einer Funktion erzeugt werden)
 * wie in a) aus den Zahlen einen binären String erstellt
