@@ -2,23 +2,25 @@ package exrc.chpt_062
 
 fun main() {
     // prepare customers
-    val peter = Customer("Peter Fox")
-    peter.addPhoneNumber("+49 178 444 3333")
-    peter.addPhoneNumber("+49 89 200 100 100")
-    // todo add another customer variable "john" (who has the same landline number as peter)
+    val peter = Customer("Peter Fox").apply {
+        addPhoneNumber("+49 178 444 3333")
+        addPhoneNumber("+49 89 200 100 100")
+    }
+    val john = Customer("John Deere").apply {
+        addPhoneNumber("+49 89 200 100 100")
+    }
 
     // prepare store
     val store = SushiStore()
-    store.prepareMaki()
-    store.prepareSurimi()
-    store.prepareSurimi()
+        .prepareMaki()
+        .prepareSurimi()
+        .prepareSurimi()
 
     // fulfil order
     val orders = mutableListOf<SushiStore.Order>()
-    orders.add(store.fulfillOrder(peter, "Surimi"))
-    // todo uncomment this
-//    orders.add(store.fulfillOrder(john, "Surimi"))
-//    orders.add(store.fulfillOrder(john, "Maki"))
+    store.fulfillOrder(peter, "Surimi").also { orders.add(it) }
+    store.fulfillOrder(john, "Surimi").also { orders.add(it) }
+    store.fulfillOrder(john, "Maki").also { orders.add(it) }
 
     // end-of-day
     println("Another fun day at the Sushi Store -- today we had these orders:")
@@ -32,34 +34,19 @@ data class Customer(
     val name: String,
 ) {
     private val phoneNumbers: MutableList<String> = mutableListOf()
-    fun addPhoneNumber(ph: String?) {
-        if (ph != null) {
-            this.phoneNumbers.add(ph)
-        }
-    }
+    fun addPhoneNumber(ph: String?) = ph?.let { this.phoneNumbers.add(it) }
 }
 
 
 class SushiStore {
     private val preparedMeals = mutableListOf<String>()
 
-    fun prepareSurimi(): SushiStore {
-        this.preparedMeals.add("Surimi")
-        return this
-    }
-
-    fun prepareMaki(): SushiStore {
-        this.preparedMeals.add("Maki")
-        return this
-    }
+    fun prepareSurimi(): SushiStore = this.apply { this.preparedMeals.add("Surimi") }
+    fun prepareMaki(): SushiStore = this.apply { this.preparedMeals.add("Maki") }
 
     fun fulfillOrder(customer: Customer, meal: String): Order {
-        if (meal.isBlank()) {
-            throw IllegalArgumentException("Argument 'meal' must not be blank")
-        }
-        if (!preparedMeals.contains(meal)) {
-            throw IllegalStateException("Sorry - we are out of $meal!!!")
-        }
+        require(meal.isNotBlank()) { "Argument 'meal' must not be blank" }
+        check(preparedMeals.contains(meal)) { "Sorry - we are out of $meal!!!" }
         preparedMeals.remove(meal)
         return Order(customer, meal)
     }
