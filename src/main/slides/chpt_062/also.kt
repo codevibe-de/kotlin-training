@@ -14,7 +14,7 @@ class ResultsList {
 class ResultsListBasic {
     val results = mutableListOf<String>()
 
-    fun convertAndStore(n: Int) : String {
+    fun convertAndStore(n: Int): String {
         val binaryStr = n.toBinary()
         results.add(binaryStr)
         return binaryStr

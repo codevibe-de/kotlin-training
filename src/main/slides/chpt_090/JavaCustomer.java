@@ -21,8 +21,11 @@ public class JavaCustomer {
 
     public void format(@NotNull String s) {
     }
+
+
+    public static class Address {
+        public String city;
+    }
 }
 
-class Address {
-    public String city;
-}
+
