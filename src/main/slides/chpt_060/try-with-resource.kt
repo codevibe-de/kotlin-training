@@ -12,7 +12,7 @@ fun main() {
     FileOutputStream(file).use {
         it.write(64)
         Thread.sleep(10_000)
-        // since file is closed now, we can delete it in FS
+        // since the file is closed now, we can delete it in FS (on Windows!)
     }
 
     println("done")

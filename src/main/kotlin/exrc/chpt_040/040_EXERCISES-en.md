@@ -4,8 +4,8 @@
 
 Basis: `src/main/kotlin/exrc/chpt_040/a_lambda.kt`
 
-Define the two missing lambdas as variables named `mapper` and `consumer` so that an output of
-"101010" is printed on the console at program start.
+Define the two missing lambdas as top-level variables named `mapper` and `consumer` so that an output of
+"101010" is printed on the console when the program is run.
 
 ## b) Extended pipeline
 

@@ -46,7 +46,7 @@ Let the `Task` class implement the `Runnable` interface -- but now `Task` itself
 
 Then write a class `DelegatingTask`, which receives another `Runnable` instance as an additional constructor parameter.
 
-The `DelegatingTask.run()` function simply delegates to that Runnable instance -- "don't work late, delegate!" :)
+The `DelegatingTask.run()` function simply delegates to that Runnable instance ("don't work late, delegate!" :)
 
 ## i) Abstract zoology with interfaces
 
@@ -66,8 +66,8 @@ The interfaces should be extended so that:
 
 PS:
 
-1. not all mammals have teeth, e.g. some whales have no teeth (e.g. blue whale)
-2. not all fish have teeth either, e.g. carps have none (at least not in their jaws, which is what is meant here)
+1. not all mammals have teeth, e.g., some whales have no teeth (blue whale)
+2. not all fish have teeth either, e.g., carps have none (at least not in their jaws, which is what is meant here)
 
 ## k) Extended Library
 
@@ -75,9 +75,9 @@ Basis: `src/main/kotlin/exrc/chpt_030/k_extended-library.kt`
 
 Take a look at the existing `Library` class.
 
-This needs a `Book` class in order to work. Please create this.
+This needs a `Book` class to work. Please create this.
 
-Then create an **extension** function for the `Library` class (e.g. because we cannot/do not want to change this class),
+Then create an **extension** function for the `Library` class (e.g., because we cannot/do not want to change this class),
 which calculates a map for all books that contains an alphabetically sorted list of book titles by author.
 
 ## m) Roman numerals II
@@ -96,9 +96,9 @@ https://github.com/christianhujer/expensereport/blob/trunk/expensereport-kotlin/
 
 ## q) What's our Vector, Victor?
 
-Create a class `Vector`, which describes an X/Y coordinate.
+Create some class `Vector`, which describes an X/Y coordinate. This can be a data or regular class.
 
-Instances (shown below as "V") should be able to be processed using the following operators:
+Instances (shown below as "V") of this class should be able to be processed using the following operators:
 
 * Plus (V + V)
 * Minus (V - V)
