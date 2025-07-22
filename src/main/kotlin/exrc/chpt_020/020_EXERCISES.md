@@ -91,6 +91,8 @@ jeweils haben?
 
 In der `addBook2()` Funktion sollen dann beide Variablen (Mappings) anhand der übergebenen Argumenten befüllt werden.
 
+Für das 1:n Mapping ist insbesondere die Methode `containsKey` auf der Map hilfreich.
+
 ### Bonus:
 
 Wir lesen eine Liste an Büchern von einer suboptimal konzipierten CSV Datei ein.
