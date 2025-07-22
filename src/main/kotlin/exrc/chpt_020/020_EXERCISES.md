@@ -91,7 +91,7 @@ jeweils haben?
 
 In der `addBook2()` Funktion sollen dann beide Variablen (Mappings) anhand der übergebenen Argumenten befüllt werden.
 
-Für das 1:n Mapping ist insbesondere die Methode `containsKey` auf der Map hilfreich.
+Für das 1:n Mapping sind insbesondere die Methoden `containsKey` und `getValue` der Map hilfreich.
 
 ### Bonus:
 
