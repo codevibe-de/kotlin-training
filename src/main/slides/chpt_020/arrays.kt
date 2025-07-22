@@ -1,7 +1,7 @@
 package chpt_020
 
 fun main() {
-    val fibonacci: Array<Int> = arrayOf(2, 3, 5, 8, 13, 21, 34)
+    val fibonacci: Array<Int> = arrayOf(0, 1, 1, 2, 3, 5, 8, 13, 21)
     println(fibonacci)
 //    for (f in fibonacci) println(f)
 //

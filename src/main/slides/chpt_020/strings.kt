@@ -17,6 +17,14 @@ val longAnswer = """
     ${getAnswer()}
 """.trimIndent()
 
+val withDollar = """
+    ${'$'}name
+"""
+
+val withDollar2 = $$"""
+    $name
+"""
+
 fun getAnswer(): Int {
     return 42
 }
