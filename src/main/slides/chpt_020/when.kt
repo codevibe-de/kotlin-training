@@ -18,6 +18,15 @@ fun main() {
         else -> false
     }
     println(isStringWithPrefix)
+
+    // ohne Ausdruck im Kopf
+    val n = getSomething()
+    when {
+        n <= 0 -> println("Bad Input")
+        n % 7 == 4 -> println("...")
+        System.currentTimeMillis() > 1_000_000 -> println("millis")
+        else -> println("Thanks")
+    }
 }
 
 fun printInfo(s: String) {
@@ -28,3 +37,6 @@ fun printInfo(s: String) {
         else -> println("don't know")
     }
 }
+
+
+fun getSomething() = 123
