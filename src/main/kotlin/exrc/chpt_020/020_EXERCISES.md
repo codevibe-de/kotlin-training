@@ -108,7 +108,10 @@ erfolgen, die Sie z.B. mit https://regex101.com/ entwickeln können.
 
 ## j) Extension Functions
 
-Sie können sich an drei möglichen Extension Functions für den Typ `String` austoben:
+*Hinweise: Etwas Code ist in der Datei `j_extensionFunctions.kt` vorbereitet.
+Diesen auskommentieren und zum Laufen bringen :)*
+
+Sie können sich an drei möglichen _Extension Functions_ für den Typ `String` austoben:
 
 1. Zählen der Anzahl Vokale (inklusive Umlaute)
 2. Umwandlung in Camelcase ("Wir lernen Kotlin" wird zu "WirLernenKotlin")
