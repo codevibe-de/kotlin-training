@@ -51,7 +51,7 @@ einfach der `run()` Aufruf delegiert (denn: "don't work late, delegate!" :))
 
 Datei: `src/main/kotlin/exrc/chpt_030/animal-interfaces.kt`
 
-Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten.
+Die Klasse `Animal` soll abstrakt sein jedoch ein konkretes Property `name: String` anbieten.
 
 Schreiben Sie Subklassen für Tiergattungen oder konkrete Tiere, die davon ableiten. Nutzen Sie
 die vorhandenen Interfaces, **wenn dies für die jeweilige Gattung oder das Tier relevant ist**.
