@@ -27,12 +27,15 @@ Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden ka
 
 Grundlage: `src/main/kotlin/exrc/chpt_030/g_task.kt`
 
-Schreiben Sie eine Klasse `Task`, welche einen Namen und eine optionale Priorität als `Byte` hat. Diese
-kann im Bereich 1-5 liegen. Standard ist 3.
+Schreiben Sie eine Klasse `Task`, welche einen Namen und eine optionale Priorität als `Byte` hat.
+
+Die Priorität kann im Bereich 1-5 liegen. Werte außerhalb des Bereichs werden auf 1 bzw 5 gesetzt. Der Default-Wert
+(d.h. nur wenn keiner angegeben wird) ist 3.
 
 Der Name ist final, die Priorität kann jederzeit geändert und abgefragt werden.
 
-Stellen Sie sicher, dass Instanzen immer einen Wert für die Priorität haben und dass dieser im gültigen Bereich liegt.
+Stellen Sie sicher, dass Instanzen immer einen Wert für die Priorität haben und dass dieser immer im gültigen Bereich
+liegt.
 
 ### Bonus:
 
