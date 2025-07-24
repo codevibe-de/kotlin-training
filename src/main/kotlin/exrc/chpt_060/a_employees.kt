@@ -6,10 +6,10 @@ interface Employee {
 }
 
 /**
- * Hired employees can be identified by their last name.
+ * Hired employees can be identified by their first name.
  */
 data class HiredEmployee(
-    val lastName: String,
+    val firstName: String,
     val salary: Int,
     override val supervisor: Employee? = null
 ) : Employee {
@@ -33,9 +33,9 @@ data class FreelanceEmployee(
 
 
 fun main() {
-    val kate = HiredEmployee("Sebos", 100_000)
+    val kate = HiredEmployee("Kate", 100_000)
     val fred = FreelanceEmployee(freelanceId = "X233", hoursPerMonth = 120, hourlyRate = 80, supervisor = kate)
-    val bruce = HiredEmployee("Lee", salary = 65_000, fred)
+    val bruce = HiredEmployee("Bruce", salary = 65_000, fred)
     val angie = FreelanceEmployee(freelanceId = "A002", hoursPerMonth = 50, hourlyRate = 80, supervisor = fred)
 
     val employees = listOf(kate, fred, bruce, angie)
