@@ -97,6 +97,8 @@ https://github.com/christianhujer/expensereport/blob/trunk/expensereport-kotlin/
 
 ## q) What's our Vector, Victor?
 
+_Hinweis: Nutzen Sie die bestehende Datei `q_vector.kt`_
+
 Erstellen Sie eine Klasse `Vector`, welche eine X/Y Koordinate beschreibt.
 
 Instanzen (unten als "V" dargestellt) sollen mittels folgender Operatoren verarbeitet werden können:
