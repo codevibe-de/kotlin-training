@@ -6,14 +6,17 @@ class ServerError : BaseError()
 class ClientError : BaseError()
 
 fun main() {
-    val err: BaseError = ServerError()
-    when (err) {
+    val err: BaseError = operate()
+    val msg = when (err) {
         is ServerError -> {
-            // alert dev-ops team!
+            "alert dev-ops team!"
         }
-
         is ClientError -> {
-            // return error code
+            "selbst schuld"
         }
     }
+    println(msg)
 }
+
+
+fun operate(): BaseError = ServerError()
