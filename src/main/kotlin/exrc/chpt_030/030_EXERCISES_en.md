@@ -96,7 +96,7 @@ https://github.com/christianhujer/expensereport/blob/trunk/expensereport-kotlin/
 
 ## q) What's our Vector, Victor?
 
-Create some class `Vector`, which describes an X/Y coordinate. This can be a data or regular class.
+Create a class named `Vector`, which contains X and Y coordinates. This can be a data class or a regular class.
 
 Instances (shown below as "V") of this class should be able to be processed using the following operators:
 
