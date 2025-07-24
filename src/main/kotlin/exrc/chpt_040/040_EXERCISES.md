@@ -29,8 +29,14 @@ Ziel soll sein, dass die Verarbeitungs-Pipeline
 Grundlage: `src/main/kotlin/exrc/chpt_040/d_collection-operations.kt`
 
 Implementieren Sie in der oben genannten Datei eine Verarbeitung-Pipeline auf Basis einer
-Liste oder Range, welche den gleichen Output generiert wie oben in b). Die Variable `div` definiert die Zahl,
-mittels der die "Ist-Teilbar-Durch" Prüfung stattfinden soll.
+Liste oder Range, welche den gleichen Output generiert wie oben in b), d.h.:
+
+* für eine Liste von Zahlen 1 bis 10
+* werden nur die betrachtet, die durch die Zahl `div` teilbar sind 
+* und dann in binäre String-Form konvertiert
+* und schließlich in eine Datei geschrieben oder per println ausgeben
+
+Die Variable `div` definiert die Zahl, mittels der die "Ist-Teilbar-Durch" Prüfung stattfinden soll.
 
 Sie brauchen also als Ausgangspunkt eine `List` oder z.B. auch eine `Range` Instanz, auf der dann die
 Verarbeitungs-Pipeline definiert wird.
