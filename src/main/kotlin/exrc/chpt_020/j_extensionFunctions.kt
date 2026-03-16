@@ -1,12 +1,14 @@
 package exrc.chpt_020
 
+import org.assertj.core.api.Assertions.assertThat
+
 fun main() {
 //    val vocalCount = "Hallöchen!".countVocals()
-//    assert(vocalCount == 2)
-//
+//    assertThat(vocalCount).isEqualTo(2)
+
 //    val camelCase = "Wir lernen Kotlin".toCamelCase()
-//    assert(camelCase == "WirLernenKotlin")
-//
+//    Assertions.assertThat(camelCase).isEqualTo("WirLernenKotlin")
+
 //    val spaced = "Hallo".toSpaced()
-//    assert(spaced == "H a l l o")
+//    Assertions.assertThat(camelCase).isEqualTo("H a l l o")
 }
