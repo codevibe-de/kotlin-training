@@ -48,7 +48,7 @@ fun main() {
 val identifierKeyExtractor: (Employee) -> String = {
     when (it) {
         is FreelanceEmployee -> it.freelanceId
-        is HiredEmployee -> it.lastName
+        is HiredEmployee -> it.firstName
     }
 }
 

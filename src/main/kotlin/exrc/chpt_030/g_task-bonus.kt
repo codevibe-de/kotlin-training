@@ -2,7 +2,6 @@ package exrc.chpt_030
 
 fun main() {
     val runnable = PrintHelloRunnable()
-
     val dlgTask = DelegatingTask("Do something", runnable = runnable)
     dlgTask.run()
 }
