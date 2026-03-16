@@ -5,11 +5,12 @@ fun main() {
     printInfo(x)
 
     // checking for number ranges
-    when (val n = (0..10).random()) {
-        in 0..9 -> print("no luck, just got a $n")
-        10 -> print("bingo!")
-        else -> print("weird")
+    val result = when (val n = (0..10).random()) {
+        in 0..9 -> "no luck, just got a $n"
+        10 -> "bingo!"
+        else -> "weird"
     }
+    println(result)
 
     // checking for types and working with them (smart-cast)
     val something: Any = "foo"
@@ -18,6 +19,15 @@ fun main() {
         else -> false
     }
     println(isStringWithPrefix)
+
+    // ohne Ausdruck im Kopf
+    val n = getSomething()
+    when {
+        n <= 0 -> println("Bad Input")
+        n % 7 == 4 -> println("...")
+        System.currentTimeMillis() > 1_000_000 -> println("millis")
+        else -> println("Thanks")
+    }
 }
 
 fun printInfo(s: String) {
@@ -28,3 +38,6 @@ fun printInfo(s: String) {
         else -> println("don't know")
     }
 }
+
+
+fun getSomething() = 123

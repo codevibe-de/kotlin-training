@@ -19,3 +19,8 @@ val str = buildString {
     append(" ")
     append("world")
 }
+
+//configureSecurity {
+//    permitAll("/api/public")
+//    requireRole("GET", "/actuator/info", "MGMT")
+//}

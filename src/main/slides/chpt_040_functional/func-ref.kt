@@ -1,22 +1,30 @@
 package chpt_040_functional
 
 fun main() {
-    var k = listOf(1.2, 77.8, 6.3, 988.88, 0.1)
-    k.forEach(::println) // top-level function
+    var processingLambda: (Any) -> Unit
 
-    val consumer = Consumer()
-    k.forEach(consumer::apply) // instance function
+    // top-level function:
+    processingLambda = ::gibEsAus
 
-    k.forEach(WriteMethods::printToErr) // static/companion function
+    // instance method
+    val myConsole = MyConsole()
+    processingLambda = myConsole::print
+
+    // static method
+    processingLambda = MyConsole::directPrint
 }
 
-class Consumer {
-    fun apply(d: Double) = println(d)
+fun gibEsAus(input: Any): Unit {
+    println(input)
 }
 
-class WriteMethods {
+class MyConsole {
+    fun print(input: Any): Unit {
+        println(">> $input")
+    }
     companion object {
-        fun <T> printToStd(value: T) = System.out.println(value)
-        fun <T> printToErr(value: T) = System.err.println(value)
+        fun directPrint(input: Any): Unit {
+            println(input)
+        }
     }
 }

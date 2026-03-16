@@ -78,20 +78,20 @@ Hilfreich für die Lösung ist das `CharArray`, welches aus einem String erzeugt
 
 ## g) Gemappte Bücherei
 
+*Hinweise: Etwas Code ist in der Datei `g_collections.kt` vorbereitet. In dieser Übung bitte noch 
+nicht mit Streams/Funktional arbeiten!*
+
 Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Arten verwalten:
 
 * ein 1:1 Mapping von ISBN auf Buchtitel
 * ein 1:n Mapping von einem Autor auf seine Buchtitel
 
-Schreiben Sie die zwei Funktionen, welche für jeden Anwendungsfall eine `Map` erstellt.
-
 Beginnen Sie damit, die zwei Variablen für diese Maps anzulegen. Welche generischen Typen müssen die Maps
 jeweils haben?
 
-In der `addBook2()` Funktion sollen dann beide Maps mit den übergebenen Argumenten erweitert werden.
+In der `addBook2()` Funktion sollen dann beide Variablen (Mappings) anhand der übergebenen Argumenten befüllt werden.
 
-Etwas Code ist für Sie in der Datei `src/main/kotlin/exrc/chpt_020/g_collections.kt` vorbereitet - in dieser
-Datei können Sie also weiterprogrammieren.
+Für das 1:n Mapping sind insbesondere die Methoden `containsKey` und `getValue` der Map hilfreich.
 
 ### Bonus:
 
@@ -110,7 +110,10 @@ erfolgen, die Sie z.B. mit https://regex101.com/ entwickeln können.
 
 ## j) Extension Functions
 
-Sie können sich an drei möglichen Extension Functions für den Typ `String` austoben:
+*Hinweise: Etwas Code ist in der Datei `j_extensionFunctions.kt` vorbereitet.
+Diesen auskommentieren und zum Laufen bringen :)*
+
+Sie können sich an drei möglichen _Extension Functions_ für den Typ `String` austoben:
 
 1. Zählen der Anzahl Vokale (inklusive Umlaute)
 2. Umwandlung in Camelcase ("Wir lernen Kotlin" wird zu "WirLernenKotlin")

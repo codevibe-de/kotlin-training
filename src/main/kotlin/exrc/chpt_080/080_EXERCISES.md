@@ -14,7 +14,10 @@ haben darf der Testfall Sourcecode in das gleiche Verzeichnis (ausnahmsweise ...
 
 ## c) OrderService
 
-File: `src/main/kotlin/exrc/chpt_080/c_orderService.kt`
+Files: 
+
+- `src/main/kotlin/exrc/chpt_080/c_orderService.kt`
+- `src/main/kotlin/exrc/chpt_080/OrderServiceTest.kt`
 
 Es gibt einen `OrderService`, der über einen `ProductApiClient` einen Drittservice nach Produktdetails anfragt.
 

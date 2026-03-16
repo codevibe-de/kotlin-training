@@ -1,3 +1,5 @@
+@file:Suppress("VariableInitializerIsRedundant")
+
 package chpt_030_ood
 
 fun interface IntPredicate {
@@ -5,11 +7,16 @@ fun interface IntPredicate {
 }
 
 fun main() {
-    val p1 = object : IntPredicate {
+    // "KLASSISCH":
+    var p: IntPredicate = object : IntPredicate {
         override fun accept(n: Int): Boolean {
             return n % 2 == 0
         }
     }
 
-    val p2 = IntPredicate { n -> n % 2 == 0 }
+    // ALTERNATIV:
+    p = IntPredicate { n -> n % 2 == 0 }
+
+    // dann:
+    p.accept(123)
 }

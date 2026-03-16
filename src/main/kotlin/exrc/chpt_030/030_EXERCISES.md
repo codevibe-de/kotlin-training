@@ -27,12 +27,15 @@ Schreiben Sie eine Klasse `SuperString`, welche auf drei Arten erzeugt werden ka
 
 Grundlage: `src/main/kotlin/exrc/chpt_030/g_task.kt`
 
-Schreiben Sie eine Klasse `Task`, welche einen Namen und eine optionale Priorität als `Byte` hat. Diese
-kann im Bereich 1-5 liegen. Standard ist 3.
+Schreiben Sie eine Klasse `Task`, welche einen Namen und eine optionale Priorität als `Byte` hat.
+
+Die Priorität kann im Bereich 1-5 liegen. Werte außerhalb des Bereichs werden auf 1 bzw 5 gesetzt. Der Default-Wert
+(d.h. nur wenn keiner angegeben wird) ist 3.
 
 Der Name ist final, die Priorität kann jederzeit geändert und abgefragt werden.
 
-Stellen Sie sicher, dass Instanzen immer einen Wert für die Priorität haben und dass dieser im gültigen Bereich liegt.
+Stellen Sie sicher, dass Instanzen immer einen Wert für die Priorität haben und dass dieser immer im gültigen Bereich
+liegt.
 
 ### Bonus:
 
@@ -48,7 +51,7 @@ einfach der `run()` Aufruf delegiert (denn: "don't work late, delegate!" :))
 
 Datei: `src/main/kotlin/exrc/chpt_030/animal-interfaces.kt`
 
-Die Klasse `Animal` soll abstrakt sein und ein abstraktes Property `name: String` anbieten.
+Die Klasse `Animal` soll abstrakt sein jedoch ein konkretes Property `name: String` anbieten.
 
 Schreiben Sie Subklassen für Tiergattungen oder konkrete Tiere, die davon ableiten. Nutzen Sie
 die vorhandenen Interfaces, **wenn dies für die jeweilige Gattung oder das Tier relevant ist**.
@@ -93,6 +96,8 @@ Schauen Sie sich die Kotlin Variante an und optimieren Sie den bestehenden Code:
 https://github.com/christianhujer/expensereport/blob/trunk/expensereport-kotlin/src/main/kotlin/com/nelkinda/training/ExpenseReport.kt
 
 ## q) What's our Vector, Victor?
+
+_Hinweis: Nutzen Sie die bestehende Datei `q_vector.kt`_
 
 Erstellen Sie eine Klasse `Vector`, welche eine X/Y Koordinate beschreibt.
 

@@ -30,6 +30,17 @@ class ClassWithSetter {
 }
 
 
+class ClassWithSetter2(name:String) {
+    var name: String = validateName(name) // default value
+        set(value) {
+            field = validateName(value)
+        }
+
+    private fun validateName(n: String) =
+        if (n.isBlank()) "no-name" else n
+}
+
+
 open class BaseClass {
     open var property: String = "default"
         set(v: String) {
