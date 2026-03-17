@@ -3,7 +3,7 @@ package exrc.chpt_020
 import org.assertj.core.api.Assertions.assertThat
 
 fun main() {
-//    val count = "Hallöchen!".countUmlauts()
+//    val count = "Hallöchen!".countVowels()
 //    assertThat(count).isEqualTo(3)
 //
 //    val camelCase = "Wir lernen Kotlin".camelcase()
