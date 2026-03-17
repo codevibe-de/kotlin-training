@@ -15,7 +15,8 @@ spannende Möglichkeiten :)
 
 ## c) Bücherei
 
-Sie beginnen die Geschäftslogik für eine Bücherei zu entwickeln.
+Sie beginnen die Geschäftslogik für eine Bücherei zu entwickeln. Hierfür ist die Datei `c_library.kt` als Ausgangspunkt
+zu nutzen.
 
 Dabei ist der zentrale Bestandteil die Funktion `addBook`, die folgende Parameter verarbeiten kann:
 
@@ -51,6 +52,17 @@ val (titleString, priceString) = parts
 
 Beim Parsen auftretende Fehler können Sie gerne behandeln.
 
+## d) Variadisches print()
+
+Schreiben Sie eine top-level Funktion `vprint()`, welche eine beliebige Anzahl an Werten ausgeben kann (ähnlich wie
+in [Python](https://docs.python.org/3/library/functions.html#print)).
+
+Zusätzlich **kann** dieser Funktion übergeben werden:
+
+- ein Separator-String übergeben werden, welcher jeweils zwischen zwei
+  Werten ausgegeben wird (Default ist `" "`)
+- ein End-String übergeben werden, welcher nach Ausgabe aller Werte ausgegeben wird (Default ist `"\n"`)
+
 ## e) Statistik
 
 Schreiben Sie eine Methode, die
@@ -78,7 +90,7 @@ Hilfreich für die Lösung ist das `CharArray`, welches aus einem String erzeugt
 
 ## g) Gemappte Bücherei
 
-*Hinweise: Etwas Code ist in der Datei `g_collections.kt` vorbereitet. In dieser Übung bitte noch 
+*Hinweise: Etwas Code ist in der Datei `g_collections.kt` vorbereitet. In dieser Übung bitte noch
 nicht mit Streams/Funktional arbeiten!*
 
 Es gibt eine Reihe an Büchern in Ihrer Bücherei. Diese wollen wir auf zwei Arten verwalten:
