@@ -1,11 +1,4 @@
-fun main() {
-    X.CONSTANT
-    X.CONSTANT
+fun main(args: Array<String>) {
 }
 
 
-class X {
-    companion object Jupp {
-        const val CONSTANT = "constant"
-    }
-}

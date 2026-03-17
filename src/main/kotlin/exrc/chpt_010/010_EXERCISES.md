@@ -14,7 +14,7 @@ Sie können mit Intellij eine aus Kotlin generierte `.class` Datei in Java dekom
 
 Daran kann man schön erkennen, wie Kotlin intern eigentlich arbeitet.
 
-Schauen Sie in dem Ordner `out/production/kotlin-training/exrc/chpt_010` nach der
+Schauen Sie in dem Ordner `target/classes/exrc/chpt_010` nach der
 `.class` Datei, die durch diese Übung entstanden ist.
 
 Dann: Menü > Tools > Kotlin > Decompile to Java
