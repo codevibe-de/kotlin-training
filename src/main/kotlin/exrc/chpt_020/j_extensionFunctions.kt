@@ -3,12 +3,12 @@ package exrc.chpt_020
 import org.assertj.core.api.Assertions.assertThat
 
 fun main() {
-//    val vocalCount = "Hallöchen!".countVocals()
-//    assertThat(vocalCount).isEqualTo(2)
-
-//    val camelCase = "Wir lernen Kotlin".toCamelCase()
-//    Assertions.assertThat(camelCase).isEqualTo("WirLernenKotlin")
-
-//    val spaced = "Hallo".toSpaced()
-//    Assertions.assertThat(camelCase).isEqualTo("H a l l o")
+//    val count = "Hallöchen!".countUmlauts()
+//    assertThat(count).isEqualTo(3)
+//
+//    val camelCase = "Wir lernen Kotlin".camelcase()
+//    assertThat(camelCase).isEqualTo("WirLernenKotlin")
+//
+//    val spaced = "Hallo".spaced()
+//    assertThat(spaced).isEqualTo("H a l l o")
 }
