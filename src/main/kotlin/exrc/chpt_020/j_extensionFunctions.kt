@@ -43,5 +43,5 @@ fun String.spaced(): String {
     for (c in this) {
         result.append(c).append(' ')
     }
-    return result.toString()
+    return result.toString().trim()
 }
