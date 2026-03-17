@@ -3,7 +3,7 @@ package exrc.chpt_020
 import org.assertj.core.api.Assertions.assertThat
 
 fun main() {
-    val count = "Hallöchen!".countUmlauts()
+    val count = "Hallöchen!".countVowels()
     assertThat(count).isEqualTo(3)
 
     val camelCase = "Wir lernen Kotlin".camelcase()
@@ -14,16 +14,16 @@ fun main() {
 }
 
 
-fun Char.isUmlaut(): Boolean =
+fun Char.isVowel(): Boolean =
     when (this) {
         'a', 'ä', 'A', 'Ä', 'e', 'E', 'i', 'I', 'o', 'O', 'ö', 'Ö', 'u', 'U', 'ü', 'Ü' -> true
         else -> false
     }
 
-fun String.countUmlauts(): Int {
+fun String.countVowels(): Int {
     var result = 0
     for (c in this) {
-        result += if (c.isUmlaut()) 1 else 0
+        result += if (c.isVowel()) 1 else 0
     }
     return result
 }
