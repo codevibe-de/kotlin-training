@@ -1,14 +1,10 @@
 package chpt_030_ood
 
 fun main() {
-    createPrintlnRunnable("Hola!").run()
-}
-
-
-fun createPrintlnRunnable(output: String): Runnable {
-    return object : Runnable {
+    val r: Runnable = object : Runnable {
         override fun run() {
-            println(output)
+            println("Hello")
         }
     }
+    r.run()
 }
