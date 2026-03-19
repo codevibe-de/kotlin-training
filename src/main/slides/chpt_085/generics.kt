@@ -1,6 +1,6 @@
 package chpt_085
 
-class Box<T>(val value: T)
+class Box<T>(var value: T? = null)
 
 fun main() {
     val b1 = Box("StringBox")

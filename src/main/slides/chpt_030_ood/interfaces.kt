@@ -7,12 +7,22 @@ import java.io.OutputStream
 
 //interface Writable {
 //    fun getWriteProgress(): Int
-//    fun write(out: Writer)
+//
+//    fun write(out: OutputStream)
+//
+//    fun init() {
+//        println("Initializing...")
+//    }
 //}
 
 interface Writable {
     val writeProgress: Int
+
     fun write(out: OutputStream)
+
+    fun init() {
+        println("Initializing...")
+    }
 }
 
 class WritableString(val value: String) : Writable {

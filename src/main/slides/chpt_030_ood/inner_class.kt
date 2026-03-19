@@ -13,7 +13,7 @@ class Person {
     }
 
     // nested
-    data class Address(
+    class Address(
         val zipCode: String,
         val city: String,
     )
