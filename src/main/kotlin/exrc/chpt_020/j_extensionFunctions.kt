@@ -14,19 +14,7 @@ fun main() {
 }
 
 
-fun Char.isVowel(): Boolean =
-    when (this) {
-        'a', 'ä', 'A', 'Ä', 'e', 'E', 'i', 'I', 'o', 'O', 'ö', 'Ö', 'u', 'U', 'ü', 'Ü' -> true
-        else -> false
-    }
-
-fun String.countVowels(): Int {
-    var result = 0
-    for (c in this) {
-        result += if (c.isVowel()) 1 else 0
-    }
-    return result
-}
+fun String.countVowels() = Regex("[auioeäüö]", RegexOption.IGNORE_CASE).findAll(this).count()
 
 
 fun String.camelcase(): String {
@@ -38,10 +26,4 @@ fun String.camelcase(): String {
 }
 
 
-fun String.spaced(): String {
-    val result = StringBuilder()
-    for (c in this) {
-        result.append(c).append(' ')
-    }
-    return result.toString().trim()
-}
+fun String.spaced(): String = this.toCharArray().joinToString(" ")
