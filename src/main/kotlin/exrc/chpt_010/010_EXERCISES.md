@@ -1,6 +1,6 @@
 # Übungen zum Kapitel "Einführung"
 
-## Hello World
+## a) Hello World
 
 Schreiben Sie ein Kotlin Programm, welches eine Ausgabe auf der Kommandozeile macht.
 
@@ -8,7 +8,7 @@ Sie können den Code in diesem Package platzieren.
 
 Starten Sie dann Ihr Programm in der IDE.
 
-## Decompile to Java
+## b) Decompile to Java
 
 Sie können mit Intellij eine aus Kotlin generierte `.class` Datei in Java dekompilieren.
 
@@ -19,13 +19,13 @@ Schauen Sie in dem Ordner `target/classes/exrc/chpt_010` nach der
 
 Dann: Menü > Tools > Kotlin > Decompile to Java
 
-## Änderung der Kotlin Version
+## c) Änderung der Kotlin Version
 
 Ändern Sie die Kotlin Compiler Version über die globalen Settings.
 
 Ändern Sie die Version der Kotlin Runtime Library über die Modul-Settings.
 
-## Kotlin Compiler (optional)
+## d) Kotlin Compiler (optional)
 
 Installieren Sie den Kotlin Compiler von https://github.com/JetBrains/kotlin/releases
 
