@@ -4,10 +4,14 @@
 
 Erstellen Sie eine `Sequence`, welche die Jahre 1900, 2000 und 2100 aufzählt.
 
-Für jedes Jahr wollen wir eine weitere Sequenz der Monate 1 bis 12 haben.
+Für jedes dieser Jahre soll eine weitere Sequenz die Monate 1 bis 12 aufzählen (innere Schleife).
 
-Für jede Kombination von Jahr und Monat erzeugen Sie eine `LocalDate` Instanz zum
-jeweiligen ersten Tag des Monats.
+Dann können wir für jede Kombination von Jahr und Monat eine `LocalDate` Instanz zum
+jeweiligen ersten Tag des Monats erzeugen.
 
-Geben Sie für jede Datumsangabe den Abstand zum vorherigen Datum aus (Tipp: `ChronoUnit.DAYS.betweenn()`)
+Geben Sie für jede dieser Datumsangaben den Abstand zum vorherigen Datum aus (Tipp: `ChronoUnit.DAYS.betweenn()`)
 
+## b) Sequenzen erzeugen
+
+Schauen Sie sich den Sourcecode `exrc/chpt_045/b_seq.kt` an und implementieren Sie die fehlende Funktionalität zur
+Erzeugung von Sequenzen.
