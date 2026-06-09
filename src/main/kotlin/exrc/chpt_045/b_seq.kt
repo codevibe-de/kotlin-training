@@ -2,14 +2,15 @@ package exrc.chpt_045
 
 import org.assertj.core.api.Assertions
 
-// WORK IN PROGRESS: another exercise for sequences
 
 fun main() {
     val seq1 = createMultiplierSequence(1, 2, 100)
+    seq1.forEach(::println)
     Assertions.assertThat(seq1.toList()).containsSequence(1, 2, 4, 8, 16, 32, 64)
 
-    val sequence = createNamesSequence("John", "Rob")
-    sequence.forEach { println(it) }
+    val seq2 = createNamesSequence("John", "Rob", listOf("Alice", "Bob"))
+    seq1.forEach(::println)
+    Assertions.assertThat(seq2.toList()).containsSequence("John", "Rob", "Alice", "Bob")
 }
 
 
@@ -21,11 +22,11 @@ fun createMultiplierSequence(base: Int, multiplier: Int, limit: Int): Sequence<I
 }
 
 
-fun createNamesSequence(vararg moreNames: String): Sequence<String> {
+fun createNamesSequence(name1: String, name2: String, additionalNames: Iterable<String>): Sequence<String> {
     return sequence {
-        yield("Bob")
-        yield("Alice")
+        yield(name1)
+        yield(name2)
         println("more names wanted!")
-        yieldAll(moreNames.iterator())
+        yieldAll(additionalNames)
     }
 }
