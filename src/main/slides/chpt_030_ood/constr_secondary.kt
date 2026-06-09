@@ -3,13 +3,13 @@ package chpt_030_ood
 class Animal3(
     val name: String
 ) {
+    init {
+        println("Init $name")
+    }
+
     constructor(order: String, family: String)
             : this("animal of Order `$order` and family `$family`") {
         println("using secondary constructor")
-    }
-
-    init {
-        println("Init $name")
     }
 
     fun introduce() {

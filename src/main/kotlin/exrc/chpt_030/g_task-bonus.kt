@@ -42,5 +42,4 @@ class PrintHelloRunnable : Runnable {
     override fun run() {
         println("Hello!!")
     }
-
 }

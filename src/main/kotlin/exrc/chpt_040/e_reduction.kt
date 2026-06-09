@@ -41,7 +41,7 @@ class Order(val productIds: Set<String>)
 
 // converts a Kotlin Pair to a Map.Entry
 // https://discuss.kotlinlang.org/t/pair-should-implement-map-entry/11917
-fun <K,V> Pair<K,V>.toEntry() = object: Map.Entry<K,V> {
+fun <K, V> Pair<K, V>.toEntry() = object : Map.Entry<K, V> {
     override val key: K = first
     override val value: V = second
 }
