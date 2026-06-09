@@ -14,7 +14,7 @@ haben darf der Testfall Sourcecode in das gleiche Verzeichnis (ausnahmsweise ...
 
 ## c) OrderService
 
-Files: 
+Files:
 
 - `src/main/kotlin/exrc/chpt_080/c_orderService.kt`
 - `src/main/kotlin/exrc/chpt_080/OrderServiceTest.kt`

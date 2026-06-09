@@ -1,6 +1,6 @@
 package exrc.chpt_020
 
-import org.assertj.core.api.Assertions.assertThat
+// import org.assertj.core.api.Assertions.assertThat
 
 fun main() {
 //    val count = "Hallöchen Axel!".countVowels()

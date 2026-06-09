@@ -1,7 +1,7 @@
 package exrc.chpt_030
 
-import kotlin.test.assertEquals
-import kotlin.test.assertFailsWith
+// import kotlin.test.assertEquals
+// import kotlin.test.assertFailsWith
 
 fun main() {
 //    val stack = Stack() // oder Stack<String>()
