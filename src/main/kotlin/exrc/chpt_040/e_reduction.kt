@@ -1,6 +1,6 @@
 package exrc.chpt_040
 
-import org.assertj.core.api.Assertions.assertThat
+// import org.assertj.core.api.Assertions.assertThat
 
 fun main() {
     var orders = listOf(

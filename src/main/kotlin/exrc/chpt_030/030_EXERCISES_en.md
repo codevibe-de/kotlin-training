@@ -77,7 +77,8 @@ Take a look at the existing `Library` class.
 
 This needs a `Book` class to work. Please create this.
 
-Then create an **extension** function for the `Library` class (e.g., because we cannot/do not want to change this class),
+Then create an **extension** function for the `Library` class (e.g., because we cannot/do not want to change this
+class),
 which calculates a map for all books that contains an alphabetically sorted list of book titles by author.
 
 ## m) Roman numerals II
