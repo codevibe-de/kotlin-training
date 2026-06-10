@@ -18,6 +18,8 @@ dependencies {
     implementation("org.junit.jupiter:junit-jupiter:6.0.3")
     implementation("org.assertj:assertj-core:3.27.7")
     implementation("io.mockk:mockk-jvm:1.14.9")
+    implementation("io.kotest:kotest-runner-junit5-jvm:6.1.11")
+    implementation("io.kotest:kotest-assertions-core-jvm:6.1.11")
 }
 
 kotlin {
