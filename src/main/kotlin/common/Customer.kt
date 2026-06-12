@@ -2,7 +2,7 @@ package common
 
 data class Customer(
     val id: Long,
-    val firstName: String,
+    val firstName: String? = null,
     val lastName: String,
 )
 
