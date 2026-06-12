@@ -15,7 +15,6 @@ class BehaviorSpecTest : BehaviorSpec({
             then("only even numbers remain") {
                 evens shouldBe listOf(2, 4)
             }
-
             then("count is correct") {
                 evens.size shouldBe 2
             }

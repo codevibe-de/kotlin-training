@@ -2,6 +2,7 @@ package chpt_080.kotest
 
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.assertions.throwables.shouldThrowMessage
+import io.kotest.assertions.throwables.shouldThrowWithMessage
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
@@ -21,6 +22,12 @@ class ExceptionTest : StringSpec({
 
     "shouldThrowMessage checks message directly" {
         shouldThrowMessage("uh oh") {
+            bad()
+        }
+    }
+
+    "shouldThrowWithMessage checks type and message" {
+        shouldThrowWithMessage<IllegalArgumentException>("uh oh") {
             bad()
         }
     }
