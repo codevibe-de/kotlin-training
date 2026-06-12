@@ -1,5 +1,7 @@
 package chpt_080.mock
 
+import common.Product
+import common.ProductRepository
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.slot
@@ -21,7 +23,7 @@ class ComplexMockTest {
 
         // pretend we have existing products
         val idSlot = slot<Int>()
-        every { repoMock.findById(capture(idSlot)) } answers { Product(idSlot.captured, "Sample Product", 1.99) }
+        every { repoMock.findById(capture(idSlot)) } answers { Product(idSlot.captured, "Sample Product", 1.99f) }
         // but not for ids 100 or more
         every { repoMock.findById(more(100, true)) } returns null
 
@@ -38,7 +40,7 @@ class ComplexMockTest {
     @Test
     fun `tests that product is saved`() {
         // when
-        val newProduct = service.createNew(Product(1234, "New Product", 0.01))
+        val newProduct = service.createNew(Product(1234, "New Product", 0.01f))
 
         // then
         assertThat(newProduct.createdMillis).isNotNull()
@@ -52,14 +54,8 @@ class ComplexMockTest {
     fun `tests for an exception when product already exists`() {
         // when / then
         Assertions.assertThatExceptionOfType(IllegalStateException::class.java)
-            .isThrownBy { service.createNew(Product(1, "New Product", 0.01)) }
+            .isThrownBy { service.createNew(Product(1, "New Product", 0.01f)) }
     }
-}
-
-
-interface ProductRepository {
-    fun findById(id: Int): Product?
-    fun save(product: Product): Product
 }
 
 
@@ -73,12 +69,4 @@ class ServiceUnderTest(private val productRepository: ProductRepository) {
         }
     }
 }
-
-
-data class Product(
-    val id: Int,
-    val title: String,
-    val price: Double,
-    var createdMillis: Long? = null, // set when saved
-)
 
