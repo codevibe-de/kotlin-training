@@ -13,6 +13,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.21")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.21.1")
+    implementation("org.jspecify:jspecify:1.0.1")
 
     implementation(kotlin("test"))
     implementation("org.junit.jupiter:junit-jupiter:6.0.3")

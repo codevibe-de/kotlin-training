@@ -1,7 +1,7 @@
 package chpt_090;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public class JavaCustomer {
 
@@ -10,7 +10,7 @@ public class JavaCustomer {
     @Nullable
     public String nullableStr;
 
-    @NotNull
+    @NonNull
     public String getId() {
         return "aaa";
     }
@@ -19,7 +19,7 @@ public class JavaCustomer {
         return null;
     }
 
-    public void format(@NotNull String s) {
+    public void format(@NonNull String s) {
     }
 
 
