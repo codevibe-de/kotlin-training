@@ -2,6 +2,8 @@ package exrc.chpt_030
 
 import org.assertj.core.api.Assertions.assertThat
 
+// data class: componentN(), equals() and toString() come for free
+// (q_vector_regular.kt shows the same with a regular class)
 data class Vector(val x: Int, val y: Int) {
     operator fun plus(vector: Vector): Vector {
         return Vector(this.x + vector.x, this.y + vector.y)
