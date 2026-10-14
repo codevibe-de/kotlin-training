@@ -8,12 +8,8 @@ class ClientError : BaseError()
 fun main() {
     val err: BaseError = operate()
     val msg = when (err) {
-        is ServerError -> {
-            "alert dev-ops team!"
-        }
-        is ClientError -> {
-            "selbst schuld"
-        }
+        is ServerError -> "alert dev-ops team!"
+        is ClientError -> "client's fault"
     }
     println(msg)
 }

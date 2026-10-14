@@ -21,6 +21,8 @@ private fun create() {
 
 fun listOperations() {
     val numbers: IntArray = intArrayOf(10, 20, 30, 40, 50)
+    val doubled = IntArray(5) { it * 2 }  // 0, 2, 4, 6, 8
+    val squares = List(5) { it * it }     // 0, 1, 4, 9, 16
     val list = numbers.toMutableList()
 
     list.add(1)
@@ -49,7 +51,7 @@ fun setOps() {
 fun mapOps() {
     val map = mutableMapOf("yes" to true, "true" to true)
 
-    map.computeIfAbsent("1") { s: String -> true }
+    map.computeIfAbsent("1") { it.isNotEmpty() }
     map["okay"] = true
     val map2 = map.plus("TRUE" to true)
 

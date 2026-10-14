@@ -11,8 +11,19 @@ fun <T> asIdentityMap(a: T): Map<T, T> {
     return mapOf(a to a)
 }
 
-fun <N : Number> addAsInt(a: N, b: N): Int {
-    return a.toInt() + b.toInt()
+// before: result type is fixed
+fun createValueToLengthMapNonGeneric(
+    s: CharSequence
+): Map<CharSequence, Int> = mapOf(s to s.length)
+
+// after: T is kept, bound to CharSequence
+fun <T : CharSequence> createValueToLengthMap(
+    s: T
+): Map<T, Int> = mapOf(s to s.length)
+
+fun main2() {
+    val m: Map<String, Int> =
+        createValueToLengthMap("Kotlin")
 }
 
 fun <T : Number> double(value: T): Double {

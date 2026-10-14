@@ -5,7 +5,8 @@ fun main() {
     test("blah", p)
 }
 
-fun createPredicate(minLen: Int) = { s: String -> s.length >= minLen }
+fun createPredicate(minLen: Int): (String) -> Boolean =
+    { it.length >= minLen }
 
 fun test(str: String, pred: (String) -> Boolean) = pred(str)
 
@@ -16,4 +17,7 @@ fun main2() {
 
     // bevorzugt:
     test("foo") { s -> s.isNotEmpty() }
+
+    // auch bei Konstruktoren:
+    val squares = Array(5) { it * it }
 }

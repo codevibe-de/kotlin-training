@@ -29,46 +29,24 @@ fun main() {
 }
 
 object Off : State() {
-    override fun powerButtonPressed(): State {
-        return Booting
-    }
-
-    override fun timeElapsed(): State {
-        return Off
-    }
+    override fun powerButtonPressed() = Booting
+    override fun timeElapsed() = Off
 }
 
 object Booting : State() {
-    override fun powerButtonPressed(): State {
-        return Off
-    }
-
-    override fun timeElapsed(): State {
-        return Running()
-    }
+    override fun powerButtonPressed() = Off
+    override fun timeElapsed() = Running()
 }
 
-// this state is stateful, hence it is a class, not an object
+// stateful, hence a class, not an object
 class Running : State() {
-
-    private val memory: String = "0x000"
-
-    override fun powerButtonPressed(): State {
-        return Shutdown
-    }
-
-    override fun timeElapsed(): State {
-        return this
-    }
+    private val memory = "0x000"
+    override fun powerButtonPressed() = Shutdown
+    override fun timeElapsed() = this
 }
 
 object Shutdown : State() {
-    override fun powerButtonPressed(): State {
-        return Shutdown
-    }
-
-    override fun timeElapsed(): State {
-        return Off
-    }
+    override fun powerButtonPressed() = Shutdown
+    override fun timeElapsed() = Off
 }
 

@@ -9,8 +9,9 @@ fun main() {
 //
 //    val firstFib = fibonacci[0]
 //
-//    fibonacci.plus(arrayOf(55, 89))
-//    println(fibonacci.joinToString(" -> "))
+    val f2 = fibonacci.plus(arrayOf(34, 55, 89))
+    println(fibonacci.joinToString(" -> "))
+    println(f2.joinToString(" -> "))
 //
 //    fibonacci.indexOf(8)
 //

@@ -8,30 +8,43 @@ val analysis = "The string '$s' has length ${s.length}."
 
 val someExpr = "\$name" // $name
 
+val price = 19.999
+val total = "Total: %.2f".format(price) // Total: 20.00
 
-val longAnswer = """
-    The Answer to the Ultimate Question of Life, 
-    the Universe, 
-    and ${"Everything".uppercase()} is 
-    ...
-    ${getAnswer()}
+
+val id = 42
+val name = "Arthur Dent"
+
+val json = """
+    {
+        "id": $id,
+        "name": "${name.uppercase()}"
+    }
 """.trimIndent()
 
-val withDollar = """
-    ${'$'}name
+val url = "http://json-schema.org/draft-07/schema#"
+val schemaName = "Customer"
+
+val s1 = """
+    {
+      "${'$'}schema": "$url",
+      "title": "$schemaName"
+    }
 """
 
-val withDollar2 = $$"""
-    $name
+// $ is a literal, $$ interpolates
+val s2 = $$"""
+    {
+      "$schema": "$$url",
+      "title": "$$schemaName"
+    }
 """
-
-fun getAnswer(): Int {
-    return 42
-}
 
 fun main() {
-    println(longAnswer)
     println(analysis)
     println(someExpr)
+    println(total)
+    println(json)
+    println(s1 == s2) // true
 }
 

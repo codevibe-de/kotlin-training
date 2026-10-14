@@ -12,6 +12,9 @@ fun main(args: Array<String>) {
     for ((i, v) in args.withIndex()) {
         println("#$i: $v")
     }
+
+    val map = mapOf("a" to 1, "b" to 2)
+    for ((key, value) in map) println("$key -> $value")
 }
 // Romani
 // Ite

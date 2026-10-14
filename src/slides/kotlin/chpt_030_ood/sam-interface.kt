@@ -15,7 +15,7 @@ fun main() {
     }
 
     // ALTERNATIV:
-    p = IntPredicate { n -> n % 2 == 0 }
+    p = IntPredicate { it % 2 == 0 }
 
     // dann:
     p.accept(123)

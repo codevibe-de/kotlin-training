@@ -3,7 +3,7 @@ package chpt_040_functional
 typealias StringPredicate = (String) -> Boolean
 
 fun main() {
-    val pred: StringPredicate = { s -> s.length > 3 }
+    val pred: StringPredicate = { it.length > 3 }
 
     println(pred(""))
     println(pred("abc"))

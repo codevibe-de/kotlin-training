@@ -1,8 +1,6 @@
 package chpt_030_ood
 
-import java.io.BufferedOutputStream
-import java.io.File
-import java.io.FileOutputStream
+import java.io.ByteArrayOutputStream
 import java.io.OutputStream
 
 //interface Writable {
@@ -17,6 +15,8 @@ import java.io.OutputStream
 
 interface Writable {
     val writeProgress: Int
+    val isDone: Boolean
+        get() = writeProgress >= 100
 
     fun write(out: OutputStream)
 
@@ -29,11 +29,12 @@ class WritableString(val value: String) : Writable {
 
     private var byteWriteCount = 0
 
-    override val writeProgress: Int = byteWriteCount * 100 / value.length
+    override val writeProgress: Int
+        get() = byteWriteCount * 100 / value.length
 
     override fun write(out: OutputStream) {
         val bytes = value.toByteArray()
-        for (i in 0..bytes.size) {
+        for (i in bytes.indices) {
             byteWriteCount++
             out.write(bytes[i].toInt())
         }
@@ -41,5 +42,7 @@ class WritableString(val value: String) : Writable {
 }
 
 fun main() {
-    WritableString("Hello").write(BufferedOutputStream(FileOutputStream(File("out.txt"))))
+    val ws = WritableString("abc")
+    ws.write(ByteArrayOutputStream())
+    println(ws.isDone) // true, inherited
 }
