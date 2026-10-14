@@ -99,7 +99,7 @@ https://github.com/christianhujer/expensereport/blob/trunk/expensereport-kotlin/
 
 _Hinweis: Nutzen Sie die bestehende Datei `q_vector.kt`_
 
-Erstellen Sie eine Klasse `Vector`, welche eine X/Y Koordinate beschreibt.
+Erstellen Sie eine Klasse `Vector`, welche eine X/Y Koordinate beschreibt. Ob Sie dafür eine Data-Klasse oder eine normale Klasse nutzen, ist Ihnen überlassen. Bei einer normalen Klasse implementieren Sie für das Destructuring die Operatoren `component1()` und `component2()` selbst, für die Prüfungen in `main()` außerdem `equals()` und `toString()`.
 
 Instanzen (unten als "V" dargestellt) sollen mittels folgender Operatoren verarbeitet werden können:
 

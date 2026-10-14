@@ -97,7 +97,7 @@ https://github.com/christianhujer/expensereport/blob/trunk/expensereport-kotlin/
 
 ## q) What's our Vector, Victor?
 
-Create a class named `Vector`, which contains X and Y coordinates. This can be a data class or a regular class.
+Create a class named `Vector`, which contains X and Y coordinates. Whether you use a data class or a regular class is up to you. With a regular class, implement the operators `component1()` and `component2()` yourself to support destructuring, and also `equals()` and `toString()` for the checks in `main()`.
 
 Instances (shown below as "V") of this class should be able to be processed using the following operators:
 
