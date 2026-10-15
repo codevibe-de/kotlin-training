@@ -5,6 +5,6 @@ fun main() {
     val result = regex.find("DE07123412341234123412")
     if (result != null) {
         val (blz, kontoNr) = result.destructured
-        println("BLZ: $blz, Kontonummer: $kontoNr")
+        println("Bank code: $blz, account no: $kontoNr")
     }
 }

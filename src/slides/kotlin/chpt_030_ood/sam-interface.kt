@@ -7,16 +7,16 @@ fun interface IntPredicate {
 }
 
 fun main() {
-    // "KLASSISCH":
+    // "CLASSIC":
     var p: IntPredicate = object : IntPredicate {
         override fun accept(n: Int): Boolean {
             return n % 2 == 0
         }
     }
 
-    // ALTERNATIV:
+    // ALTERNATIVE:
     p = IntPredicate { it % 2 == 0 }
 
-    // dann:
+    // then:
     p.accept(123)
 }

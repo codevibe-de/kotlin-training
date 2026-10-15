@@ -11,7 +11,7 @@ fun main() {
     var counter = Counter(0)
     println(counter++) // Counter(count=0)
     println(-counter) // Counter(count=-1)
-    println(counter["whatever"]) // 1, nicht -1 !!!
+    println(counter["whatever"]) // 1, not -1 !!!
 }
 
 data class Counter(val count: Int) {

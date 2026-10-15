@@ -2,14 +2,14 @@ package chpt_030_ood
 
 import java.util.*
 
-// Ich manage das "length" property, damit es kein anderer machen muss
+// I manage the "length" property, so nobody else has to
 abstract class IdGenerator(protected val length: Int) {
     abstract val name: String
     abstract fun generateId(): String
 }
 
 
-// Ich stelle (wie auch immer) einen Namen zur Verfügung
+// I provide a name (one way or another)
 class UUidGenerator(
     override val name: String,
     length: Int

@@ -4,7 +4,7 @@ fun main() {
     var processingLambda: (Any) -> Unit
 
     // top-level function:
-    processingLambda = ::gibEsAus
+    processingLambda = ::printIt
 
     // instance method
     val myConsole = MyConsole()
@@ -14,7 +14,7 @@ fun main() {
     processingLambda = MyConsole::directPrint
 }
 
-fun gibEsAus(input: Any): Unit {
+fun printIt(input: Any): Unit {
     println(input)
 }
 

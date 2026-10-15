@@ -12,12 +12,12 @@ fun test(str: String, pred: (String) -> Boolean) = pred(str)
 
 
 fun main2() {
-    // erlaubt:
+    // allowed:
     test("foo", { s -> s.isNotEmpty() })
 
-    // bevorzugt:
+    // preferred:
     test("foo") { s -> s.isNotEmpty() }
 
-    // auch bei Konstruktoren:
+    // also for constructors:
     val squares = Array(5) { it * it }
 }

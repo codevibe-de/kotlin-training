@@ -10,7 +10,7 @@ class Animal7(nameParam: String) {
     }
 
     constructor() : this("tralala") {
-        println("sekundäre")
+        println("secondary")
     }
 
     fun introduce() {

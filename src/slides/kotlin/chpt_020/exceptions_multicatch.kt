@@ -10,7 +10,7 @@ fun main() {
     catch (e: IOException) {
         when (e) {
             // we want to handle this case:
-            is FileNotFoundException -> println("nicht gefunden")
+            is FileNotFoundException -> println("not found")
             // whatever, just rethrow:
             else -> throw e
         }
@@ -18,5 +18,5 @@ fun main() {
 }
 
 fun readSomething(path:String) {
-    throw FileNotFoundException("Nicht gefunden")
+    throw FileNotFoundException("Not found")
 }
