@@ -1,55 +1,55 @@
 # Exercises for the chapter "Introduction"
 
-## Hello World
+## a) Hello World
 
 Write a Kotlin program that produces some output on the command line.
 
-You can place the code in this package.
+You can put the code in this package.
 
-Then start your program in the IDE.
+Then run your program in the IDE.
 
-## Decompile to Java
+## b) Decompile to Java
 
-You can use Intellij to decompile a Kotlin generated `.class` file to Java.
+IntelliJ can decompile a `.class` file generated from Kotlin into Java.
 
-This is a good way to see how Kotlin actually works internally.
+This nicely shows how Kotlin actually works internally.
 
-Look in folder `out/production/kotlin-training/exrc/chpt_010` for the
+Look in the folder `target/classes/exrc/chpt_010` for the
 `.class` file created by this exercise.
 
 Then: Menu > Tools > Kotlin > Decompile to Java
 
-## Change the Kotlin version
+## c) Change the Kotlin version
 
-Change the Kotlin **compiler** version via the *IDE global* settings.
+Change the Kotlin compiler version in the global settings.
 
-Change the version of the **Kotlin Runtime Library** via the *IDE module* settings.
+Change the version of the Kotlin runtime library in the module settings.
 
-## Kotlin Compiler (optional)
+## d) Kotlin Compiler (optional)
 
-Install the Kotlin Compiler from https://github.com/JetBrains/kotlin/releases
+Install the Kotlin compiler from https://github.com/JetBrains/kotlin/releases
 
-Change to the root directory of the project on the command line.
+On the command line, change to the root directory of the project.
 
-Compile your program from the command line, e.g:
+Compile your program from the command line, e.g.:
 
 ```` shell
 kotlinc-jvm src/main/kotlin/exrc/chpt_010/hello.kt -d bin
 ````
 
-and then execute it:
+and then run it:
 
 ```` shell
 kotlin -cp bin exrc.chpt_010.HelloKt
 ````
 
-Or compile the program so that Kotlin creates a self-contained JAR including runtime:
+Or compile the program so that Kotlin creates a self-contained JAR including the runtime:
 
 ```` shell
 kotlinc-jvm src/main/kotlin/exrc/chpt_010/hello.kt -include-runtime -d bin/hello.jar 
 ````
 
-You can then start this like a normal Java JAR:
+You can then run it like a regular Java JAR:
 
 ```` shell
 java -jar bin/hello.jar

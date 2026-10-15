@@ -1,13 +1,17 @@
-# Übungen zum Kapitel "Collections & Sequences"
+# Exercises for the chapter "Collections & Sequences"
 
-## a) Monate und Jahre
+## a) Months and years
 
-Erstellen Sie eine `Sequence`, welche die Jahre 1900, 2000 und 2100 aufzählt.
+Create a `Sequence` that enumerates the years 1900, 2000 and 2100.
 
-Für jedes Jahr wollen wir eine weitere Sequenz der Monate 1 bis 12 haben.
+For each of these years, another sequence is to enumerate the months 1 to 12 (inner loop).
 
-Für jede Kombination von Jahr und Monat erzeugen Sie eine `LocalDate` Instanz zum
-jeweiligen ersten Tag des Monats.
+Then, for each combination of year and month, we can create a `LocalDate` instance for the
+first day of that month.
 
-Geben Sie für jede Datumsangabe den Abstand zum vorherigen Datum aus (Tipp: `ChronoUnit.DAYS.betweenn()`)
+For each of these dates, print the distance to the previous date (tip: `ChronoUnit.DAYS.between()`)
 
+## b) Creating sequences
+
+Look at the source code `exrc/chpt_045/b_seq.kt` and implement the missing functionality for
+creating sequences.

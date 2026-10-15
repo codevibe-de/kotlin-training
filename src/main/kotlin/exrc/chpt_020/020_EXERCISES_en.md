@@ -2,31 +2,33 @@
 
 ## a) Multiples of 3 and 5
 
-Write a program which, for all numbers below a given upper limit, adds all numbers that are divisible
-by either 3 or 5. If a number is divisible by both, it is counted only once.
+Write a program that, for all numbers below a given upper limit, adds up the numbers that are
+divisible by either 3 or 5. If a number is divisible by both, it is only counted once.
 
 ````text
 addUp(3) = 0
-addUp(10) = 23 // since 3 + 5 + 6 + 9
+addUp(10) = 23    // since 3 + 5 + 6 + 9
 ````
 
-Lambdas will be used later, you are asked to complete this exercise without lambdas.
+Lambdas only come later, so feel free to solve this exercise without lambdas. There are
+interesting options for that, too :)
 
 ## c) Library
 
-Now we start developing the business logic for a library.
+You start developing the business logic for a library. Use the file `c_library.kt` as a starting
+point.
 
-The central component will be a function `addBook`, which can process the following parameters:
+The central part is the function `addBook`, which takes the following parameters:
 
 * `title: String`, required
 * `isbn: String`, optional, default value "?"
 * `price: Float`, required
 * `author: String`, optional, default value "??"
 
-The method body initially does a simple `println` with the given parameters, only. To do this you can create a
-single-line or multi-line string :)
+For now, the method body just does a simple `println` with the parameters. You can build a
+single-line or multi-line string here :)
 
-Now call the method with the following argument combinations:
+Now call the method with the following combinations of arguments:
 
 * all parameters
 * only title, isbn, price
@@ -35,29 +37,39 @@ Now call the method with the following argument combinations:
 
 ### Bonus:
 
-Allow one or more books to be defined via command line parameters. This
-can be in the format `<title>:<price>`.
+Allow one or more books to be defined via command-line arguments, in the format
+`<title>:<price>`.
 
-Your program should split these pairs and generate function calls from them.
+Your program should split these pairs and turn them into function calls.
 
-Splitting is possible, for example, using the following instruction. This uses "destructuring", which we will learn
-about more later.
+You can split them e.g. with the following statement. It uses "destructuring", which we will
+cover in detail later:
 
 ````kotlin
 val parts = arg.split(":")
 val (titleString, priceString) = parts
 ````
 
-You are welcome to handle errors that occur during parsing.
+Feel free to handle errors that occur while parsing.
+
+## d) Variadic print()
+
+Write a top-level function `vprint()` that can print any number of values (similar to
+[Python](https://docs.python.org/3/library/functions.html#print)).
+
+In addition, the function **can** be passed:
+
+- a separator string that is printed between two values (default is `" "`)
+- an end string that is printed after all values (default is `"\n"`)
 
 ## e) Statistics
 
-Write a method that accepts
+Write a method that takes
 
 * any number of `Int` values
-* as well as a calculation operator type given as a string ("sum", "min", "max", "avg")
+* and a calculation type as a string ("sum", "min", "max", "avg")
 
-Depending on the operator type, the numbers should be calculated accordingly and returned as `Int`.
+Depending on the calculation type, the numbers are to be calculated accordingly and returned as an `Int`.
 
 ## f) Roman numerals
 
@@ -69,51 +81,59 @@ Write a function that calculates a decimal number from a Roman numeral:
 * XCIX = 99
 * MCMIX = 1909
 
-Note that the so-called "subtractive notation" applies: https://en.wikipedia.org/wiki/Roman_numerals#Standard_form
+So the subtractive notation applies: https://en.wikipedia.org/wiki/Roman_numerals#Standard_form
 
-There is no need to check the order of the characters any further...
+No further checks of the order of the characters are needed...
 
-Helpful for the solution is the `CharArray`, which can be generated from a string.
+The `CharArray`, which can be created from a string, is helpful for the solution.
 
 ## g) Mapping library
+
+*Note: some code is prepared in the file `g_collections.kt`. Please don't use streams/functional
+style in this exercise yet!*
 
 There are a number of books in your library. We want to manage them in two ways:
 
 * a 1:1 mapping from ISBN to book title
-* a 1:n mapping from an author to his books (titles)
+* a 1:n mapping from an author to his/her book titles
 
-Write the two functions that create a `Map` for each use case.
+Start by creating the two variables for these maps. Which generic types do the maps
+need?
 
-Some code is prepared for you in the file `src/main/kotlin/exrc/chpt_020/g_collections.kt`.
+The `addBook2()` function should then fill both variables (mappings) based on the arguments passed.
+
+For the 1:n mapping, the map's methods `containsKey` and `getValue` are particularly helpful.
 
 ### Bonus:
 
-Let's read a list of books from a suboptimally designed CSV file.
+We read a list of books from a suboptimally designed CSV file.
 
-This can be found in the project under the name `books.csv`. Each line has the following format (the
-characters "<" and ">" are not literals and are placeholders):
+You will find it in the project under the name `books.csv`. Each line has the following format (the
+characters "<" and ">" are not literals and belong to the placeholder):
 
 ````text
 <isbn>,<title> (<author>),"<price>","<description>"
 ````
 
-Read the file line by line (see predefined function `readLinesFromFile()`) and extract the necessary
-information to add the book to the library. This can be done nicely with a `Regex`, which you can develop
-with https://regex101.com/, for example.
+Read the file line by line (see the predefined function `readLinesFromFile()`) and extract the
+information needed to add the book to the library. This can be done nicely with a `Regex`,
+which you can develop e.g. with https://regex101.com/.
 
 ## j) Extension Functions
 
-You can experiment with these ideas for creating extension functions for the `String` type:
+*Note: some code is prepared in the file `j_extensionFunctions.kt`.
+Uncomment it and make it work :)*
+
+You can experiment with three possible _extension functions_ for the type `String`:
 
 1. counting the number of vowels (including umlauts)
-2. conversion to Camelcase ("We learn Kotlin" becomes "WeLearnKotlin")
+2. conversion to camel case ("Wir lernen Kotlin" becomes "WirLernenKotlin")
 3. inserting a space between each letter ("Hallo" becomes "H a l l o")
 
 Hints:
 
-* split a `string`: `String.split()`
-* access a `char` of a string with `str[0]` or with `for(c in string)` on the string
+* split a `String`: `String.split()`
+* access a `Char` of a string with `str[0]` or with `for(c in string)` on the string
   (because a string can be iterated using the index operator)
-* both `String` and `Char` provide case conversion functions -- however note that the case conversion of a `Char`
-  returns a `String`!
-
+* both `String` and `Char` provide case conversion functions, but for
+  a `Char` the return value is a `String`!
