@@ -21,9 +21,16 @@ Then: Menu > Tools > Kotlin > Decompile to Java
 
 ## c) Change the Kotlin version
 
-Change the Kotlin compiler version in the global settings.
+This project is built with Maven, so the Kotlin version is defined in the build file, not in the IDE settings.
 
-Change the version of the Kotlin runtime library in the module settings.
+Change the property `kotlin.version` in `pom.xml`, e.g. from `2.2.21` to `2.1.20`, and reload the Maven project (Maven tool window > Reload All Maven Projects).
+
+Then check where the new version shows up:
+
+- Settings > Build, Execution, Deployment > Compiler > Kotlin Compiler: "Kotlin compiler version"
+- Project tool window > External Libraries: `kotlin-stdlib`
+
+Set the version back to `2.2.21` afterwards.
 
 ## d) Kotlin Compiler (optional)
 

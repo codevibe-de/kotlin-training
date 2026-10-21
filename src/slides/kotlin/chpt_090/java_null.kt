@@ -7,8 +7,8 @@ fun main() {
 
 fun customer() {
     val c = JavaCustomer()
-    val n1: String? = c.name // platform type "String!"
 
+    val n1 = c.name // platform type "String!"
     println(n1 ?: "unknown name")
 
     c.address?.let {
@@ -16,6 +16,9 @@ fun customer() {
     }
 
     val n2: String = c.name // NPE
+
+    val nullStr: String? = null
+    c.format(nullStr)   // compile error
 }
 
 
