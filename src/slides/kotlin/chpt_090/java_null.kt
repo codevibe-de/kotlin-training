@@ -18,7 +18,7 @@ fun customer() {
     val n2: String = c.name // NPE
 
     val nullStr: String? = null
-    c.format(nullStr)   // compile error
+//    c.format(nullStr)   // compile error
 }
 
 
