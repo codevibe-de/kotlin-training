@@ -9,9 +9,10 @@ fun show(box: Box<out Animal>) {
 
 fun fill(box: Box<in Cat>) {
     box.value = Cat()     // writing is fine
+    // val c: Cat = box.value // ❌ reading as Cat is not (output is of type Any?)
 }
 
 fun main() {
     show(Box(Cat()))
-    fill(Box<Animal>(Animal()))
+    fill(Box(Animal()))
 }
