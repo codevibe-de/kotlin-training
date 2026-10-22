@@ -11,19 +11,17 @@ fun <T> asIdentityMap(a: T): Map<T, T> {
     return mapOf(a to a)
 }
 
-// before: result type is fixed
-fun createValueToLengthMapNonGeneric(
-    s: CharSequence
-): Map<CharSequence, Int> = mapOf(s to s.length)
+// without a bound, T has no length:
+// fun <T> longer(a: T, b: T): T =
+//     if (a.length >= b.length) a else b  // ❌
 
-// after: T is kept, bound to CharSequence
-fun <T : CharSequence> createValueToLengthMap(
-    s: T
-): Map<T, Int> = mapOf(s to s.length)
+// with a bound, T is at least a CharSequence:
+fun <T : CharSequence> longer(a: T, b: T): T =
+    if (a.length >= b.length) a else b
 
 fun main2() {
-    val m: Map<String, Int> =
-        createValueToLengthMap("Kotlin")
+    val s: String = longer("cat", "mouse")
+    println(s)
 }
 
 fun <T : Number> double(value: T): Double {
