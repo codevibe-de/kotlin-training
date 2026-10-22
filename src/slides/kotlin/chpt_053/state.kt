@@ -8,8 +8,10 @@ sealed class State {
     }
 }
 
-// this is "the context"
-data class Computer(private var state: State = Off) {
+class Computer {
+    var state: State = Off
+        private set
+
     fun pressOnOff() {
         state = state.powerButtonPressed()
     }
@@ -21,11 +23,11 @@ data class Computer(private var state: State = Off) {
 
 fun main() {
     val pc = Computer()
-    println(pc)
+    println(pc.state)
     pc.pressOnOff()
-    println(pc)
+    println(pc.state)
     pc.waitAWhile()
-    println(pc)
+    println(pc.state)
 }
 
 object Off : State() {
