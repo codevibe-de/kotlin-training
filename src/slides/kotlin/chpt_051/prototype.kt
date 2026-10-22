@@ -16,5 +16,5 @@ data class ComplexSetup(
     val factor: Double,
     val offset: Int,
     val trimPercent: Byte,
-    val destination: File,
+    val destination: File
 )

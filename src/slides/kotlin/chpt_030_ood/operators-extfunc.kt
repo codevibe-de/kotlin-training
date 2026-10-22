@@ -6,4 +6,4 @@ fun main() {
     println(s) // Hell
 }
 
-operator fun String.dec(): String = this.substring(0, this.length-1);
+operator fun String.dec(): String = this.substring(0, this.length-1)

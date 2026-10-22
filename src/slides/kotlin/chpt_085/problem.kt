@@ -1,6 +1,11 @@
 package chpt_085
 
 fun main() {
+    val n: Number
+    val i: Int = 8080
+
+    n = i // upcast
+
     val ints: MutableList<Int> = mutableListOf(1, 2, 3)
     // compile error:
 //    val numbers: MutableList<Number> = ints

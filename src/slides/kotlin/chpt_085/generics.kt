@@ -4,7 +4,10 @@ class Box<T>(var value: T? = null)
 
 fun main() {
     val b1 = Box("StringBox")
+    val someString = b1.value
+
     val b2 = Box(123) // IntBox
+    val someInt = b2.value
 }
 
 fun <T> asIdentityMap(a: T): Map<T, T> {
