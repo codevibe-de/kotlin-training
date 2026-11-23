@@ -5,10 +5,10 @@ fun main() {
     check(task1.priority == Task.DEFAULT_PRIO)
 
     val task2 = Task("Clean room", -9)
-    check(task2.priority == 1.toByte())
+    check(task2.priority == Task.MIN_PRIO)
 
     task2.priority = 100 // yeah, let's clean up!
-    check(task2.priority == 5.toByte())
+    check(task2.priority == Task.MAX_PRIO)
 }
 
 class Task(

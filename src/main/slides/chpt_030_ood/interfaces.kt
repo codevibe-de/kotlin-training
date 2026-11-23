@@ -10,8 +10,8 @@ import java.io.OutputStream
 //
 //    fun write(out: OutputStream)
 //
-//    fun init() {
-//        println("Initializing...")
+//    fun prepare() {
+//        println("Preparing...")
 //    }
 //}
 
@@ -20,8 +20,8 @@ interface Writable {
 
     fun write(out: OutputStream)
 
-    fun init() {
-        println("Initializing...")
+    fun prepare() {
+        println("Preparing...")
     }
 }
 
