@@ -1,5 +1,7 @@
 package chpt_020
 
+fun sum(vararg nums: Int): Int = nums.sum() // nums is an IntArray
+
 fun factorSum(vararg nums: Int, factor: Float = 1.0f): Float {
     var result = 0
     for (n in nums) result += n
@@ -7,6 +9,9 @@ fun factorSum(vararg nums: Int, factor: Float = 1.0f): Float {
 }
 
 fun main() {
+    println(sum(1, 2, 3)) // 6
+    println(sum())        // 0
+
     factorSum(1, 2, 3, factor = 2.2f)
 
     val numbers = intArrayOf(1, 10, 100)
