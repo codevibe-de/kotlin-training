@@ -11,6 +11,6 @@ fun main() {
     println(lengthInCm.toMeter())
 
     val n: Int = 100
-    println(lengthInCm.toMeter()) // works, too
+    println(n.toMeter()) // works, too
 }
 
