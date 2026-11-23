@@ -106,6 +106,8 @@ Instances (shown below as "V") of this class should be able to be processed usin
 * Destructuring
 * Access to x/y using `V['x']` or `V['y']`
 
+Tip: `v += w` works with just `plus()`: Kotlin turns it into `v = v + w`, so `Vector` can stay immutable as long as `v` is a `var`. If you define `plusAssign()` as well, the compiler reports an ambiguity for a `var`.
+
 ## r) Lazy Id
 
 Extend the `Task` class with an `id` property, which is created lazily via delegation.

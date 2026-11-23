@@ -109,6 +109,8 @@ Instanzen (unten als "V" dargestellt) sollen mittels folgender Operatoren verarb
 * Destructuring
 * Zugriff auf x/y mittels V['x'] bzw. V['y']
 
+Tipp: `v += w` funktioniert schon mit `plus()` allein: Kotlin macht daraus `v = v + w`, der `Vector` kann also unveränderlich bleiben, solange `v` eine `var` ist. Definieren Sie zusätzlich `plusAssign()`, meldet der Compiler bei einer `var` eine Mehrdeutigkeit.
+
 ## r) Lazy Id
 
 Erweitern Sie die `Task` Klasse um ein `id` Property, welches mittels Delegation "lazy" erzeugt wird.
