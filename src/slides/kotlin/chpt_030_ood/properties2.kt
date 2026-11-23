@@ -6,6 +6,9 @@ fun main() {
     val sc = SubClass()
     sc.property = "abc"
     println(sc.property)    // ABCX
+
+    println(ClassWithSetter(" ").name)    // no-name
+    println(ClassWithSetter("Tom").name)  // Tom
 }
 
 class ClassWithGetterSetter {
@@ -19,11 +22,15 @@ class NoBacking {
 }
 
 
-class ClassWithSetter {
-    var name: String = validateName("") // default value
+class ClassWithSetter(name: String) {
+    var name: String = ""
         set(value) {
             field = validateName(value)
         }
+
+    init {
+        this.name = name // runs through the setter
+    }
 
     private fun validateName(n: String) =
         if (n.isBlank()) "no-name" else n
