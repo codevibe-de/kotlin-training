@@ -15,8 +15,17 @@ fun vprint(vararg args: Any, sep: String = " ", end: String = "\n") {
 }
 
 
+// Alternative: joinToString() takes care of the separator for us
+fun vprintJoined(vararg args: Any, sep: String = " ", end: String = "\n") =
+    kotlin.io.print(args.joinToString(sep) + end)
+
+
 fun main() {
     vprint(true, 1, "hallo")
     vprint(1, 2, 3, end = ".\n")
     vprint(178, "44455", "11", sep = "-")
+
+    vprintJoined(true, 1, "hallo")
+    vprintJoined(1, 2, 3, end = ".\n")
+    vprintJoined(178, "44455", "11", sep = "-")
 }

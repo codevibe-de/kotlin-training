@@ -5,7 +5,10 @@ interface Finned {
 }
 
 interface Toothed {
-    fun bite(animal: Animal)
+    // default implementation, used by Lion and Orca
+    fun bite(animal: Animal) {
+        println("Biting ${animal.name}")
+    }
 }
 
 abstract class Animal(val name: String)
@@ -21,11 +24,7 @@ class BlueWhale(
 
 class Lion(
     name: String
-) : Mammal(name), Toothed {
-    override fun bite(animal: Animal) {
-        println("Biting ${animal.name}")
-    }
-}
+) : Mammal(name), Toothed
 
 open class Fish(
     name: String,
@@ -37,22 +36,20 @@ class Shark(
     override val finCount: Int
 ) : Fish(name, finCount), Toothed {
     override fun bite(animal: Animal) {
-        println("Biting ${animal.name}")
+        println("Just one bite!")  // Bruce, "Finding Nemo"
     }
 }
 
 class Orca(
     name: String,
     override val finCount: Int
-) : Mammal(name), Finned, Toothed {
-    override fun bite(animal: Animal) {
-        println("Biting ${animal.name}")
-    }
-}
+) : Mammal(name), Finned, Toothed
 
 
 fun main() {
     val lion = Lion("Leo")
     val blueWhale = BlueWhale("Mobby", 4)
-    lion.bite(blueWhale)
+    lion.bite(blueWhale)                  // Biting Mobby
+    Shark("Bruce", 7).bite(blueWhale)     // Just one bite!
+    Orca("Willy", 5).bite(blueWhale)      // Biting Mobby
 }

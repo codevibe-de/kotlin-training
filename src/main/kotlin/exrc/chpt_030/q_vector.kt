@@ -5,6 +5,8 @@ import org.assertj.core.api.Assertions.assertThat
 // data class: componentN(), equals() and toString() come for free
 // (q_vector_regular.kt shows the same with a regular class)
 data class Vector(val x: Int, val y: Int) {
+    // enough for v += w as well: Kotlin turns it into v = v + w (v must be a var);
+    // an additional plusAssign() would make v += w ambiguous for a var
     operator fun plus(vector: Vector): Vector {
         return Vector(this.x + vector.x, this.y + vector.y)
     }
