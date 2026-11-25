@@ -32,7 +32,7 @@ Write a class `Task` that has a name and an optional priority as a `Byte`.
 The priority can be in the range 1-5. Values outside this range are set to 1 or 5 respectively. The default value
 (i.e. only if none is given) is 3.
 
-The name is final, the priority can be changed and queried at any time.
+The name is read-only, the priority value can be changed at any time.
 
 Make sure that instances always have a value for the priority and that it is always within the valid range.
 
