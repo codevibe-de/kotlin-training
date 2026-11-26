@@ -3,16 +3,19 @@ package chpt_085.variance
 class Box<T>(var value: T)
 
 fun show(box: Box<out Animal>) {
-    println(box.value)    // reading is fine
-    // box.value = Cat()  // ❌ writing is not
+    println(box.value)    // ✅ Reading as Animal
+    // box.value = Cat()  // ❌ Writing not allowed
 }
 
 fun fill(box: Box<in Cat>) {
-    box.value = Cat()     // writing is fine
-    // val c: Cat = box.value // ❌ reading as Cat is not (output is of type Any?)
+    box.value = Cat()         // ✅ Writing a Cat
+    val a: Any? = box.value   // ✅ Reading as Any?
+    // val c: Cat = box.value // ❌ Reading as Cat
 }
 
 fun main() {
-    show(Box(Cat()))
-    fill(Box(Animal()))
+    val catBox = Box(Cat())
+    val animalBox = Box(Animal())
+    show(catBox)
+    fill(animalBox)
 }
